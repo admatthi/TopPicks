@@ -585,7 +585,7 @@
 				DEVELOPMENT_TEAM = KG7NFCGVM4;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = SportsQuant/Info.plist;
-				INFOPLIST_KEY_CFBundleDisplayName = "Top Picks";
+				INFOPLIST_KEY_CFBundleDisplayName = "Line Alerts";
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.productivity";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
@@ -619,7 +619,7 @@
 				DEVELOPMENT_TEAM = KG7NFCGVM4;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = SportsQuant/Info.plist;
-				INFOPLIST_KEY_CFBundleDisplayName = "Top Picks";
+				INFOPLIST_KEY_CFBundleDisplayName = "Line Alerts";
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.productivity";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
