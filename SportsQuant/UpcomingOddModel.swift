@@ -86,3 +86,12 @@ class Outcome: Codable {
 }
 
 typealias UpcomingOdds = [UpcomingOdd]
+class Category: Codable {
+    let name: String
+    let key: String
+
+    init(name: String, key: String) {
+        self.name = name
+        self.key = key
+    }
+}

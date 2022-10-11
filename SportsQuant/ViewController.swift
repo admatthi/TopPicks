@@ -6,24 +6,37 @@
 //
 
 import UIKit
+import SVProgressHUD
 
 class ViewController: UIViewController {
+    var selectedIndex = 0
 
-
+    @IBOutlet weak var tagsCollectionView: UICollectionView!
+    
     @IBOutlet weak var tableView: UITableView!
     var allOdds:[UpcomingOdd] = []
+    var allCategories:[Category] = [Category(name: "Upcoming", key: "upcoming"),Category(name: "NFL", key: "americanfootball_nfl"),Category(name: "NBA", key: "basketball_nba"),Category(name: "MLB", key: "baseball_mlb")]
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.tableView.dataSource = self
         self.tableView.delegate = self
-        ApiModel.getSportsUpcommingOddsData { response, error in
+        self.tagsCollectionView.dataSource = self
+        self.tagsCollectionView.delegate = self
+        getCategoryOdd(selectedIndex: selectedIndex)
+        // Do any additional setup after loading the view.
+    }
+
+    func getCategoryOdd(selectedIndex:Int){
+        SVProgressHUD.show()
+        var category = allCategories[selectedIndex].key
+        ApiModel.getSportsWithCategoryOddsData(category: category ){ response, error in
+            SVProgressHUD.dismiss()
             self.allOdds = response ?? []
             self.tableView.reloadData()
             
         }
-        // Do any additional setup after loading the view.
     }
-
 
 }
 
@@ -34,7 +47,7 @@ extension ViewController:UITableViewDataSource,UITableViewDelegate{
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "SportsBetterDetailTableViewCell", for: indexPath) as! SportsBetterDetailTableViewCell
-        var odd = allOdds[indexPath.row]
+        let odd = allOdds[indexPath.row]
         cell.titleLabel.text = odd.sportTitle
         cell.awayTeamLabel.text = odd.awayTeam
         cell.homeTeamLabel.text = odd.homeTeam
@@ -86,4 +99,44 @@ extension ViewController:UITableViewDataSource,UITableViewDelegate{
         return cell
     }
     
+}
+extension ViewController:UICollectionViewDataSource,UICollectionViewDelegate,UICollectionViewDelegateFlowLayout{
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return allCategories.count
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "TagsCollectionViewCell", for: indexPath) as! TagsCollectionViewCell
+        cell.titleLabel.text = allCategories[indexPath.row].name
+        if selectedIndex == indexPath.row{
+            cell.titleLabel.alpha = 1
+            cell.myselected.isHidden = false
+            cell.myselected.layer.cornerRadius = 4.0
+            cell.myselected.layer.masksToBounds = true
+            //            cell.layer.cornerRadius = 10
+        }else{
+            cell.titleLabel.alpha = 0.5
+            cell.myselected.isHidden = true
+            cell.myselected.layer.cornerRadius = 4.0
+            cell.myselected.layer.masksToBounds = true
+            
+        }
+        return cell
+    }
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        selectedIndex = indexPath.row
+        self.tagsCollectionView.reloadData()
+        self.getCategoryOdd(selectedIndex: selectedIndex)
+
+    }
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        return CGSize(width: 90, height: 40)
+    }
+        func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
+            return 10
+        }
+    
+        func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
+            return 10
+        }
 }
