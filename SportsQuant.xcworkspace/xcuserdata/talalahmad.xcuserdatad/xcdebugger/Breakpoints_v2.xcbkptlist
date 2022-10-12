@@ -18,38 +18,6 @@
             endingLineNumber = "33"
             landmarkName = "getSportsWithCategoryOddsData(category:completion:)"
             landmarkType = "7">
-            <Locations>
-               <Location
-                  uuid = "2BDD16F1-E5C3-4FF4-A309-CDD4093EB9FA - c00c8a6bc3500d29"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "static SportsQuant.ApiModel.getSportsWithCategoryOddsData(category: Swift.String, completion: (Swift.Optional&lt;Swift.Array&lt;SportsQuant.UpcomingOdd&gt;&gt;, Swift.Optional&lt;Swift.String&gt;) -&gt; ()) -&gt; ()"
-                  moduleName = "SportsQuant"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/talalahmad/TopPicks/SportsQuant/ApiModel.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "33"
-                  endingLineNumber = "33"
-                  offsetFromSymbolStart = "424">
-               </Location>
-               <Location
-                  uuid = "2BDD16F1-E5C3-4FF4-A309-CDD4093EB9FA - f95aecc6317d4609"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #1 (Swift.Int, Any) -&gt; () in static SportsQuant.ApiModel.getSportsWithCategoryOddsData(category: Swift.String, completion: (Swift.Optional&lt;Swift.Array&lt;SportsQuant.UpcomingOdd&gt;&gt;, Swift.Optional&lt;Swift.String&gt;) -&gt; ()) -&gt; ()"
-                  moduleName = "SportsQuant"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/talalahmad/TopPicks/SportsQuant/ApiModel.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "34"
-                  endingLineNumber = "34"
-                  offsetFromSymbolStart = "124">
-               </Location>
-            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

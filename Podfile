@@ -7,7 +7,7 @@ target 'SportsQuant' do
 
   # Pods for SportsQuant
 
-
+  pod 'Parchment'
 pod 'SVProgressHUD'
 pod 'SDWebImage'
 pod 'Alamofire', '4.9.0'
