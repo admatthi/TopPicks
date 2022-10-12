@@ -24,7 +24,7 @@ import Amplitude_iOS
 import SVProgressHUD
 import AppsFlyerLib
 import SwiftyJSON
-
+import IQKeyboardManagerSwift
 var uid = String()
 
 var db : Firestore!
@@ -37,7 +37,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
-        
+        IQKeyboardManager.shared.enable = true
         FirebaseApp.configure()
         db = Firestore.firestore()
         

@@ -26,7 +26,7 @@ pod 'MBProgressHUD'
 pod 'Purchases'
 pod 'FlexibleSteppedProgressBar'
 pod 'Amplitude-iOS', '~> 4.9.3'
-
+pod 'IQKeyboardManagerSwift'
   target 'SportsQuantTests' do
     inherit! :search_paths
     # Pods for testing
