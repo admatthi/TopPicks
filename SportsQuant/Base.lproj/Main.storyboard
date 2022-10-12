@@ -117,7 +117,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6VF-cV-UEg">
-                                <rect key="frame" x="4" y="666" width="383" height="80"/>
+                                <rect key="frame" x="14" y="666" width="360" height="80"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="80" id="7RH-wn-FBj"/>
@@ -192,7 +192,7 @@
                                     <constraint firstAttribute="width" constant="45" id="OQl-o4-huO"/>
                                 </constraints>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Facebook &amp; Google Resumes" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2Lo-pc-uWd">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Facebook &amp; Google Resumes" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2Lo-pc-uWd">
                                 <rect key="frame" x="55" y="385.33333333333331" width="313" height="42"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="313" id="FXe-Gu-aAy"/>
@@ -210,7 +210,7 @@
                                     <constraint firstAttribute="width" constant="45" id="mX8-Rt-DOK"/>
                                 </constraints>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Unlimited downloads" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="X2H-Zg-8lg">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Unlimited downloads" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="X2H-Zg-8lg">
                                 <rect key="frame" x="55" y="425.33333333333331" width="313" height="42"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="42" id="UDP-wh-t2f"/>
@@ -262,7 +262,7 @@
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="knk-e0-oVf">
                                 <rect key="frame" x="14" y="145" width="354" height="1"/>
-                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="1" id="h7v-wd-HVy"/>
                                 </constraints>
@@ -336,8 +336,8 @@
                             <constraint firstItem="dgc-9q-FLE" firstAttribute="top" secondItem="Ao9-S2-xVG" secondAttribute="bottom" constant="17" id="3jI-v2-Eq6"/>
                             <constraint firstItem="NF7-hO-9v6" firstAttribute="leading" secondItem="B9B-cH-5M7" secondAttribute="leading" constant="20" id="4Zw-Yg-QRs"/>
                             <constraint firstItem="X2H-Zg-8lg" firstAttribute="top" secondItem="Gnf-xF-qj7" secondAttribute="bottom" constant="38" id="4g7-DV-T5t"/>
-                            <constraint firstItem="B9B-cH-5M7" firstAttribute="trailing" secondItem="6VF-cV-UEg" secondAttribute="trailing" constant="3" id="5Rc-y8-blj"/>
-                            <constraint firstItem="6VF-cV-UEg" firstAttribute="leading" secondItem="B9B-cH-5M7" secondAttribute="leading" constant="4" id="5sg-Xn-y8V"/>
+                            <constraint firstItem="B9B-cH-5M7" firstAttribute="trailing" secondItem="6VF-cV-UEg" secondAttribute="trailing" constant="16" id="5Rc-y8-blj"/>
+                            <constraint firstItem="6VF-cV-UEg" firstAttribute="leading" secondItem="B9B-cH-5M7" secondAttribute="leading" constant="14" id="5sg-Xn-y8V"/>
                             <constraint firstItem="drw-vn-bXX" firstAttribute="leading" secondItem="sat-pq-HMz" secondAttribute="trailing" constant="9" id="71j-ai-sBg"/>
                             <constraint firstItem="NxX-g6-Neq" firstAttribute="top" secondItem="Ao9-S2-xVG" secondAttribute="bottom" constant="8" symbolic="YES" id="87p-J0-R98"/>
                             <constraint firstItem="NF7-hO-9v6" firstAttribute="top" secondItem="knk-e0-oVf" secondAttribute="bottom" constant="59.5" id="8Cm-IX-BpG"/>
@@ -368,9 +368,11 @@
                             <constraint firstItem="dZ5-em-UQ4" firstAttribute="centerX" secondItem="SMT-pv-Hxm" secondAttribute="centerX" id="dQ6-UY-BEC"/>
                             <constraint firstItem="Jrh-gj-cce" firstAttribute="top" secondItem="gnQ-JG-vUB" secondAttribute="bottom" constant="7" id="dg4-qI-aLI"/>
                             <constraint firstItem="gnQ-JG-vUB" firstAttribute="top" secondItem="gFo-22-I8e" secondAttribute="bottom" constant="65" id="jly-1y-M6H"/>
+                            <constraint firstItem="X2H-Zg-8lg" firstAttribute="leading" secondItem="B9B-cH-5M7" secondAttribute="leading" constant="55" id="k40-g5-2c7"/>
                             <constraint firstItem="Ao9-S2-xVG" firstAttribute="top" secondItem="2Lo-pc-uWd" secondAttribute="bottom" constant="7" id="r3m-qd-KbB"/>
                             <constraint firstItem="B9B-cH-5M7" firstAttribute="trailing" secondItem="ifA-O9-vRc" secondAttribute="trailing" constant="13" id="rH2-p6-8X5"/>
                             <constraint firstItem="Jrh-gj-cce" firstAttribute="top" secondItem="gnQ-JG-vUB" secondAttribute="bottom" constant="7" id="sIv-z8-ibn"/>
+                            <constraint firstItem="2Lo-pc-uWd" firstAttribute="leading" secondItem="B9B-cH-5M7" secondAttribute="leading" constant="55" id="sUa-ZK-iTM"/>
                             <constraint firstItem="DPd-vW-hvx" firstAttribute="top" secondItem="Gnf-xF-qj7" secondAttribute="bottom" constant="7" id="tQb-Vj-FYa"/>
                             <constraint firstItem="ifA-O9-vRc" firstAttribute="leading" secondItem="B9B-cH-5M7" secondAttribute="leading" constant="16" id="u5U-bB-RKm"/>
                             <constraint firstItem="gFo-22-I8e" firstAttribute="centerY" secondItem="NF7-hO-9v6" secondAttribute="centerY" id="uhF-1j-7wf"/>
@@ -389,7 +391,7 @@
         <!--Item-->
         <scene sceneID="KaA-pu-Jov">
             <objects>
-                <viewController id="H9G-v3-ZPm" sceneMemberID="viewController">
+                <viewController modalPresentationStyle="fullScreen" id="H9G-v3-ZPm" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Zek-tZ-S1T">
                         <rect key="frame" x="0.0" y="0.0" width="390" height="787"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
