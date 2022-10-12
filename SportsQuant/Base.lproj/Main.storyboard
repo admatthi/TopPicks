@@ -87,10 +87,11 @@
             </objects>
             <point key="canvasLocation" x="-828" y="643"/>
         </scene>
-        <!--Tab Bar Controller-->
+        <!--maintab-->
         <scene sceneID="FES-88-Ei7">
             <objects>
-                <tabBarController id="lUi-r8-QYX" sceneMemberID="viewController">
+                <tabBarController restorationIdentifier="maintab" storyboardIdentifier="maintab" title="maintab" id="lUi-r8-QYX" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="nVC-iu-7d7"/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="BUX-oy-bYA">
                         <rect key="frame" x="0.0" y="0.0" width="390" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -99,15 +100,18 @@
                         <color key="barTintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <color key="selectedImageTintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>
+                    <connections>
+                        <segue destination="H9G-v3-ZPm" kind="relationship" relationship="viewControllers" id="3A1-uZ-zUD"/>
+                    </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="WHo-55-LGu" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-827" y="-96"/>
         </scene>
-        <!--Pay View Controller-->
+        <!--Pay-->
         <scene sceneID="dJu-bT-J1c">
             <objects>
-                <viewController id="XiT-Ir-ZXl" customClass="PayViewController" customModule="SportsQuant" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController restorationIdentifier="Pay" storyboardIdentifier="Pay" title="Pay" id="XiT-Ir-ZXl" customClass="PayViewController" customModule="SportsQuant" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="SMT-pv-Hxm">
                         <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -375,21 +379,25 @@
                             <constraint firstItem="2Lo-pc-uWd" firstAttribute="top" secondItem="Jrh-gj-cce" secondAttribute="bottom" constant="8" symbolic="YES" id="yhm-W1-vaA"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <segue destination="lUi-r8-QYX" kind="show" identifier="PaywalltoHome" id="nGI-bR-83s"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rfi-39-CvX" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="30.769230769230766" y="-803.3175355450237"/>
         </scene>
-        <!--View Controller-->
+        <!--Item-->
         <scene sceneID="KaA-pu-Jov">
             <objects>
                 <viewController id="H9G-v3-ZPm" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Zek-tZ-S1T">
-                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="787"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <viewLayoutGuide key="safeArea" id="ach-6N-7gT"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
+                    <tabBarItem key="tabBarItem" title="Item" id="l8c-8y-kpu"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Mzf-fl-wKU" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
