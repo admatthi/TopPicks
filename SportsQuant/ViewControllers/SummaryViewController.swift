@@ -23,7 +23,7 @@ class SummaryViewController: UIViewController {
     }
     
     @IBAction func nextButtonAction(_ sender: Any) {
-        pagingViewController?.select(index: 3,animated: true)
+        pagingViewController?.select(index: 5,animated: true)
     }
     
     /*

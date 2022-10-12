@@ -21,7 +21,7 @@ class FinishViewController: UIViewController {
     }
     
     @IBAction func nextButtonAction(_ sender: Any) {
-        pagingViewController?.select(index: 3,animated: true)
+        
     }
     
     /*
