@@ -12,6 +12,8 @@ class HomeViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.tabBarController?.tabBar.isHidden = true
+
         setupPageController()
         // Do any additional setup after loading the view.
     }
