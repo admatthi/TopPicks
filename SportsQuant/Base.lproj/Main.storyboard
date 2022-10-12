@@ -787,6 +787,14 @@
                                                 <constraint firstAttribute="trailingMargin" secondItem="IXQ-tA-NZh" secondAttribute="trailing" id="vxb-ZY-GW3"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="address1TF" destination="NnW-hv-s6G" id="Grx-Oc-MeW"/>
+                                            <outlet property="address2TF" destination="kkq-7E-mSy" id="wCB-5G-n0g"/>
+                                            <outlet property="emailTF" destination="ibz-6j-GWa" id="Y3Q-YH-f6E"/>
+                                            <outlet property="phoneTF" destination="1mq-Ft-PXz" id="21S-Rt-hbu"/>
+                                            <outlet property="socialLinkTF" destination="3Xw-8V-gyB" id="9tY-nf-NHu"/>
+                                            <outlet property="websiteLinkTF" destination="ZNB-gG-TL6" id="Rs4-rN-pEW"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
