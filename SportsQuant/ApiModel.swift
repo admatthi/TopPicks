@@ -7,6 +7,7 @@
 
 import Foundation
 import SwiftyJSON
+
 class ApiModel {
     
     class func getSportsUpcommingOddsData(completion: @escaping (_ response:[UpcomingOdd]?, _ error:String?) -> Void) {

@@ -51,6 +51,23 @@ extension ViewController:UITableViewDataSource,UITableViewDelegate{
         cell.titleLabel.text = odd.sportTitle
         cell.awayTeamLabel.text = odd.awayTeam
         cell.homeTeamLabel.text = odd.homeTeam
+        
+      
+        
+        var datef = DateFormatter()
+        
+        datef.dateFormat = "yyyy-MM-dd'T'HH:mm:ss.SSSZ"
+        
+        let date1 = datef.date(from: odd.commenceTime ?? "")
+ 
+        var datef2 = DateFormatter()
+        
+        datef2.dateFormat = "h:mm MM/dd/yyyy"
+        
+        let date2 = datef2.string(from: date1 ?? Date())
+
+        cell.date.text = date2 ?? ""
+
 
         if let booker = odd.bookmakers?.filter({$0.title?.lowercased() == "DraftKings".lowercased()}).first{
             cell.bookMakerLabel.text = booker.title

@@ -17,6 +17,7 @@ class SportsBetterDetailTableViewCell: UITableViewCell {
     @IBOutlet weak var homeTeamLabel: UILabel!
     @IBOutlet weak var titleLabel: UILabel!
     
+    @IBOutlet weak var date: UILabel!
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
