@@ -7,6 +7,7 @@
 
 import UIKit
 import Parchment
+var pagingViewController:PagingViewController?
 class HomeViewController: UIViewController {
 
     override func viewDidLoad() {
@@ -21,27 +22,27 @@ class HomeViewController: UIViewController {
         let ContactViewControllerVC = storyboard!.instantiateViewController(withIdentifier: "ContactViewController") as! ContactViewController
         ContactViewControllerVC.title = "Contact"
 
-        let pagingViewController = PagingViewController(viewControllers: [
+         pagingViewController = PagingViewController(viewControllers: [
             IntoViewControllerVC,ContactViewControllerVC
         ])
-        pagingViewController.menuItemSize = .fixed(width: UIScreen.main.bounds.width / 2, height: 50)
-        pagingViewController.textColor = UIColor.darkGray
-        pagingViewController.selectedFont = UIFont.systemFont(ofSize: 17, weight: UIFont.Weight.semibold)
-        pagingViewController.font =  UIFont.systemFont(ofSize: 17, weight: UIFont.Weight.semibold)
-        pagingViewController.selectedTextColor = #colorLiteral(red: 0.5490196078, green: 0.6784313725, blue: 0.2588235294, alpha: 1)
-        pagingViewController.indicatorColor = #colorLiteral(red: 0.5490196078, green: 0.6784313725, blue: 0.2588235294, alpha: 1)
+        pagingViewController?.menuItemSize = .fixed(width: UIScreen.main.bounds.width / 2, height: 50)
+        pagingViewController?.textColor = UIColor.darkGray
+        pagingViewController?.selectedFont = UIFont.systemFont(ofSize: 17, weight: UIFont.Weight.semibold)
+        pagingViewController?.font =  UIFont.systemFont(ofSize: 17, weight: UIFont.Weight.semibold)
+        pagingViewController?.selectedTextColor = #colorLiteral(red: 0.5490196078, green: 0.6784313725, blue: 0.2588235294, alpha: 1)
+        pagingViewController?.indicatorColor = #colorLiteral(red: 0.5490196078, green: 0.6784313725, blue: 0.2588235294, alpha: 1)
 //        pagingViewController.menuBackgroundColor = .secondarySystemBackground
         
-        addChild(pagingViewController)
-        view.addSubview(pagingViewController.view)
-        pagingViewController.didMove(toParent: self)
-        pagingViewController.view.translatesAutoresizingMaskIntoConstraints = false
+        addChild(pagingViewController!)
+        view.addSubview(pagingViewController!.view)
+        pagingViewController?.didMove(toParent: self)
+        pagingViewController?.view.translatesAutoresizingMaskIntoConstraints = false
 
         NSLayoutConstraint.activate([
-          pagingViewController.view.leadingAnchor.constraint(equalTo: view.leadingAnchor),
-          pagingViewController.view.trailingAnchor.constraint(equalTo: view.trailingAnchor),
-          pagingViewController.view.bottomAnchor.constraint(equalTo: view.bottomAnchor),
-          pagingViewController.view.topAnchor.constraint(equalTo: view.topAnchor,constant:  getNavBarHeight())
+            pagingViewController!.view.leadingAnchor.constraint(equalTo: view.leadingAnchor),
+            pagingViewController!.view.trailingAnchor.constraint(equalTo: view.trailingAnchor),
+            pagingViewController!.view.bottomAnchor.constraint(equalTo: view.bottomAnchor),
+            pagingViewController!.view.topAnchor.constraint(equalTo: view.topAnchor,constant:  getNavBarHeight())
         ])
     }
     func getNavBarHeight() -> CGFloat {

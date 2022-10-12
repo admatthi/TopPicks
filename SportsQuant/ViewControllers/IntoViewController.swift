@@ -9,6 +9,7 @@ import UIKit
 
 class IntoViewController: UIViewController {
 
+    @IBOutlet weak var nextButton: UIButton!
     var firstName = ""
     var lastName = ""
     @IBOutlet weak var tableView: UITableView!
@@ -16,10 +17,15 @@ class IntoViewController: UIViewController {
         super.viewDidLoad()
         tableView.dataSource = self
         tableView.delegate = self
+        nextButton.layer.cornerRadius = nextButton.frame.height/2
+        nextButton.layer.masksToBounds = true
         // Do any additional setup after loading the view.
     }
     
-
+    @IBAction func nextButtonAction(_ sender: Any) {
+        pagingViewController?.select(index: 1,animated: true)
+    }
+    
     /*
     // MARK: - Navigation
 

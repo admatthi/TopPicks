@@ -400,6 +400,7 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Item" id="l8c-8y-kpu"/>
+                    <nil key="simulatedBottomBarMetrics"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Mzf-fl-wKU" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -425,19 +426,19 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Let's get started with the basics." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="w6S-4u-6fZ">
-                                                    <rect key="frame" x="20" y="71" width="350" height="24"/>
-                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                                    <rect key="frame" x="20" y="61.000000000000007" width="350" height="25.333333333333336"/>
+                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="21"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="What is your name?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cco-IO-9T5">
-                                                    <rect key="frame" x="20" y="155" width="350" height="20.333333333333343"/>
+                                                    <rect key="frame" x="20" y="146.33333333333334" width="350" height="20.333333333333343"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="2" translatesAutoresizingMaskIntoConstraints="NO" id="TON-Pd-B0C">
-                                                    <rect key="frame" x="20" y="205.33333333333334" width="350" height="34.666666666666657"/>
+                                                    <rect key="frame" x="20" y="196.66666666666666" width="350" height="34.666666666666657"/>
                                                     <subviews>
                                                         <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="First Name" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Uyb-n5-D8o">
                                                             <rect key="frame" x="0.0" y="0.0" width="350" height="31.666666666666668"/>
@@ -445,7 +446,7 @@
                                                             <textInputTraits key="textInputTraits"/>
                                                         </textField>
                                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="PTt-re-Qug">
-                                                            <rect key="frame" x="0.0" y="33.666666666666657" width="350" height="1"/>
+                                                            <rect key="frame" x="0.0" y="33.666666666666686" width="350" height="1"/>
                                                             <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="height" constant="1" id="1ET-nW-fXd"/>
@@ -454,7 +455,7 @@
                                                     </subviews>
                                                 </stackView>
                                                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="2" translatesAutoresizingMaskIntoConstraints="NO" id="2gw-Pz-rp5">
-                                                    <rect key="frame" x="20" y="280" width="350" height="34.666666666666686"/>
+                                                    <rect key="frame" x="20" y="271.33333333333331" width="350" height="34.666666666666686"/>
                                                     <subviews>
                                                         <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Last Name" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="VE7-XQ-feL">
                                                             <rect key="frame" x="0.0" y="0.0" width="350" height="31.666666666666668"/>
@@ -471,7 +472,7 @@
                                                     </subviews>
                                                 </stackView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JG6-6i-YWV">
-                                                    <rect key="frame" x="20" y="374.66666666666669" width="350" height="54"/>
+                                                    <rect key="frame" x="20" y="366" width="350" height="54"/>
                                                     <string key="text">It is common to only show your first and last name in a resume, but feel free to include your title, middle name, or middle initial.</string>
                                                     <fontDescription key="fontDescription" type="system" weight="light" pointSize="15"/>
                                                     <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -481,7 +482,7 @@
                                             <constraints>
                                                 <constraint firstItem="JG6-6i-YWV" firstAttribute="top" secondItem="2gw-Pz-rp5" secondAttribute="bottom" constant="60" id="4As-RZ-dzP"/>
                                                 <constraint firstItem="2gw-Pz-rp5" firstAttribute="leading" secondItem="dlr-90-0ha" secondAttribute="leadingMargin" id="7fg-l4-iYT"/>
-                                                <constraint firstItem="w6S-4u-6fZ" firstAttribute="top" secondItem="dlr-90-0ha" secondAttribute="topMargin" constant="60" id="9qg-Oq-dhN"/>
+                                                <constraint firstItem="w6S-4u-6fZ" firstAttribute="top" secondItem="dlr-90-0ha" secondAttribute="topMargin" constant="50" id="9qg-Oq-dhN"/>
                                                 <constraint firstItem="JG6-6i-YWV" firstAttribute="leading" secondItem="dlr-90-0ha" secondAttribute="leadingMargin" id="BMV-Mh-AJm"/>
                                                 <constraint firstItem="cco-IO-9T5" firstAttribute="leading" secondItem="dlr-90-0ha" secondAttribute="leadingMargin" id="JYe-tI-wvd"/>
                                                 <constraint firstAttribute="trailingMargin" secondItem="cco-IO-9T5" secondAttribute="trailing" id="Mnx-sl-duz"/>
@@ -503,17 +504,36 @@
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dGQ-0A-cZa">
+                                <rect key="frame" x="20" y="750" width="350" height="50"/>
+                                <color key="backgroundColor" systemColor="tintColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="9mH-QP-GS2"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="25"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" title="NEXT">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="nextButtonAction:" destination="nhF-d0-nS6" eventType="touchUpInside" id="CSW-Vm-hfs"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="nRb-d5-ah4"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstAttribute="bottom" secondItem="UX4-PZ-JAJ" secondAttribute="bottom" id="3cb-Xr-z6q"/>
+                            <constraint firstItem="nRb-d5-ah4" firstAttribute="trailing" secondItem="dGQ-0A-cZa" secondAttribute="trailing" constant="20" id="DKx-XZ-08g"/>
                             <constraint firstItem="nRb-d5-ah4" firstAttribute="trailing" secondItem="UX4-PZ-JAJ" secondAttribute="trailing" id="OjE-ax-7gD"/>
+                            <constraint firstItem="nRb-d5-ah4" firstAttribute="bottom" secondItem="dGQ-0A-cZa" secondAttribute="bottom" constant="10" id="iP9-o6-sfL"/>
                             <constraint firstItem="UX4-PZ-JAJ" firstAttribute="top" secondItem="nRb-d5-ah4" secondAttribute="top" id="kno-ta-DPY"/>
+                            <constraint firstItem="dGQ-0A-cZa" firstAttribute="leading" secondItem="nRb-d5-ah4" secondAttribute="leading" constant="20" id="nXA-N9-kgP"/>
                             <constraint firstItem="UX4-PZ-JAJ" firstAttribute="leading" secondItem="nRb-d5-ah4" secondAttribute="leading" id="uXc-H6-htb"/>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="nextButton" destination="dGQ-0A-cZa" id="kWI-oB-ii6"/>
                         <outlet property="tableView" destination="UX4-PZ-JAJ" id="cLG-G0-dJr"/>
                     </connections>
                 </viewController>
@@ -559,6 +579,9 @@
         </systemColor>
         <systemColor name="systemGreenColor">
             <color red="0.20392156862745098" green="0.7803921568627451" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="tintColor">
+            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
