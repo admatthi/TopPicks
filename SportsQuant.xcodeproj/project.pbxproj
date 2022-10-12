@@ -22,6 +22,10 @@
 		9D1F12B828F58D93007D1BC0 /* SportsQuantTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D1F12B728F58D93007D1BC0 /* SportsQuantTests.swift */; };
 		9D1F12C228F58D93007D1BC0 /* SportsQuantUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D1F12C128F58D93007D1BC0 /* SportsQuantUITests.swift */; };
 		9D1F12C428F58D93007D1BC0 /* SportsQuantUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D1F12C328F58D93007D1BC0 /* SportsQuantUITestsLaunchTests.swift */; };
+		9D902A5A28F6D2E8003E44A1 /* PayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D902A5928F6D2E8003E44A1 /* PayViewController.swift */; };
+		9D902A5C28F6D48A003E44A1 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 9D902A5B28F6D48A003E44A1 /* GoogleService-Info.plist */; };
+		9D902A5D28F6D48A003E44A1 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 9D902A5B28F6D48A003E44A1 /* GoogleService-Info.plist */; };
+		9D902A5E28F6D48A003E44A1 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 9D902A5B28F6D48A003E44A1 /* GoogleService-Info.plist */; };
 		DBC9A735C834F3F18D566E2D /* Pods_SportsQuantTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AEFDD23CD8C18AA95A369F15 /* Pods_SportsQuantTests.framework */; };
 /* End PBXBuildFile section */
 
@@ -65,6 +69,8 @@
 		9D1F12BD28F58D93007D1BC0 /* SportsQuantUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SportsQuantUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		9D1F12C128F58D93007D1BC0 /* SportsQuantUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SportsQuantUITests.swift; sourceTree = "<group>"; };
 		9D1F12C328F58D93007D1BC0 /* SportsQuantUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SportsQuantUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		9D902A5928F6D2E8003E44A1 /* PayViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PayViewController.swift; sourceTree = "<group>"; };
+		9D902A5B28F6D48A003E44A1 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
 		AEFDD23CD8C18AA95A369F15 /* Pods_SportsQuantTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SportsQuantTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D77C8D6F8DF36786AF15D710 /* Pods_SportsQuant_SportsQuantUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SportsQuant_SportsQuantUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		EDABA02DFC76AAE3D8B3C218 /* Pods-SportsQuantTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SportsQuantTests.release.xcconfig"; path = "Target Support Files/Pods-SportsQuantTests/Pods-SportsQuantTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -140,9 +146,11 @@
 				9D1F12A028F58D91007D1BC0 /* AppDelegate.swift */,
 				9D1F12A428F58D91007D1BC0 /* ViewController.swift */,
 				9D1F12A628F58D91007D1BC0 /* Main.storyboard */,
+				9D902A5928F6D2E8003E44A1 /* PayViewController.swift */,
 				9D1F12A928F58D93007D1BC0 /* Assets.xcassets */,
 				9D1F12AB28F58D93007D1BC0 /* LaunchScreen.storyboard */,
 				9D1F12AE28F58D93007D1BC0 /* Info.plist */,
+				9D902A5B28F6D48A003E44A1 /* GoogleService-Info.plist */,
 				4EBAF49528F5CF5800BF2EE5 /* SportsBetterDetailTableViewCell.swift */,
 				4E479CEC28F5EAE800757C9D /* TagsCollectionViewCell.swift */,
 			);
@@ -291,6 +299,7 @@
 				9D1F12AD28F58D93007D1BC0 /* LaunchScreen.storyboard in Resources */,
 				9D1F12AA28F58D93007D1BC0 /* Assets.xcassets in Resources */,
 				9D1F12A828F58D91007D1BC0 /* Main.storyboard in Resources */,
+				9D902A5C28F6D48A003E44A1 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -298,6 +307,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9D902A5D28F6D48A003E44A1 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -305,6 +315,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9D902A5E28F6D48A003E44A1 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -421,6 +432,7 @@
 				4EBAF49228F5C7B300BF2EE5 /* NetworkManager.swift in Sources */,
 				4EBAF49628F5CF5800BF2EE5 /* SportsBetterDetailTableViewCell.swift in Sources */,
 				4E479CED28F5EAE800757C9D /* TagsCollectionViewCell.swift in Sources */,
+				9D902A5A28F6D2E8003E44A1 /* PayViewController.swift in Sources */,
 				9D1F12A528F58D91007D1BC0 /* ViewController.swift in Sources */,
 				9D1F12A128F58D91007D1BC0 /* AppDelegate.swift in Sources */,
 				4EBAF49328F5C7B300BF2EE5 /* UpcomingOddModel.swift in Sources */,
