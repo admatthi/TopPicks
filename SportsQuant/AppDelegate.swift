@@ -44,17 +44,24 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         Purchases.debugLogsEnabled = true
         
         uid = UIDevice.current.identifierForVendor!.uuidString
-
-        Purchases.debugLogsEnabled = true
-
-        Purchases.configure(withAPIKey: "appl_AozYIhYOTjSTvONMDSUXOWFflCh", appUserID: uid)
-        Purchases.shared.delegate = self
         
         ApplicationDelegate.shared.application(
                            application,
                            didFinishLaunchingWithOptions: launchOptions
                        )
         
+        AppEvents.activateApp()
+        UIApplication.shared.isIdleTimerDisabled = true
+        Settings.setAdvertiserTrackingEnabled(true)
+
+        Purchases.debugLogsEnabled = true
+        Purchases.configure(withAPIKey: "appl_AozYIhYOTjSTvONMDSUXOWFflCh", appUserID: uid)
+        Purchases.shared.delegate = self
+        SVProgressHUD.setDefaultMaskType(.clear)
+
+        
+        
+   
         Purchases.shared.purchaserInfo { (purchaserInfo, error) in
             if let purchaserInfo = purchaserInfo{
                 
@@ -83,6 +90,38 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                     UserDefaults.standard.set(true, forKey: "didPurchase")
                 }
             }
+        }
+        
+        let launchedBefore = UserDefaults.standard.bool(forKey: "launchedBefore")
+
+        if launchedBefore  {
+           
+
+                   let mainStoryboardIpad : UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+                   let vc : UITabBarController = mainStoryboardIpad.instantiateViewController(withIdentifier: "maintab") as! UITabBarController
+                   self.window = UIWindow(frame: UIScreen.main.bounds)
+                   self.window?.rootViewController = vc
+                   vc.selectedIndex = 0
+                   self.window?.makeKeyAndVisible()
+        } else {
+            
+            
+            UserDefaults.standard.set(true, forKey: "launchedBefore")
+
+//                        let mainStoryboardIpad : UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+//                        let vc : PaywalViewController = mainStoryboardIpad.instantiateViewController(withIdentifier: "Paywall") as! PaywalViewController
+//                        self.window = UIWindow(frame: UIScreen.main.bounds)
+//                        self.window?.rootViewController = vc
+//            //            vc.selectedIndex = 0
+//                        self.window?.makeKeyAndVisible()
+
+            let mainStoryboardIpad : UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+            let vc : PayViewController = mainStoryboardIpad.instantiateViewController(withIdentifier: "Pay") as! PayViewController
+            self.window = UIWindow(frame: UIScreen.main.bounds)
+            self.window?.rootViewController = vc
+//            vc.selectedIndex = 0
+            self.window?.makeKeyAndVisible()
+            
         }
         
         
