@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		1337F6B7217969FF508B2D44 /* Pods_SportsQuant_SportsQuantUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D77C8D6F8DF36786AF15D710 /* Pods_SportsQuant_SportsQuantUITests.framework */; };
 		22AB65507D9E997CB8D527F1 /* Pods_SportsQuant.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6B7B38A5B5860FB8B6FCA06D /* Pods_SportsQuant.framework */; };
+		4E21DE0D28F767AB00E5CA16 /* FinishViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E21DE0C28F767AB00E5CA16 /* FinishViewController.swift */; };
+		4E21DE0F28F7683C00E5CA16 /* FinishTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E21DE0E28F7683C00E5CA16 /* FinishTableViewCell.swift */; };
 		4E479CED28F5EAE800757C9D /* TagsCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E479CEC28F5EAE800757C9D /* TagsCollectionViewCell.swift */; };
 		4E5D04B928F75B1800BE4C8A /* WorkDetailTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E5D04B828F75B1800BE4C8A /* WorkDetailTableViewCell.swift */; };
 		4E79FA1028F7324F000BC176 /* ContactDetailTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E79FA0F28F7324F000BC176 /* ContactDetailTableViewCell.swift */; };
@@ -59,6 +61,8 @@
 		0FDB582AAE03D8EDF54EBD52 /* Pods-SportsQuant.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SportsQuant.debug.xcconfig"; path = "Target Support Files/Pods-SportsQuant/Pods-SportsQuant.debug.xcconfig"; sourceTree = "<group>"; };
 		17DE67884E577448D32446CC /* Pods-SportsQuant-SportsQuantUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SportsQuant-SportsQuantUITests.debug.xcconfig"; path = "Target Support Files/Pods-SportsQuant-SportsQuantUITests/Pods-SportsQuant-SportsQuantUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		3FD925993C0673A8F8CDE894 /* Pods-SportsQuant.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SportsQuant.release.xcconfig"; path = "Target Support Files/Pods-SportsQuant/Pods-SportsQuant.release.xcconfig"; sourceTree = "<group>"; };
+		4E21DE0C28F767AB00E5CA16 /* FinishViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FinishViewController.swift; sourceTree = "<group>"; };
+		4E21DE0E28F7683C00E5CA16 /* FinishTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FinishTableViewCell.swift; sourceTree = "<group>"; };
 		4E479CEC28F5EAE800757C9D /* TagsCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TagsCollectionViewCell.swift; sourceTree = "<group>"; };
 		4E5D04B828F75B1800BE4C8A /* WorkDetailTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkDetailTableViewCell.swift; sourceTree = "<group>"; };
 		4E79FA0F28F7324F000BC176 /* ContactDetailTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactDetailTableViewCell.swift; sourceTree = "<group>"; };
@@ -143,6 +147,7 @@
 				4EFB7A4728F6F1650010A45D /* HomeViewController.swift */,
 				4E79FA1128F7367E000BC176 /* EducationViewController.swift */,
 				4E79FA1528F741BE000BC176 /* WorkHistoryViewController.swift */,
+				4E21DE0C28F767AB00E5CA16 /* FinishViewController.swift */,
 				4E7BB37B28F75F2F00251F4E /* SummaryViewController.swift */,
 			);
 			path = ViewControllers;
@@ -192,6 +197,7 @@
 				4EFB7A4B28F6F7D90010A45D /* IntroTableViewCell.swift */,
 				4E5D04B828F75B1800BE4C8A /* WorkDetailTableViewCell.swift */,
 				4E7BB37D28F75FDB00251F4E /* SummaryDetailTableViewCell.swift */,
+				4E21DE0E28F7683C00E5CA16 /* FinishTableViewCell.swift */,
 			);
 			path = SportsQuant;
 			sourceTree = "<group>";
@@ -471,12 +477,14 @@
 				4EBAF49628F5CF5800BF2EE5 /* SportsBetterDetailTableViewCell.swift in Sources */,
 				4E479CED28F5EAE800757C9D /* TagsCollectionViewCell.swift in Sources */,
 				9D902A5A28F6D2E8003E44A1 /* PayViewController.swift in Sources */,
+				4E21DE0D28F767AB00E5CA16 /* FinishViewController.swift in Sources */,
 				9D1F12A528F58D91007D1BC0 /* ViewController.swift in Sources */,
 				9D1F12A128F58D91007D1BC0 /* AppDelegate.swift in Sources */,
 				4EFB7A4428F6F02C0010A45D /* IntoViewController.swift in Sources */,
 				4EFB7A4828F6F1650010A45D /* HomeViewController.swift in Sources */,
 				4E79FA1028F7324F000BC176 /* ContactDetailTableViewCell.swift in Sources */,
 				4E79FA1228F7367E000BC176 /* EducationViewController.swift in Sources */,
+				4E21DE0F28F7683C00E5CA16 /* FinishTableViewCell.swift in Sources */,
 				4EBAF49328F5C7B300BF2EE5 /* UpcomingOddModel.swift in Sources */,
 				4EBAF49428F5C7B300BF2EE5 /* ApiModel.swift in Sources */,
 				4E79FA1428F73B1B000BC176 /* EducationDetailTableViewCell.swift in Sources */,

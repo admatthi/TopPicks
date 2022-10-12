@@ -1536,6 +1536,78 @@ name?</string>
             </objects>
             <point key="canvasLocation" x="4056.9230769230767" y="-73.222748815165872"/>
         </scene>
+        <!--Finish View Controller-->
+        <scene sceneID="81D-LE-e61">
+            <objects>
+                <viewController storyboardIdentifier="FinishViewController" id="sHs-ex-nce" customClass="FinishViewController" customModule="SportsQuant" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="9n6-0W-v8H">
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="dIW-lZ-ke0">
+                                <rect key="frame" x="0.0" y="47" width="390" height="797"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="FinishTableViewCell" rowHeight="551" id="x89-KV-Sl3" customClass="FinishTableViewCell" customModule="SportsQuant" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="50" width="390" height="551"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="x89-KV-Sl3" id="G9B-36-gSc">
+                                            <rect key="frame" x="0.0" y="0.0" width="390" height="551"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Here is the last step to generate Resume" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aRI-HL-1oa">
+                                                    <rect key="frame" x="20" y="41" width="350" height="50.333333333333343"/>
+                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="21"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="aRI-HL-1oa" firstAttribute="top" secondItem="G9B-36-gSc" secondAttribute="topMargin" constant="30" id="JmU-AS-CXQ"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="aRI-HL-1oa" secondAttribute="trailing" id="byn-7T-4lc"/>
+                                                <constraint firstItem="aRI-HL-1oa" firstAttribute="leading" secondItem="G9B-36-gSc" secondAttribute="leadingMargin" id="yIc-pw-BMK"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jXf-ou-fbq">
+                                <rect key="frame" x="20" y="750" width="350" height="50"/>
+                                <color key="backgroundColor" systemColor="tintColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="pfZ-kH-RRR"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" title="Generate CV">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="nextButtonAction:" destination="sHs-ex-nce" eventType="touchUpInside" id="c9n-cM-wyO"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="hze-wl-f1T"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="dIW-lZ-ke0" firstAttribute="top" secondItem="hze-wl-f1T" secondAttribute="top" id="6eZ-RN-mhv"/>
+                            <constraint firstItem="jXf-ou-fbq" firstAttribute="leading" secondItem="hze-wl-f1T" secondAttribute="leading" constant="20" id="979-l4-5Ql"/>
+                            <constraint firstAttribute="trailing" secondItem="dIW-lZ-ke0" secondAttribute="trailing" id="ReG-vi-TIP"/>
+                            <constraint firstAttribute="bottom" secondItem="dIW-lZ-ke0" secondAttribute="bottom" id="Xfl-ML-XgX"/>
+                            <constraint firstItem="hze-wl-f1T" firstAttribute="trailing" secondItem="jXf-ou-fbq" secondAttribute="trailing" constant="20" id="eyn-ON-Asl"/>
+                            <constraint firstItem="dIW-lZ-ke0" firstAttribute="leading" secondItem="hze-wl-f1T" secondAttribute="leading" id="q6x-9n-mCc"/>
+                            <constraint firstItem="hze-wl-f1T" firstAttribute="bottom" secondItem="jXf-ou-fbq" secondAttribute="bottom" constant="10" id="yOk-yQ-k12"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="nextButton" destination="jXf-ou-fbq" id="Fup-00-tKg"/>
+                        <outlet property="tableView" destination="dIW-lZ-ke0" id="2jx-oP-LAs"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ehj-ts-34P" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4863" y="-73"/>
+        </scene>
     </scenes>
     <resources>
         <image name="by proceeding" width="542" height="74"/>
