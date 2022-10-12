@@ -23,9 +23,13 @@ class HomeViewController: UIViewController {
         ContactViewControllerVC.title = "Contact"
         let EducationViewControllerVC = storyboard!.instantiateViewController(withIdentifier: "EducationViewController") as! EducationViewController
         EducationViewControllerVC.title = "Education"
+        let WorkHistoryViewControllerVC = storyboard!.instantiateViewController(withIdentifier: "WorkHistoryViewController") as! WorkHistoryViewController
+        WorkHistoryViewControllerVC.title = "Work"
+        let SummaryViewControllerVC = storyboard!.instantiateViewController(withIdentifier: "SummaryViewController") as! SummaryViewController
+        SummaryViewControllerVC.title = "Summary"
         
          pagingViewController = PagingViewController(viewControllers: [
-            IntoViewControllerVC,ContactViewControllerVC,EducationViewControllerVC
+            IntoViewControllerVC,ContactViewControllerVC,EducationViewControllerVC,WorkHistoryViewControllerVC,SummaryViewControllerVC
         ])
         pagingViewController?.menuItemSize = .fixed(width: UIScreen.main.bounds.width / 3, height: 50)
         pagingViewController?.textColor = UIColor.darkGray
