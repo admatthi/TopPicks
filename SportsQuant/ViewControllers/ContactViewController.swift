@@ -21,7 +21,7 @@ class ContactViewController: UIViewController {
     }
     
     @IBAction func nextButtonAction(_ sender: Any) {
-        pagingViewController?.select(index: 1,animated: true)
+        pagingViewController?.select(index: 2,animated: true)
     }
     
     /*

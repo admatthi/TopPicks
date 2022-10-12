@@ -21,11 +21,13 @@ class HomeViewController: UIViewController {
         IntoViewControllerVC.title = "Intro"
         let ContactViewControllerVC = storyboard!.instantiateViewController(withIdentifier: "ContactViewController") as! ContactViewController
         ContactViewControllerVC.title = "Contact"
-
+        let EducationViewControllerVC = storyboard!.instantiateViewController(withIdentifier: "EducationViewController") as! EducationViewController
+        EducationViewControllerVC.title = "Education"
+        
          pagingViewController = PagingViewController(viewControllers: [
-            IntoViewControllerVC,ContactViewControllerVC
+            IntoViewControllerVC,ContactViewControllerVC,EducationViewControllerVC
         ])
-        pagingViewController?.menuItemSize = .fixed(width: UIScreen.main.bounds.width / 2, height: 50)
+        pagingViewController?.menuItemSize = .fixed(width: UIScreen.main.bounds.width / 3, height: 50)
         pagingViewController?.textColor = UIColor.darkGray
         pagingViewController?.selectedFont = UIFont.systemFont(ofSize: 17, weight: UIFont.Weight.semibold)
         pagingViewController?.font =  UIFont.systemFont(ofSize: 17, weight: UIFont.Weight.semibold)

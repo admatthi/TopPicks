@@ -11,6 +11,8 @@
 		22AB65507D9E997CB8D527F1 /* Pods_SportsQuant.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6B7B38A5B5860FB8B6FCA06D /* Pods_SportsQuant.framework */; };
 		4E479CED28F5EAE800757C9D /* TagsCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E479CEC28F5EAE800757C9D /* TagsCollectionViewCell.swift */; };
 		4E79FA1028F7324F000BC176 /* ContactDetailTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E79FA0F28F7324F000BC176 /* ContactDetailTableViewCell.swift */; };
+		4E79FA1228F7367E000BC176 /* EducationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E79FA1128F7367E000BC176 /* EducationViewController.swift */; };
+		4E79FA1428F73B1B000BC176 /* EducationDetailTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E79FA1328F73B1B000BC176 /* EducationDetailTableViewCell.swift */; };
 		4EBAF49228F5C7B300BF2EE5 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EBAF48F28F5C7B200BF2EE5 /* NetworkManager.swift */; };
 		4EBAF49328F5C7B300BF2EE5 /* UpcomingOddModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EBAF49028F5C7B200BF2EE5 /* UpcomingOddModel.swift */; };
 		4EBAF49428F5C7B300BF2EE5 /* ApiModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EBAF49128F5C7B200BF2EE5 /* ApiModel.swift */; };
@@ -55,6 +57,8 @@
 		3FD925993C0673A8F8CDE894 /* Pods-SportsQuant.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SportsQuant.release.xcconfig"; path = "Target Support Files/Pods-SportsQuant/Pods-SportsQuant.release.xcconfig"; sourceTree = "<group>"; };
 		4E479CEC28F5EAE800757C9D /* TagsCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TagsCollectionViewCell.swift; sourceTree = "<group>"; };
 		4E79FA0F28F7324F000BC176 /* ContactDetailTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactDetailTableViewCell.swift; sourceTree = "<group>"; };
+		4E79FA1128F7367E000BC176 /* EducationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EducationViewController.swift; sourceTree = "<group>"; };
+		4E79FA1328F73B1B000BC176 /* EducationDetailTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EducationDetailTableViewCell.swift; sourceTree = "<group>"; };
 		4EBAF48F28F5C7B200BF2EE5 /* NetworkManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 		4EBAF49028F5C7B200BF2EE5 /* UpcomingOddModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UpcomingOddModel.swift; sourceTree = "<group>"; };
 		4EBAF49128F5C7B200BF2EE5 /* ApiModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ApiModel.swift; sourceTree = "<group>"; };
@@ -129,7 +133,7 @@
 				4EFB7A4328F6F02C0010A45D /* IntoViewController.swift */,
 				4EFB7A4528F6F0490010A45D /* ContactViewController.swift */,
 				4EFB7A4728F6F1650010A45D /* HomeViewController.swift */,
-				4E79FA0F28F7324F000BC176 /* ContactDetailTableViewCell.swift */,
+				4E79FA1128F7367E000BC176 /* EducationViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -173,6 +177,8 @@
 				9D1F12AE28F58D93007D1BC0 /* Info.plist */,
 				4EBAF49528F5CF5800BF2EE5 /* SportsBetterDetailTableViewCell.swift */,
 				4E479CEC28F5EAE800757C9D /* TagsCollectionViewCell.swift */,
+				4E79FA1328F73B1B000BC176 /* EducationDetailTableViewCell.swift */,
+				4E79FA0F28F7324F000BC176 /* ContactDetailTableViewCell.swift */,
 				4EFB7A4B28F6F7D90010A45D /* IntroTableViewCell.swift */,
 			);
 			path = SportsQuant;
@@ -457,8 +463,10 @@
 				4EFB7A4428F6F02C0010A45D /* IntoViewController.swift in Sources */,
 				4EFB7A4828F6F1650010A45D /* HomeViewController.swift in Sources */,
 				4E79FA1028F7324F000BC176 /* ContactDetailTableViewCell.swift in Sources */,
+				4E79FA1228F7367E000BC176 /* EducationViewController.swift in Sources */,
 				4EBAF49328F5C7B300BF2EE5 /* UpcomingOddModel.swift in Sources */,
 				4EBAF49428F5C7B300BF2EE5 /* ApiModel.swift in Sources */,
+				4E79FA1428F73B1B000BC176 /* EducationDetailTableViewCell.swift in Sources */,
 				4EFB7A4C28F6F7D90010A45D /* IntroTableViewCell.swift in Sources */,
 				4EFB7A4628F6F0490010A45D /* ContactViewController.swift in Sources */,
 			);
