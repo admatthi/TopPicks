@@ -11,6 +11,7 @@
 		22AB65507D9E997CB8D527F1 /* Pods_SportsQuant.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6B7B38A5B5860FB8B6FCA06D /* Pods_SportsQuant.framework */; };
 		4E21DE0D28F767AB00E5CA16 /* FinishViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E21DE0C28F767AB00E5CA16 /* FinishViewController.swift */; };
 		4E21DE0F28F7683C00E5CA16 /* FinishTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E21DE0E28F7683C00E5CA16 /* FinishTableViewCell.swift */; };
+		4E21DE1128F76F9100E5CA16 /* Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E21DE1028F76F9100E5CA16 /* Extension.swift */; };
 		4E479CED28F5EAE800757C9D /* TagsCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E479CEC28F5EAE800757C9D /* TagsCollectionViewCell.swift */; };
 		4E5D04B928F75B1800BE4C8A /* WorkDetailTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E5D04B828F75B1800BE4C8A /* WorkDetailTableViewCell.swift */; };
 		4E79FA1028F7324F000BC176 /* ContactDetailTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E79FA0F28F7324F000BC176 /* ContactDetailTableViewCell.swift */; };
@@ -63,6 +64,7 @@
 		3FD925993C0673A8F8CDE894 /* Pods-SportsQuant.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SportsQuant.release.xcconfig"; path = "Target Support Files/Pods-SportsQuant/Pods-SportsQuant.release.xcconfig"; sourceTree = "<group>"; };
 		4E21DE0C28F767AB00E5CA16 /* FinishViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FinishViewController.swift; sourceTree = "<group>"; };
 		4E21DE0E28F7683C00E5CA16 /* FinishTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FinishTableViewCell.swift; sourceTree = "<group>"; };
+		4E21DE1028F76F9100E5CA16 /* Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extension.swift; sourceTree = "<group>"; };
 		4E479CEC28F5EAE800757C9D /* TagsCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TagsCollectionViewCell.swift; sourceTree = "<group>"; };
 		4E5D04B828F75B1800BE4C8A /* WorkDetailTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkDetailTableViewCell.swift; sourceTree = "<group>"; };
 		4E79FA0F28F7324F000BC176 /* ContactDetailTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactDetailTableViewCell.swift; sourceTree = "<group>"; };
@@ -198,6 +200,7 @@
 				4E5D04B828F75B1800BE4C8A /* WorkDetailTableViewCell.swift */,
 				4E7BB37D28F75FDB00251F4E /* SummaryDetailTableViewCell.swift */,
 				4E21DE0E28F7683C00E5CA16 /* FinishTableViewCell.swift */,
+				4E21DE1028F76F9100E5CA16 /* Extension.swift */,
 			);
 			path = SportsQuant;
 			sourceTree = "<group>";
@@ -487,6 +490,7 @@
 				4E21DE0F28F7683C00E5CA16 /* FinishTableViewCell.swift in Sources */,
 				4EBAF49328F5C7B300BF2EE5 /* UpcomingOddModel.swift in Sources */,
 				4EBAF49428F5C7B300BF2EE5 /* ApiModel.swift in Sources */,
+				4E21DE1128F76F9100E5CA16 /* Extension.swift in Sources */,
 				4E79FA1428F73B1B000BC176 /* EducationDetailTableViewCell.swift in Sources */,
 				4EFB7A4C28F6F7D90010A45D /* IntroTableViewCell.swift in Sources */,
 				4E79FA1628F741BE000BC176 /* WorkHistoryViewController.swift in Sources */,

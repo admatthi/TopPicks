@@ -10,10 +10,13 @@ import UIKit
 class IntoViewController: UIViewController {
 
     @IBOutlet weak var nextButton: UIButton!
-    var firstName = ""
-    var lastName = ""
+    var firstName:String? = ""
+    var lastName:String? = ""
     @IBOutlet weak var tableView: UITableView!
     override func viewDidLoad() {
+        firstName = UserDefaults.standard.User_First_Name
+        lastName = UserDefaults.standard.User_Last_Name
+
         super.viewDidLoad()
         tableView.dataSource = self
         tableView.delegate = self
@@ -23,6 +26,9 @@ class IntoViewController: UIViewController {
     }
     
     @IBAction func nextButtonAction(_ sender: Any) {
+        UserDefaults.standard.User_First_Name = firstName
+        UserDefaults.standard.User_Last_Name = lastName
+
         pagingViewController?.select(index: 1,animated: true)
     }
     
@@ -35,11 +41,29 @@ class IntoViewController: UIViewController {
         // Pass the selected object to the new view controller.
     }
     */
+    func textField(_ textField: UITextField,
+        shouldChangeCharactersIn range: NSRange,
+        replacementString string: String) -> Bool {
 
+        NSLog("Event Triggered")
+        return true
+    }
+    @objc func textFieldFirstNameDidChange(_ textField: UITextField) {
+        firstName = textField.text
+        UserDefaults.standard.User_First_Name = firstName
+
+    }
+    @objc func textFieldLastNameDidChange(_ textField: UITextField) {
+        lastName = textField.text
+        UserDefaults.standard.User_Last_Name = lastName
+    }
 }
 extension IntoViewController:UITableViewDelegate,UITableViewDataSource{
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "IntroTableViewCell", for: indexPath) as! IntroTableViewCell
+        cell.firstNameTextField.addTarget(self, action: #selector(IntoViewController.textFieldFirstNameDidChange(_:)), for: .editingChanged)
+        cell.lastNameTextField.addTarget(self, action: #selector(IntoViewController.textFieldLastNameDidChange(_:)), for: .editingChanged)
+
         cell.firstNameTextField.text = firstName
         cell.lastNameTextField.text = lastName
         return cell
