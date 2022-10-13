@@ -54,7 +54,7 @@ class WorkDetailTableViewCell: UITableViewCell {
         
         
         companyLocationLabel.attributedPlaceholder = NSAttributedString(
-            string: "Menlo Park",
+            string: "Menlo Park, CA",
             attributes: [NSAttributedString.Key.foregroundColor: UIColor.white.withAlphaComponent(0.2)]
         )
         
