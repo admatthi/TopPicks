@@ -1407,9 +1407,16 @@ name?</string>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
+                                            <outlet property="companyInPositionLabel" destination="h1y-w9-KcE" id="J0s-v7-8co"/>
+                                            <outlet property="companyLocationLabel" destination="v9X-Qo-GZS" id="lpT-Vy-iKZ"/>
+                                            <outlet property="companyNameLabel" destination="lmr-LM-T6V" id="l7B-qL-FWM"/>
+                                            <outlet property="fromMonthTF" destination="Xhy-NJ-P6t" id="yLd-nl-iqX"/>
+                                            <outlet property="fromYearTF" destination="G4A-04-hOk" id="FHF-VI-RW4"/>
                                             <outlet property="presentSwitch" destination="bdo-jV-8cN" id="3He-wE-ELD"/>
                                             <outlet property="skipThisSectionButton" destination="KFQ-zK-Vbo" id="Ck7-K9-Iel"/>
                                             <outlet property="toDateStackView" destination="6ZC-Ee-ssO" id="4Ji-YR-UV6"/>
+                                            <outlet property="toMonthTF" destination="FJ0-6s-kcL" id="HiZ-Yf-YBO"/>
+                                            <outlet property="toYearTF" destination="y8L-Kt-1op" id="yMi-T9-uuz"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>

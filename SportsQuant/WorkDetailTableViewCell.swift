@@ -9,7 +9,14 @@
 import UIKit
 
 class WorkDetailTableViewCell: UITableViewCell {
-
+    @IBOutlet weak var toYearTF: UITextField!
+    @IBOutlet weak var fromYearTF: UITextField!
+    @IBOutlet weak var toMonthTF: UITextField!
+    @IBOutlet weak var fromMonthTF: UITextField!
+    @IBOutlet weak var companyNameLabel: UITextField!
+    
+    @IBOutlet weak var companyInPositionLabel: UITextField!
+    @IBOutlet weak var companyLocationLabel: UITextField!
     @IBOutlet weak var skipThisSectionButton: UIButton!
     @IBOutlet weak var toDateStackView: UIStackView!
     @IBOutlet weak var presentSwitch: UISwitch!

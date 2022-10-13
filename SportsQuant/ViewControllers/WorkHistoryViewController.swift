@@ -9,8 +9,70 @@
 import UIKit
 
 class WorkHistoryViewController: UIViewController {
-    var isPresentSelected = false
-    
+    var isPresentSelected:Bool{
+        get{
+            UserDefaults.standard.UserWorkHistoryPresentSelected
+        }
+        set{
+            UserDefaults.standard.UserWorkHistoryPresentSelected = newValue
+        }
+    }
+    var toYear: String?{
+        get{
+            UserDefaults.standard.UserWorkToYear
+        }
+        set{
+            UserDefaults.standard.UserWorkToYear = newValue
+        }
+    }
+    var fromYear: String?{
+        get{
+            UserDefaults.standard.UserWorkFromYear
+        }
+        set{
+            UserDefaults.standard.UserWorkFromYear = newValue
+        }
+    }
+    var toMonth: String?{
+        get{
+            UserDefaults.standard.UserWorkToMonth
+        }
+        set{
+            UserDefaults.standard.UserWorkToMonth = newValue
+        }
+    }
+    var fromMonth: String?{
+        get{
+            UserDefaults.standard.UserWorkFromMonth
+        }
+        set{
+            UserDefaults.standard.UserWorkFromMonth = newValue
+        }
+    }
+    var companyName: String?{
+        get{
+            UserDefaults.standard.UserWorkCompanyName
+        }
+        set{
+            UserDefaults.standard.UserWorkCompanyName = newValue
+        }
+    }
+    var companyLocation: String?{
+        get{
+            UserDefaults.standard.UserWorkCompanyLocation
+        }
+        set{
+            UserDefaults.standard.UserWorkCompanyLocation = newValue
+        }
+    }
+    var companyInPosition: String?{
+        get{
+            UserDefaults.standard.UserWorkCompanyInPosition
+        }
+        set{
+            UserDefaults.standard.UserWorkCompanyInPosition = newValue
+        }
+    }
     @IBOutlet weak var nextButton: UIButton!
 
     @IBOutlet weak var tableView: UITableView!
@@ -46,6 +108,23 @@ class WorkHistoryViewController: UIViewController {
           print("table row switch Changed \(sender.tag)")
           print("The switch is \(sender.isOn ? "ON" : "OFF")")
     }
+    @objc func textFieldToMonthDidChange(_ textField: UITextField) {
+        toMonth = textField.text
+
+    }
+    @objc func textFieldFromMonthDidChange(_ textField: UITextField) {
+        fromMonth = textField.text
+
+    }
+    @objc func textFieldToYearDidChange(_ textField: UITextField) {
+        toYear = textField.text
+
+    }
+    @objc func textFieldfromYearDidChange(_ textField: UITextField) {
+        fromYear = textField.text
+
+    }
+
 }
 extension WorkHistoryViewController:UITableViewDelegate,UITableViewDataSource{
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -63,6 +142,17 @@ extension WorkHistoryViewController:UITableViewDelegate,UITableViewDataSource{
 
             cell.toDateStackView.isHidden = false
         }
+        cell.fromMonthTF.text = fromMonth
+        cell.fromYearTF.text = fromYear
+        cell.toMonthTF.text = toMonth
+        cell.toYearTF.text = toYear
+        cell.fromMonthTF.addTarget(self, action: #selector(EducationViewController.textFieldFromMonthDidChange(_:)), for: .editingChanged)
+
+        cell.fromYearTF.addTarget(self, action: #selector(EducationViewController.textFieldfromYearDidChange(_:)), for: .editingChanged)
+
+        cell.toMonthTF.addTarget(self, action: #selector(EducationViewController.textFieldToMonthDidChange(_:)), for: .editingChanged)
+
+        cell.toYearTF.addTarget(self, action: #selector(EducationViewController.textFieldToYearDidChange(_:)), for: .editingChanged)
 
         return cell
     }

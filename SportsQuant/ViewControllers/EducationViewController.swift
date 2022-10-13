@@ -50,7 +50,14 @@ class EducationViewController: UIViewController {
              UserDefaults.standard.UserEducationSchoolName = newValue
          }
      }
-    var isPresentSelected = false
+    var isPresentSelected:Bool{
+        get{
+            UserDefaults.standard.UserEducationPresentSelected
+        }
+        set{
+            UserDefaults.standard.UserEducationPresentSelected = newValue
+        }
+    }
     
     @IBOutlet weak var nextButton: UIButton!
 

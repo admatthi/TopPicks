@@ -123,5 +123,76 @@ extension UserDefaults{
             UserDefaults.standard.set(newValue, forKey: "UserEducationSchoolName")
         }
     }
-    
+    public var UserEducationPresentSelected:Bool{
+        get{
+            return UserDefaults.standard.bool(forKey: "UserEducationPresentSelected")
+        }
+        set{
+            UserDefaults.standard.set(newValue, forKey: "UserEducationPresentSelected")
+        }
+    }
+    public var UserWorkHistoryPresentSelected:Bool{
+        get{
+            return UserDefaults.standard.bool(forKey: "UserWorkHistoryPresentSelected")
+        }
+        set{
+            UserDefaults.standard.set(newValue, forKey: "UserWorkHistoryPresentSelected")
+        }
+    }
+    public var UserWorkToMonth:String?{
+        get{
+            return UserDefaults.standard.string(forKey: "UserWorkToMonth")
+        }
+        set{
+            UserDefaults.standard.set(newValue, forKey: "UserWorkToMonth")
+        }
+    }
+    public var UserWorkFromMonth:String?{
+        get{
+            return UserDefaults.standard.string(forKey: "UserWorkFromMonth")
+        }
+        set{
+            UserDefaults.standard.set(newValue, forKey: "UserWorkFromMonth")
+        }
+    }
+    public var UserWorkToYear:String?{
+        get{
+            return UserDefaults.standard.string(forKey: "UserWorkToYear")
+        }
+        set{
+            UserDefaults.standard.set(newValue, forKey: "UserWorkToYear")
+        }
+    }
+    public var UserWorkFromYear:String?{
+        get{
+            return UserDefaults.standard.string(forKey: "UserWorkFromYear")
+        }
+        set{
+            UserDefaults.standard.set(newValue, forKey: "UserWorkFromYear")
+        }
+    }
+    public var UserWorkCompanyName:String?{
+        get{
+            return UserDefaults.standard.string(forKey: "UserWorkCompanyName")
+        }
+        set{
+            UserDefaults.standard.set(newValue, forKey: "UserWorkCompanyName")
+        }
+    }
+    public var UserWorkCompanyLocation:String?{
+        get{
+            return UserDefaults.standard.string(forKey: "UserWorkCompanyLocation")
+        }
+        set{
+            UserDefaults.standard.set(newValue, forKey: "UserWorkCompanyLocation")
+        }
+    }
+    public var UserWorkCompanyInPosition:String?{
+        get{
+            return UserDefaults.standard.string(forKey: "UserWorkCompanyInPosition")
+        }
+        set{
+            UserDefaults.standard.set(newValue, forKey: "UserWorkCompanyInPosition")
+        }
+    }
 }
