@@ -36,11 +36,14 @@ class HomeViewController: UIViewController {
             IntoViewControllerVC,ContactViewControllerVC,EducationViewControllerVC,WorkHistoryViewControllerVC,SummaryViewControllerVC,FinishViewControllerVC
         ])
         pagingViewController?.menuItemSize = .fixed(width: UIScreen.main.bounds.width / 3, height: 50)
-        pagingViewController?.textColor = UIColor.darkGray
+        pagingViewController?.textColor = UIColor.lightGray
         pagingViewController?.selectedFont = UIFont.systemFont(ofSize: 17, weight: UIFont.Weight.semibold)
+        
         pagingViewController?.font =  UIFont.systemFont(ofSize: 17, weight: UIFont.Weight.semibold)
-        pagingViewController?.selectedTextColor = #colorLiteral(red: 0.5490196078, green: 0.6784313725, blue: 0.2588235294, alpha: 1)
-        pagingViewController?.indicatorColor = #colorLiteral(red: 0.5490196078, green: 0.6784313725, blue: 0.2588235294, alpha: 1)
+        pagingViewController?.selectedTextColor = #colorLiteral(red: 0.0829134658, green: 0.2267663181, blue: 0.5822093487, alpha: 1)
+        pagingViewController?.indicatorColor = #colorLiteral(red: 0.0829134658, green: 0.2267663181, blue: 0.5822093487, alpha: 1)
+        pagingViewController?.backgroundColor = #colorLiteral(red: 0.0829134658, green: 0.2267663181, blue: 0.5822093487, alpha: 1)
+        
 //        pagingViewController.menuBackgroundColor = .secondarySystemBackground
         
         addChild(pagingViewController!)
