@@ -18,6 +18,13 @@ class ContactDetailTableViewCell: UITableViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         
+        socialLinkTF.setUnderLine()
+        address2TF.setUnderLine()
+        address1TF.setUnderLine()
+        websiteLinkTF.setUnderLine()
+        phoneTF.setUnderLine()
+        emailTF.setUnderLine()
+
         emailTF.attributedPlaceholder = NSAttributedString(
             string: "john@appleeseed.com",
             attributes: [NSAttributedString.Key.foregroundColor: UIColor.white.withAlphaComponent(0.2)]

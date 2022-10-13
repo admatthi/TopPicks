@@ -23,6 +23,15 @@ class WorkDetailTableViewCell: UITableViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         
+        toYearTF.setUnderLine()
+        fromYearTF.setUnderLine()
+        toMonthTF.setUnderLine()
+        fromMonthTF.setUnderLine()
+        companyInPositionLabel.setUnderLine()
+        companyLocationLabel.setUnderLine()
+        
+        
+        
         toYearTF.attributedPlaceholder = NSAttributedString(
             string: "yyyy",
             attributes: [NSAttributedString.Key.foregroundColor: UIColor.white.withAlphaComponent(0.2)]

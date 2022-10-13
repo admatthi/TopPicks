@@ -15,6 +15,7 @@ class IntroTableViewCell: UITableViewCell {
         super.awakeFromNib()
         // Initialization code
         
+        
         firstNameTextField.attributedPlaceholder = NSAttributedString(
             string: "First Name",
             attributes: [NSAttributedString.Key.foregroundColor: UIColor.white.withAlphaComponent(0.2)]
@@ -24,6 +25,9 @@ class IntroTableViewCell: UITableViewCell {
             string: "Last Name",
             attributes: [NSAttributedString.Key.foregroundColor: UIColor.white.withAlphaComponent(0.2)]
         )
+        
+        lastNameTextField.setUnderLine()
+        firstNameTextField.setUnderLine()
         
     }
 

@@ -22,6 +22,12 @@ class EducationDetailTableViewCell: UITableViewCell {
         super.awakeFromNib()
         // Initialization code
         
+        toYearTF.setUnderLine()
+        fromYearTF.setUnderLine()
+        toMonthTF.setUnderLine()
+        fromMonthTF.setUnderLine()
+        schoolNameTF.setUnderLine()
+        
         schoolNameTF.attributedPlaceholder = NSAttributedString(
             string: "e.g. harvard university",
             attributes: [NSAttributedString.Key.foregroundColor: UIColor.white.withAlphaComponent(0.2)]
