@@ -8,8 +8,15 @@
 
 import UIKit
 
-class SummaryViewController: UIViewController {
-    
+class SummaryViewController: UIViewController, UITextViewDelegate {
+    var userSummary: String?{
+        get{
+            UserDefaults.standard.UserSummary
+        }
+        set{
+            UserDefaults.standard.UserSummary = newValue
+        }
+    }
     @IBOutlet weak var nextButton: UIButton!
 
     @IBOutlet weak var tableView: UITableView!
@@ -35,10 +42,16 @@ class SummaryViewController: UIViewController {
         // Pass the selected object to the new view controller.
     }
     */
+    func textViewDidChange(_ textView: UITextView) {
+        userSummary = textView.text
+    }
 }
 extension SummaryViewController:UITableViewDelegate,UITableViewDataSource{
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "SummaryDetailTableViewCell", for: indexPath) as! SummaryDetailTableViewCell
+        cell.summaryTextView.delegate = self
+        cell.summaryTextView.text = userSummary
+
         return cell
     }
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {

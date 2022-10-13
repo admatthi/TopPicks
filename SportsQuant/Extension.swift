@@ -34,6 +34,15 @@ extension UserDefaults{
             UserDefaults.standard.set(newValue, forKey: "UserEmail")
         }
     }
+    public var UserSummary:String?{
+        get{
+            return UserDefaults.standard.string(forKey: "UserSummary")
+        }
+        set{
+            UserDefaults.standard.set(newValue, forKey: "UserSummary")
+        }
+    }
+    
     public var UserPhone:String?{
         get{
             return UserDefaults.standard.string(forKey: "UserPhone")
