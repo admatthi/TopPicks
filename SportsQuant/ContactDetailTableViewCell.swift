@@ -17,6 +17,40 @@ class ContactDetailTableViewCell: UITableViewCell {
     @IBOutlet weak var emailTF: UITextField!
     override func awakeFromNib() {
         super.awakeFromNib()
+        
+        emailTF.attributedPlaceholder = NSAttributedString(
+            string: "john@appleeseed.com",
+            attributes: [NSAttributedString.Key.foregroundColor: UIColor.white.withAlphaComponent(0.2)]
+        )
+        
+        phoneTF.attributedPlaceholder = NSAttributedString(
+            string: "(123)456-7890",
+            attributes: [NSAttributedString.Key.foregroundColor: UIColor.white.withAlphaComponent(0.2)]
+        )
+        
+        websiteLinkTF.attributedPlaceholder = NSAttributedString(
+            string: "www.example.com",
+            attributes: [NSAttributedString.Key.foregroundColor: UIColor.white.withAlphaComponent(0.2)]
+        )
+        
+        address1TF.attributedPlaceholder = NSAttributedString(
+            string: "831 Blueberry Lane",
+            attributes: [NSAttributedString.Key.foregroundColor: UIColor.white.withAlphaComponent(0.2)]
+        )
+        
+        
+        address2TF.attributedPlaceholder = NSAttributedString(
+            string: "New York, NY 11102",
+            attributes: [NSAttributedString.Key.foregroundColor: UIColor.white.withAlphaComponent(0.2)]
+        )
+        
+        
+        socialLinkTF.attributedPlaceholder = NSAttributedString(
+            string: "linkedin.com/superman",
+            attributes: [NSAttributedString.Key.foregroundColor: UIColor.white.withAlphaComponent(0.2)]
+        )
+        
+        
         // Initialization code
     }
 
