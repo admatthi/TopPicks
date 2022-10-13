@@ -74,44 +74,44 @@ extension UserDefaults{
             UserDefaults.standard.set(newValue, forKey: "UserAddress2")
         }
     }
-    public var UserToMonth:String?{
+    public var UserEducationToMonth:String?{
         get{
-            return UserDefaults.standard.string(forKey: "UserToMonth")
+            return UserDefaults.standard.string(forKey: "UserEducationToMonth")
         }
         set{
-            UserDefaults.standard.set(newValue, forKey: "UserToMonth")
+            UserDefaults.standard.set(newValue, forKey: "UserEducationToMonth")
         }
     }
-    public var UserFromMonth:String?{
+    public var UserEducationFromMonth:String?{
         get{
-            return UserDefaults.standard.string(forKey: "UserFromMonth")
+            return UserDefaults.standard.string(forKey: "UserEducationFromMonth")
         }
         set{
-            UserDefaults.standard.set(newValue, forKey: "UserFromMonth")
+            UserDefaults.standard.set(newValue, forKey: "UserEducationFromMonth")
         }
     }
-    public var UserToYear:String?{
+    public var UserEducationToYear:String?{
         get{
-            return UserDefaults.standard.string(forKey: "UserToYear")
+            return UserDefaults.standard.string(forKey: "UserEducationToYear")
         }
         set{
-            UserDefaults.standard.set(newValue, forKey: "UserToYear")
+            UserDefaults.standard.set(newValue, forKey: "UserEducationToYear")
         }
     }
-    public var UserFromYear:String?{
+    public var UserEducationFromYear:String?{
         get{
-            return UserDefaults.standard.string(forKey: "UserFromYear")
+            return UserDefaults.standard.string(forKey: "UserEducationFromYear")
         }
         set{
-            UserDefaults.standard.set(newValue, forKey: "UserFromYear")
+            UserDefaults.standard.set(newValue, forKey: "UserEducationFromYear")
         }
     }
-    public var UserschoolName:String?{
+    public var UserEducationSchoolName:String?{
         get{
-            return UserDefaults.standard.string(forKey: "UserschoolName")
+            return UserDefaults.standard.string(forKey: "UserEducationSchoolName")
         }
         set{
-            UserDefaults.standard.set(newValue, forKey: "UserschoolName")
+            UserDefaults.standard.set(newValue, forKey: "UserEducationSchoolName")
         }
     }
     

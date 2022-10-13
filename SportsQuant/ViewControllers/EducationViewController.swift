@@ -12,42 +12,42 @@ class EducationViewController: UIViewController {
     
      var toYear: String?{
          get{
-             UserDefaults.standard.UserToYear
+             UserDefaults.standard.UserEducationToYear
          }
          set{
-             UserDefaults.standard.UserToYear = newValue
+             UserDefaults.standard.UserEducationToYear = newValue
          }
      }
      var fromYear: String?{
          get{
-             UserDefaults.standard.UserFromYear
+             UserDefaults.standard.UserEducationFromYear
          }
          set{
-             UserDefaults.standard.UserFromYear = newValue
+             UserDefaults.standard.UserEducationFromYear = newValue
          }
      }
      var toMonth: String?{
          get{
-             UserDefaults.standard.UserToMonth
+             UserDefaults.standard.UserEducationToMonth
          }
          set{
-             UserDefaults.standard.UserToMonth = newValue
+             UserDefaults.standard.UserEducationToMonth = newValue
          }
      }
      var fromMonth: String?{
          get{
-             UserDefaults.standard.UserFromMonth
+             UserDefaults.standard.UserEducationFromMonth
          }
          set{
-             UserDefaults.standard.UserFromMonth = newValue
+             UserDefaults.standard.UserEducationFromMonth = newValue
          }
      }
      var schoolName: String?{
          get{
-             UserDefaults.standard.UserschoolName
+             UserDefaults.standard.UserEducationSchoolName
          }
          set{
-             UserDefaults.standard.UserschoolName = newValue
+             UserDefaults.standard.UserEducationSchoolName = newValue
          }
      }
     var isPresentSelected = false
