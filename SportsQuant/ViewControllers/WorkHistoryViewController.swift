@@ -124,6 +124,18 @@ class WorkHistoryViewController: UIViewController {
         fromYear = textField.text
 
     }
+    @objc func textFieldNameDidChange(_ textField: UITextField) {
+        companyName = textField.text
+
+    }
+    @objc func textFieldlocationDidChange(_ textField: UITextField) {
+        companyLocation = textField.text
+
+    }
+    @objc func textFieldcompanyInPositionDidChange(_ textField: UITextField) {
+        companyInPosition = textField.text
+
+    }
 
 }
 extension WorkHistoryViewController:UITableViewDelegate,UITableViewDataSource{
@@ -146,14 +158,20 @@ extension WorkHistoryViewController:UITableViewDelegate,UITableViewDataSource{
         cell.fromYearTF.text = fromYear
         cell.toMonthTF.text = toMonth
         cell.toYearTF.text = toYear
-        cell.fromMonthTF.addTarget(self, action: #selector(EducationViewController.textFieldFromMonthDidChange(_:)), for: .editingChanged)
+        cell.fromMonthTF.addTarget(self, action: #selector(WorkHistoryViewController.textFieldFromMonthDidChange(_:)), for: .editingChanged)
 
-        cell.fromYearTF.addTarget(self, action: #selector(EducationViewController.textFieldfromYearDidChange(_:)), for: .editingChanged)
+        cell.fromYearTF.addTarget(self, action: #selector(WorkHistoryViewController.textFieldfromYearDidChange(_:)), for: .editingChanged)
 
-        cell.toMonthTF.addTarget(self, action: #selector(EducationViewController.textFieldToMonthDidChange(_:)), for: .editingChanged)
+        cell.toMonthTF.addTarget(self, action: #selector(WorkHistoryViewController.textFieldToMonthDidChange(_:)), for: .editingChanged)
 
-        cell.toYearTF.addTarget(self, action: #selector(EducationViewController.textFieldToYearDidChange(_:)), for: .editingChanged)
-
+        cell.toYearTF.addTarget(self, action: #selector(WorkHistoryViewController.textFieldToYearDidChange(_:)), for: .editingChanged)
+        cell.companyNameLabel.addTarget(self, action: #selector(WorkHistoryViewController.textFieldNameDidChange(_:)), for: .editingChanged)
+        cell.companyLocationLabel.addTarget(self, action: #selector(WorkHistoryViewController.textFieldlocationDidChange(_:)), for: .editingChanged)
+        cell.companyInPositionLabel.addTarget(self, action: #selector(WorkHistoryViewController.textFieldcompanyInPositionDidChange(_:)), for: .editingChanged)
+        
+        cell.companyNameLabel.text = companyName
+        cell.companyLocationLabel.text = companyLocation
+        cell.companyInPositionLabel.text = companyInPosition
         return cell
     }
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {

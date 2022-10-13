@@ -12,6 +12,7 @@ class Resume1ViewViewController: UIViewController {
     @IBOutlet weak var resumeMainView: UIView!
     @IBOutlet weak var educationNameLabel: UILabel!
     
+    @IBOutlet weak var workTitleLabel: UILabel!
     @IBOutlet weak var educationTimeLineLabel: UILabel!
     
     @IBOutlet weak var workNameLabel: UILabel!
@@ -36,16 +37,19 @@ class Resume1ViewViewController: UIViewController {
         descriptionLabel.text =  UserDefaults.standard.UserSummary ?? ""
         descriptionLabel.text =  UserDefaults.standard.UserSummary ?? ""
         educationNameLabel.text = UserDefaults.standard.UserEducationSchoolName ?? ""
+        workNameLabel.text = UserDefaults.standard.UserWorkCompanyName ?? ""
+
         if UserDefaults.standard.UserEducationPresentSelected{
             educationTimeLineLabel.text = "\(UserDefaults.standard.UserEducationFromMonth ?? "")/\(UserDefaults.standard.UserEducationFromYear ?? "") - Present"
         }else{
             educationTimeLineLabel.text = "\(UserDefaults.standard.UserEducationFromMonth ?? "")/\(UserDefaults.standard.UserEducationFromYear ?? "") - \(UserDefaults.standard.UserEducationToMonth ?? "")/\(UserDefaults.standard.UserEducationToYear ?? "")"
         }
         if UserDefaults.standard.UserWorkHistoryPresentSelected{
-            educationTimeLineLabel.text = "\(UserDefaults.standard.UserWorkFromMonth ?? "")/\(UserDefaults.standard.UserWorkFromYear ?? "") - Present"
+            workTimeLineLabel.text = "\(UserDefaults.standard.UserWorkFromMonth ?? "")/\(UserDefaults.standard.UserWorkFromYear ?? "") - Present, \(UserDefaults.standard.UserWorkCompanyLocation ?? "")"
         }else{
-            educationTimeLineLabel.text = "\(UserDefaults.standard.UserWorkFromMonth ?? "")/\(UserDefaults.standard.UserWorkFromYear ?? "") - \(UserDefaults.standard.UserWorkToMonth ?? "")/\(UserDefaults.standard.UserWorkToYear ?? "")"
+            workTimeLineLabel.text = "\(UserDefaults.standard.UserWorkFromMonth ?? "")/\(UserDefaults.standard.UserWorkFromYear ?? "") - \(UserDefaults.standard.UserWorkToMonth ?? "")/\(UserDefaults.standard.UserWorkToYear ?? ""), \(UserDefaults.standard.UserWorkCompanyLocation ?? "")"
         }
+        workTitleLabel.text = "--- \(UserDefaults.standard.UserWorkCompanyInPosition ?? "")"
         // Do any additional setup after loading the view.
     }
     

@@ -1743,7 +1743,7 @@ name?</string>
                                     </view>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="b3J-uy-NJP">
                                         <rect key="frame" x="10" y="140" width="370" height="155.33333333333337"/>
-                                        <mutableString key="text">"1234 Main Street" is the street address. To this, you may add a second line, indicating the apartment, suite or other sub-unit of that curb address, before specifying the city, state, country (for international mail) and ZIP code."1234 Main Street" is the street address. To this, you may add a second line, indicating the apartment, suite or other sub-unit of that curb address, before specifying the city, state, country (for international mail) and ZIP code."1234 Main Street" is the street address. To this, you may add a second line, indicating the apartment, suite or other sub-unit of that curb address, before specifying the city, state, country (for international mail) and ZIP code."1234 Main Street" is the street address. To this, you may add a second line, indicating the apartment, suite or other sub-unit of that curb address, before specifying the city, state, country (for international mail) and ZIP code.</mutableString>
+                                        <string key="text">"1234 Main Street" is the street address. To this, you may add a second line, indicating the apartment, suite or other sub-unit of that curb address, before specifying the city, state, country (for international mail) and ZIP code."1234 Main Street" is the street address. To this, you may add a second line, indicating the apartment, suite or other sub-unit of that curb address, before specifying the city, state, country (for international mail) and ZIP code."1234 Main Street" is the street address. To this, you may add a second line, indicating the apartment, suite or other sub-unit of that curb address, before specifying the city, state, country (for international mail) and ZIP code."1234 Main Street" is the street address. To this, you may add a second line, indicating the apartment, suite or other sub-unit of that curb address, before specifying the city, state, country (for international mail) and ZIP code.</string>
                                         <fontDescription key="fontDescription" type="system" weight="medium" pointSize="10"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
@@ -1777,25 +1777,36 @@ name?</string>
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="QeR-wT-B3w">
-                                        <rect key="frame" x="10" y="392.33333333333331" width="380" height="57"/>
+                                        <rect key="frame" x="10" y="392.33333333333331" width="181.33333333333334" height="57"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Employment:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KBU-Q1-4oL">
-                                                <rect key="frame" x="0.0" y="0.0" width="380" height="20.333333333333332"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="181.33333333333334" height="20.333333333333332"/>
                                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="LBD-vs-8W3">
-                                                <rect key="frame" x="0.0" y="25.333333333333371" width="380" height="31.666666666666671"/>
+                                                <rect key="frame" x="0.0" y="25.333333333333371" width="181.33333333333334" height="31.666666666666671"/>
                                                 <subviews>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ETT Soft" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qOI-Ez-mDW">
-                                                        <rect key="frame" x="0.0" y="0.0" width="380" height="15.666666666666666"/>
-                                                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="13"/>
-                                                        <nil key="textColor"/>
-                                                        <nil key="highlightedColor"/>
-                                                    </label>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="9Jj-IH-Ek6">
+                                                        <rect key="frame" x="0.0" y="0.0" width="181.33333333333334" height="15.666666666666666"/>
+                                                        <subviews>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ETT Soft" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="B4v-Pk-EmQ">
+                                                                <rect key="frame" x="0.0" y="0.0" width="54" height="15.666666666666666"/>
+                                                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="13"/>
+                                                                <nil key="textColor"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="--- Software Developer" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WZk-Hb-xoz">
+                                                                <rect key="frame" x="58.999999999999993" y="0.0" width="122.33333333333331" height="15.666666666666666"/>
+                                                                <fontDescription key="fontDescription" type="system" pointSize="11"/>
+                                                                <nil key="textColor"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                        </subviews>
+                                                    </stackView>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="11/2020 - Present" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iag-mj-fpO">
-                                                        <rect key="frame" x="0.0" y="19.666666666666629" width="380" height="12"/>
+                                                        <rect key="frame" x="0.0" y="19.666666666666629" width="181.33333333333334" height="12"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="10"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
@@ -1812,7 +1823,6 @@ name?</string>
                                     <constraint firstItem="QeR-wT-B3w" firstAttribute="leading" secondItem="j2m-vf-XOg" secondAttribute="leading" constant="10" id="Bmo-yH-qM1"/>
                                     <constraint firstItem="QeR-wT-B3w" firstAttribute="top" secondItem="gpk-g0-4QX" secondAttribute="bottom" constant="20" id="J6d-I3-3H1"/>
                                     <constraint firstAttribute="trailing" secondItem="gpk-g0-4QX" secondAttribute="trailing" id="PXk-qZ-MvG"/>
-                                    <constraint firstAttribute="trailing" secondItem="QeR-wT-B3w" secondAttribute="trailing" id="Pgn-gc-XVm"/>
                                     <constraint firstItem="gpk-g0-4QX" firstAttribute="top" secondItem="b3J-uy-NJP" secondAttribute="bottom" constant="20" id="RnO-Zf-r9g"/>
                                     <constraint firstItem="00s-8N-2kp" firstAttribute="top" secondItem="j2m-vf-XOg" secondAttribute="top" id="h9I-f7-2tC"/>
                                     <constraint firstItem="b3J-uy-NJP" firstAttribute="leading" secondItem="j2m-vf-XOg" secondAttribute="leading" constant="10" id="ieM-EZ-oJc"/>
@@ -1883,8 +1893,9 @@ name?</string>
                         <outlet property="nameLabel" destination="Lv9-GV-Cml" id="1QD-hd-Xbt"/>
                         <outlet property="phoneEmailStackView" destination="s7n-Eg-z0N" id="iVz-MO-rGb"/>
                         <outlet property="resumeMainView" destination="j2m-vf-XOg" id="6AV-ra-IyB"/>
-                        <outlet property="workNameLabel" destination="qOI-Ez-mDW" id="ocg-gc-Zmr"/>
+                        <outlet property="workNameLabel" destination="B4v-Pk-EmQ" id="nZZ-mV-d6M"/>
                         <outlet property="workTimeLineLabel" destination="iag-mj-fpO" id="dhv-zg-DyI"/>
+                        <outlet property="workTitleLabel" destination="WZk-Hb-xoz" id="2WM-Ij-hrZ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lBj-77-GRf" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
