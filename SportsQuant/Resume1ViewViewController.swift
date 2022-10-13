@@ -59,6 +59,9 @@ class Resume1ViewViewController: UIViewController {
         // Pass the selected object to the new view controller.
     }
     */
+    @IBAction func backButtonAction(_ sender: Any) {
+        self.dismiss(animated: true)
+    }
     @IBAction func shareButtonAction(_ sender: Any) {
         buildResume()
     }

@@ -1835,16 +1835,37 @@ name?</string>
                                     <action selector="shareButtonAction:" destination="bRr-iv-baI" eventType="touchUpInside" id="4un-rx-Xbt"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vud-hC-Q8p">
+                                <rect key="frame" x="20" y="750" width="50" height="50"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="RMl-1r-Ril"/>
+                                    <constraint firstAttribute="width" constant="50" id="bso-RT-QNL"/>
+                                </constraints>
+                                <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <imageReference key="image" image="arrowshape.left.fill" catalog="system" symbolScale="large"/>
+                                </state>
+                                <connections>
+                                    <action selector="backButtonAction:" destination="bRr-iv-baI" eventType="touchUpInside" id="VtJ-MK-t02"/>
+                                    <action selector="nextButtonAction:" destination="sHs-ex-nce" eventType="touchUpInside" id="gGj-FF-0oX"/>
+                                    <action selector="shareButtonAction:" destination="bRr-iv-baI" eventType="touchUpInside" id="NoP-ZL-MYE"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="CSy-oh-iI6"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="vud-hC-Q8p" firstAttribute="centerY" secondItem="KwA-cV-izd" secondAttribute="centerY" id="5Qf-3x-HFY"/>
                             <constraint firstItem="CSy-oh-iI6" firstAttribute="bottom" secondItem="KwA-cV-izd" secondAttribute="bottom" constant="10" id="AY5-NL-pU0"/>
                             <constraint firstItem="j2m-vf-XOg" firstAttribute="top" secondItem="CSy-oh-iI6" secondAttribute="top" id="BM4-xS-eg5"/>
                             <constraint firstItem="j2m-vf-XOg" firstAttribute="trailing" secondItem="CSy-oh-iI6" secondAttribute="trailing" id="Cxj-ls-IiW"/>
                             <constraint firstItem="CSy-oh-iI6" firstAttribute="bottom" secondItem="j2m-vf-XOg" secondAttribute="bottom" id="Ez5-7j-YRn"/>
                             <constraint firstItem="CSy-oh-iI6" firstAttribute="trailing" secondItem="KwA-cV-izd" secondAttribute="trailing" constant="20" id="aB0-Aj-dfe"/>
                             <constraint firstItem="j2m-vf-XOg" firstAttribute="leading" secondItem="CSy-oh-iI6" secondAttribute="leading" id="cqO-P9-icL"/>
+                            <constraint firstItem="vud-hC-Q8p" firstAttribute="leading" secondItem="CSy-oh-iI6" secondAttribute="leading" constant="20" id="rle-Km-5Wb"/>
                         </constraints>
                     </view>
                     <connections>
@@ -1868,6 +1889,7 @@ name?</string>
         </scene>
     </scenes>
     <resources>
+        <image name="arrowshape.left.fill" catalog="system" width="128" height="104"/>
         <image name="by proceeding" width="542" height="74"/>
         <image name="checkmark.circle.fill" catalog="system" width="128" height="123"/>
         <image name="flag" width="160" height="160"/>
