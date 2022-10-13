@@ -22,6 +22,57 @@ class WorkDetailTableViewCell: UITableViewCell {
     @IBOutlet weak var presentSwitch: UISwitch!
     override func awakeFromNib() {
         super.awakeFromNib()
+        
+        toYearTF.setUnderLine()
+        fromYearTF.setUnderLine()
+        toMonthTF.setUnderLine()
+        fromMonthTF.setUnderLine()
+        companyInPositionLabel.setUnderLine()
+        companyLocationLabel.setUnderLine()
+        
+        
+        
+        toYearTF.attributedPlaceholder = NSAttributedString(
+            string: "yyyy",
+            attributes: [NSAttributedString.Key.foregroundColor: UIColor.white.withAlphaComponent(0.2)]
+        )
+        
+        
+        fromYearTF.attributedPlaceholder = NSAttributedString(
+            string: "yyyy",
+            attributes: [NSAttributedString.Key.foregroundColor: UIColor.white.withAlphaComponent(0.2)]
+        )
+        
+        
+        toMonthTF.attributedPlaceholder = NSAttributedString(
+            string: "mm",
+            attributes: [NSAttributedString.Key.foregroundColor: UIColor.white.withAlphaComponent(0.2)]
+        )
+        
+        
+        fromMonthTF.attributedPlaceholder = NSAttributedString(
+            string: "mm",
+            attributes: [NSAttributedString.Key.foregroundColor: UIColor.white.withAlphaComponent(0.2)]
+        )
+        
+        
+        companyInPositionLabel.attributedPlaceholder = NSAttributedString(
+            string: "Sales Manager",
+            attributes: [NSAttributedString.Key.foregroundColor: UIColor.white.withAlphaComponent(0.2)]
+        )
+        
+        
+        companyLocationLabel.attributedPlaceholder = NSAttributedString(
+            string: "Menlo Park, CA",
+            attributes: [NSAttributedString.Key.foregroundColor: UIColor.white.withAlphaComponent(0.2)]
+        )
+        
+        companyNameLabel.attributedPlaceholder = NSAttributedString(
+            string: "Facebook",
+            attributes: [NSAttributedString.Key.foregroundColor: UIColor.white.withAlphaComponent(0.2)]
+        )
+      
+        
         // Initialization code
     }
 
