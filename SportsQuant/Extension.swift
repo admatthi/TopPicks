@@ -74,5 +74,45 @@ extension UserDefaults{
             UserDefaults.standard.set(newValue, forKey: "UserAddress2")
         }
     }
-
+    public var UserToMonth:String?{
+        get{
+            return UserDefaults.standard.string(forKey: "UserToMonth")
+        }
+        set{
+            UserDefaults.standard.set(newValue, forKey: "UserToMonth")
+        }
+    }
+    public var UserFromMonth:String?{
+        get{
+            return UserDefaults.standard.string(forKey: "UserFromMonth")
+        }
+        set{
+            UserDefaults.standard.set(newValue, forKey: "UserFromMonth")
+        }
+    }
+    public var UserToYear:String?{
+        get{
+            return UserDefaults.standard.string(forKey: "UserToYear")
+        }
+        set{
+            UserDefaults.standard.set(newValue, forKey: "UserToYear")
+        }
+    }
+    public var UserFromYear:String?{
+        get{
+            return UserDefaults.standard.string(forKey: "UserFromYear")
+        }
+        set{
+            UserDefaults.standard.set(newValue, forKey: "UserFromYear")
+        }
+    }
+    public var UserschoolName:String?{
+        get{
+            return UserDefaults.standard.string(forKey: "UserschoolName")
+        }
+        set{
+            UserDefaults.standard.set(newValue, forKey: "UserschoolName")
+        }
+    }
+    
 }

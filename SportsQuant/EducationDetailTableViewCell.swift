@@ -12,6 +12,12 @@ class EducationDetailTableViewCell: UITableViewCell {
     @IBOutlet weak var skipThisSectionButton: UIButton!
     @IBOutlet weak var toDateStackView: UIStackView!
     @IBOutlet weak var presentSwitch: UISwitch!
+    
+    @IBOutlet weak var toYearTF: UITextField!
+    @IBOutlet weak var fromYearTF: UITextField!
+    @IBOutlet weak var toMonthTF: UITextField!
+    @IBOutlet weak var fromMonthTF: UITextField!
+    @IBOutlet weak var schoolNameTF: UITextField!
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

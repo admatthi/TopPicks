@@ -1069,9 +1069,14 @@ include the month and the year for each entry. List all the dates on your resume
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
+                                            <outlet property="fromMonthTF" destination="gXG-OD-EuV" id="ETd-37-vSW"/>
+                                            <outlet property="fromYearTF" destination="xCv-CR-tJS" id="Hz6-mK-KFO"/>
                                             <outlet property="presentSwitch" destination="Tgt-gx-jr0" id="P8L-U7-mXH"/>
+                                            <outlet property="schoolNameTF" destination="c1r-Hp-Bc5" id="GUo-jO-8p1"/>
                                             <outlet property="skipThisSectionButton" destination="17y-xA-ZkY" id="2mf-ym-V5B"/>
                                             <outlet property="toDateStackView" destination="h1W-8f-Rf5" id="WlP-9U-BW9"/>
+                                            <outlet property="toMonthTF" destination="0R1-FT-HWT" id="3FZ-ZK-cER"/>
+                                            <outlet property="toYearTF" destination="Onf-HU-cAy" id="LLi-Hm-I8m"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>

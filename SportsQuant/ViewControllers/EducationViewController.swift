@@ -8,6 +8,48 @@
 import UIKit
 
 class EducationViewController: UIViewController {
+    
+    
+     var toYear: String?{
+         get{
+             UserDefaults.standard.UserToYear
+         }
+         set{
+             UserDefaults.standard.UserToYear = newValue
+         }
+     }
+     var fromYear: String?{
+         get{
+             UserDefaults.standard.UserFromYear
+         }
+         set{
+             UserDefaults.standard.UserFromYear = newValue
+         }
+     }
+     var toMonth: String?{
+         get{
+             UserDefaults.standard.UserToMonth
+         }
+         set{
+             UserDefaults.standard.UserToMonth = newValue
+         }
+     }
+     var fromMonth: String?{
+         get{
+             UserDefaults.standard.UserFromMonth
+         }
+         set{
+             UserDefaults.standard.UserFromMonth = newValue
+         }
+     }
+     var schoolName: String?{
+         get{
+             UserDefaults.standard.UserschoolName
+         }
+         set{
+             UserDefaults.standard.UserschoolName = newValue
+         }
+     }
     var isPresentSelected = false
     
     @IBOutlet weak var nextButton: UIButton!
@@ -45,6 +87,26 @@ class EducationViewController: UIViewController {
           print("table row switch Changed \(sender.tag)")
           print("The switch is \(sender.isOn ? "ON" : "OFF")")
     }
+    @objc func textFieldToMonthDidChange(_ textField: UITextField) {
+        toMonth = textField.text
+
+    }
+    @objc func textFieldFromMonthDidChange(_ textField: UITextField) {
+        fromMonth = textField.text
+
+    }
+    @objc func textFieldToYearDidChange(_ textField: UITextField) {
+        toYear = textField.text
+
+    }
+    @objc func textFieldfromYearDidChange(_ textField: UITextField) {
+        fromYear = textField.text
+
+    }
+    @objc func textFieldschoolNameDidChange(_ textField: UITextField) {
+        schoolName = textField.text
+
+    }
 }
 extension EducationViewController:UITableViewDelegate,UITableViewDataSource{
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -62,6 +124,21 @@ extension EducationViewController:UITableViewDelegate,UITableViewDataSource{
 
             cell.toDateStackView.isHidden = false
         }
+        
+        cell.fromMonthTF.text = fromMonth
+        cell.fromYearTF.text = fromYear
+        cell.toMonthTF.text = toMonth
+        cell.toYearTF.text = toYear
+        cell.schoolNameTF.text = schoolName
+        cell.fromMonthTF.addTarget(self, action: #selector(EducationViewController.textFieldFromMonthDidChange(_:)), for: .editingChanged)
+
+        cell.fromYearTF.addTarget(self, action: #selector(EducationViewController.textFieldfromYearDidChange(_:)), for: .editingChanged)
+
+        cell.toMonthTF.addTarget(self, action: #selector(EducationViewController.textFieldToMonthDidChange(_:)), for: .editingChanged)
+
+        cell.toYearTF.addTarget(self, action: #selector(EducationViewController.textFieldToYearDidChange(_:)), for: .editingChanged)
+
+        cell.schoolNameTF.addTarget(self, action: #selector(EducationViewController.textFieldschoolNameDidChange(_:)), for: .editingChanged)
 
         return cell
     }
