@@ -14,6 +14,17 @@ class IntroTableViewCell: UITableViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
+        
+        firstNameTextField.attributedPlaceholder = NSAttributedString(
+            string: "First Name",
+            attributes: [NSAttributedString.Key.foregroundColor: UIColor.white.withAlphaComponent(0.2)]
+        )
+        
+        lastNameTextField.attributedPlaceholder = NSAttributedString(
+            string: "Last Name",
+            attributes: [NSAttributedString.Key.foregroundColor: UIColor.white.withAlphaComponent(0.2)]
+        )
+        
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
