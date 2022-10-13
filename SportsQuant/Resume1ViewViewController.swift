@@ -28,7 +28,7 @@ class Resume1ViewViewController: UIViewController {
     @IBOutlet weak var nameLabel: UILabel!
     override func viewDidLoad() {
         super.viewDidLoad()
-        nameLabel.text = (UserDefaults.standard.User_First_Name ?? "") + " " + (UserDefaults.standard.User_First_Name ?? "")
+        nameLabel.text = (UserDefaults.standard.User_First_Name ?? "") + " " + (UserDefaults.standard.User_Last_Name ?? "")
         emailLabel.text = UserDefaults.standard.UserEmail ?? ""
         PhoneLabel.text = UserDefaults.standard.UserPhone ?? ""
 
