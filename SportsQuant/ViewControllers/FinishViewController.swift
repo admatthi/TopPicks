@@ -68,7 +68,7 @@ extension FinishViewController:UICollectionViewDelegate,UICollectionViewDataSour
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "TemplateCollectionViewCell", for: indexPath) as! TemplateCollectionViewCell
         let template = templates[indexPath.row]
         cell.templateImageView.image = UIImage(named: template.image)
-        cell.templateImageView.layer.cornerRadius = 10
+        cell.templateImageView.layer.cornerRadius = 2
         cell.templateImageView.layer.masksToBounds = true
         cell.downloadButton.tag = indexPath.row
         cell.downloadButton.addTarget(self,

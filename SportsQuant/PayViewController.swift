@@ -148,7 +148,6 @@ class PayViewController: UIViewController {
         Amplitude.instance().logEvent("Initiate Checkout", withEventProperties: ["referrer" : referrer])
         
         
-        self.requestTrackingPermission()
         
         
         let loadingNotification = MBProgressHUD.showAdded(to: view, animated: true)
@@ -275,44 +274,7 @@ class PayViewController: UIViewController {
     //    Cancel anytime.
     
     
-    func requestTrackingPermission() {
-        
-        
-        if #available(iOS 14, *) {
-            ATTrackingManager.requestTrackingAuthorization { (status) in
-                
-                switch status {
-                    
-                case .authorized:
-                    
-                    
-                    
-                    
-                    Settings.setAdvertiserTrackingEnabled(true)  //Cannot find 'FBAdSettings' in scope
-                    
-                    
-                    
-                case .notDetermined:
-                    print("n")
-                case .restricted:
-                    print("n")
-                case .denied:
-                    print("n")
-                    
-                    
-                    
-                @unknown default:
-                    
-                    print("n")
-                    
-                }
-                
-            }
-            
-        }
-        
-        
-    }
+    
     
     
     var currentVersion: String {

@@ -116,7 +116,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 //                        self.window?.makeKeyAndVisible()
 
             let mainStoryboardIpad : UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
-            let vc : PayViewController = mainStoryboardIpad.instantiateViewController(withIdentifier: "Pay") as! PayViewController
+            let vc : FirstViewController = mainStoryboardIpad.instantiateViewController(withIdentifier: "First") as! FirstViewController
             self.window = UIWindow(frame: UIScreen.main.bounds)
             self.window?.rootViewController = vc
 //            vc.selectedIndex = 0
