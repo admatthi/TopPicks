@@ -33,6 +33,7 @@ class FinishViewController: UIViewController {
         let width = bounds.width - 10
         layout.itemSize = CGSize(width: width/2, height: 200)
         collectionView.collectionViewLayout = layout
+        
         // Do any additional setup after loading the view.
     }
     

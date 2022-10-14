@@ -28,6 +28,7 @@ class Resume1ViewViewController: UIViewController {
     @IBOutlet weak var nameLabel: UILabel!
     override func viewDidLoad() {
         super.viewDidLoad()
+        addShadow()
         nameLabel.text = (UserDefaults.standard.User_First_Name ?? "") + " " + (UserDefaults.standard.User_Last_Name ?? "")
         emailLabel.text = UserDefaults.standard.UserEmail ?? ""
         PhoneLabel.text = UserDefaults.standard.UserPhone ?? ""
@@ -63,6 +64,13 @@ class Resume1ViewViewController: UIViewController {
         // Pass the selected object to the new view controller.
     }
     */
+    func addShadow(){
+        resumeMainView.layer.masksToBounds = false
+        resumeMainView?.layer.shadowColor = UIColor.gray.cgColor
+        resumeMainView?.layer.shadowOffset =  CGSize.zero
+        resumeMainView?.layer.shadowOpacity = 0.5
+        resumeMainView?.layer.shadowRadius = 4
+    }
     @IBAction func backButtonAction(_ sender: Any) {
         self.dismiss(animated: true)
     }
@@ -115,6 +123,7 @@ class Resume1ViewViewController: UIViewController {
                     self.present(activityViewController, animated: true) {() -> Void in
                         UINavigationBar.appearance().tintColor = .darkGray
                     }
+                    self.addShadow()
                 }
             }
         }
