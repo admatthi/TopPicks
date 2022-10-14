@@ -74,7 +74,7 @@ class FinishViewController: UIViewController, UITableViewDataSource,UITableViewD
         return templatesCategories.count
     }
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 300
+        return 280
     }
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "TemplatesTableViewCell", for: indexPath) as! TemplatesTableViewCell

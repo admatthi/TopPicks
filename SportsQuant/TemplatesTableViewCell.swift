@@ -55,10 +55,31 @@ extension TemplatesTableViewCell:UICollectionViewDelegate,UICollectionViewDataSo
         return cell
     }
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        let mainStoryboardIpad : UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
-        let vc : Resume1ViewViewController = mainStoryboardIpad.instantiateViewController(withIdentifier: "Resume1ViewViewController") as! Resume1ViewViewController
-        vc.modalPresentationStyle = .fullScreen
-        UIApplication.shared.topMostViewController()?.present(vc, animated: true, completion: nil)
+        let template = templateCategory.templates[indexPath.row]
+        if templateCategory.category ==  "Trending"{
+            let mainStoryboardIpad : UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+            let vc : Resume1ViewViewController = mainStoryboardIpad.instantiateViewController(withIdentifier: "Resume1ViewViewController") as! Resume1ViewViewController
+            vc.modalPresentationStyle = .fullScreen
+            UIApplication.shared.topMostViewController()?.present(vc, animated: true, completion: nil)
+        }else if templateCategory.category ==  "New"{
+            let mainStoryboardIpad : UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+            let vc : Resume1ViewViewController = mainStoryboardIpad.instantiateViewController(withIdentifier: "Resume1ViewViewController") as! Resume1ViewViewController
+            vc.modalPresentationStyle = .fullScreen
+            UIApplication.shared.topMostViewController()?.present(vc, animated: true, completion: nil)
+        }else if templateCategory.category ==  "Free"{
+            let mainStoryboardIpad : UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+            let vc : Resume1ViewViewController = mainStoryboardIpad.instantiateViewController(withIdentifier: "Resume1ViewViewController") as! Resume1ViewViewController
+            vc.modalPresentationStyle = .fullScreen
+            UIApplication.shared.topMostViewController()?.present(vc, animated: true, completion: nil)
+        }else if templateCategory.category ==  "Paid"{
+            let mainStoryboardIpad : UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+            let vc : Resume1ViewViewController = mainStoryboardIpad.instantiateViewController(withIdentifier: "Resume1ViewViewController") as! Resume1ViewViewController
+            vc.modalPresentationStyle = .fullScreen
+            UIApplication.shared.topMostViewController()?.present(vc, animated: true, completion: nil)
+        }else{
+            
+        }
+
     }
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
         return 0
