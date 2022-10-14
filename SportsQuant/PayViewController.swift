@@ -314,7 +314,8 @@ class PayViewController: UIViewController {
         ref = Database.database().reference()
         
         
-        
+        tapcontinue.layer.borderColor = UIColor.black.cgColor
+        tapcontinue.layer.borderWidth = 5.0
         
         Purchases.shared.offerings { (offerings, error) in
             

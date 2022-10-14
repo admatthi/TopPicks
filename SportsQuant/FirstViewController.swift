@@ -21,7 +21,8 @@ import AdSupport
 import FirebaseAnalytics
 
 class FirstViewController: UIViewController {
-
+    @IBOutlet weak var tapcontinue: UIButton!
+    
     @IBAction func tapContinue(_ sender: Any) {
         
         self.requestTrackingPermission()
@@ -34,6 +35,8 @@ class FirstViewController: UIViewController {
         // Do any additional setup after loading the view.
         
 
+        tapcontinue.layer.borderColor = UIColor.black.cgColor
+        tapcontinue.layer.borderWidth = 5.0
     }
     
     func requestTrackingPermission() {
