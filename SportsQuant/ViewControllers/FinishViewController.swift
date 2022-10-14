@@ -5,18 +5,34 @@
 //  Created by talal ahmad on 13/10/2022.
 //
 import UIKit
+struct Template {
 
+    var category:String
+    var image:String
+    var index : Int
+    init(category: String, image: String,index: Int) {
+        self.category = category
+        self.image = image
+        self.index = index
+    }
+}
 class FinishViewController: UIViewController {
-    
-    @IBOutlet weak var nextButton: UIButton!
+    var templates:[Template] = [Template(category: "free", image: "image1", index: 1)]
 
-    @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var collectionView: UICollectionView!
     override func viewDidLoad() {
         super.viewDidLoad()
-        tableView.dataSource = self
-        tableView.delegate = self
-        nextButton.layer.cornerRadius = nextButton.frame.height/2
-        nextButton.layer.masksToBounds = true
+        collectionView.dataSource = self
+        collectionView.delegate = self
+        collectionView.dataSource = self
+        collectionView.delegate = self
+        let layout: UICollectionViewFlowLayout = UICollectionViewFlowLayout()
+        layout.minimumInteritemSpacing = 0
+        layout.minimumLineSpacing = 0
+        let bounds = UIScreen.main.bounds
+        let width = bounds.width - 10
+        layout.itemSize = CGSize(width: width/2, height: 200)
+        collectionView.collectionViewLayout = layout
         // Do any additional setup after loading the view.
     }
     
@@ -37,16 +53,45 @@ class FinishViewController: UIViewController {
         // Pass the selected object to the new view controller.
     }
     */
+    @objc func downloadButtonAction(sender : UIButton){
+        print(sender.tag)
+        let index = sender.tag
+    }
 }
-extension FinishViewController:UITableViewDelegate,UITableViewDataSource{
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "FinishTableViewCell", for: indexPath) as! FinishTableViewCell
+extension FinishViewController:UICollectionViewDelegate,UICollectionViewDataSource,UICollectionViewDelegateFlowLayout{
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return templates.count
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "TemplateCollectionViewCell", for: indexPath) as! TemplateCollectionViewCell
+        let template = templates[indexPath.row]
+        cell.templateImageView.image = UIImage(named: template.image)
+        cell.templateImageView.layer.cornerRadius = 20
+        cell.templateImageView.layer.masksToBounds = true
+        cell.downloadButton.tag = indexPath.row
+        cell.downloadButton.addTarget(self,
+                                       action: #selector(self.downloadButtonAction(sender:)),
+                for: .touchUpInside)
         return cell
     }
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 1
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        let mainStoryboardIpad : UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+        let vc : Resume1ViewViewController = mainStoryboardIpad.instantiateViewController(withIdentifier: "Resume1ViewViewController") as! Resume1ViewViewController
+        vc.modalPresentationStyle = .fullScreen
+        self.present(vc, animated: true, completion: nil)
     }
-    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 500
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
+        return 0
     }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
+        return 0
+    }
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+            let bounds = UIScreen.main.bounds
+            let width = bounds.width - 10
+        return CGSize(width: width/2, height: 250)
+    }
+ 
 }

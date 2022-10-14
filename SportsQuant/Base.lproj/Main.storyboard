@@ -7,6 +7,7 @@
         <capability name="Image references" minToolsVersion="12.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="collection view cell content view" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <customFonts key="customFonts">
@@ -1529,7 +1530,7 @@ name?</string>
                                                     <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                                 </textView>
                                             </subviews>
-                                            <color key="backgroundColor" red="0.1215686351" green="0.2235293984" blue="0.56078433989999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                            <color key="backgroundColor" red="0.12156862745098039" green="0.22352941176470587" blue="0.5607843137254902" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                             <constraints>
                                                 <constraint firstAttribute="trailingMargin" secondItem="tkO-Nn-0gX" secondAttribute="trailing" id="0af-B9-9a4"/>
                                                 <constraint firstItem="R5j-az-F1D" firstAttribute="leading" secondItem="Brh-6S-8mM" secondAttribute="leadingMargin" id="0lw-PM-wau"/>
@@ -1593,70 +1594,88 @@ name?</string>
                         <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="dIW-lZ-ke0">
-                                <rect key="frame" x="0.0" y="47" width="390" height="797"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="FinishTableViewCell" rowHeight="551" id="x89-KV-Sl3" customClass="FinishTableViewCell" customModule="SportsQuant" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="50" width="390" height="551"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="x89-KV-Sl3" id="G9B-36-gSc">
-                                            <rect key="frame" x="0.0" y="0.0" width="390" height="551"/>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="2to-rI-Ser">
+                                <rect key="frame" x="0.0" y="102.33333333333331" width="390" height="707.66666666666674"/>
+                                <color key="backgroundColor" red="0.1215686275" green="0.22352941179999999" blue="0.56078431370000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="oWz-WI-mgp">
+                                    <size key="itemSize" width="190" height="252"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="TemplateCollectionViewCell" id="Rco-lh-EIw" customClass="TemplateCollectionViewCell" customModule="SportsQuant" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="190" height="252"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="Cs6-Lk-03Q">
+                                            <rect key="frame" x="0.0" y="0.0" width="190" height="252"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Here is the last step to generate Resume" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aRI-HL-1oa">
-                                                    <rect key="frame" x="20" y="41" width="350" height="50.333333333333343"/>
-                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="21"/>
-                                                    <nil key="textColor"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="NaP-d5-aHR">
+                                                    <rect key="frame" x="10" y="10" width="170" height="192"/>
+                                                </imageView>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5v8-pv-7S2">
+                                                    <rect key="frame" x="0.0" y="202" width="190" height="50"/>
+                                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="50" id="Qaf-2H-Add"/>
+                                                        <constraint firstAttribute="height" constant="50" id="WbP-r0-tH7"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
+                                                    <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                    <state key="normal" title=" Download" image="tray.and.arrow.down.fill" catalog="system">
+                                                        <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    </state>
+                                                    <connections>
+                                                        <action selector="nextButtonAction:" destination="sHs-ex-nce" eventType="touchUpInside" id="1H3-ca-Szf"/>
+                                                        <action selector="shareButtonAction:" destination="bRr-iv-baI" eventType="touchUpInside" id="04o-cd-6tr"/>
+                                                    </connections>
+                                                </button>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstItem="aRI-HL-1oa" firstAttribute="top" secondItem="G9B-36-gSc" secondAttribute="topMargin" constant="30" id="JmU-AS-CXQ"/>
-                                                <constraint firstAttribute="trailingMargin" secondItem="aRI-HL-1oa" secondAttribute="trailing" id="byn-7T-4lc"/>
-                                                <constraint firstItem="aRI-HL-1oa" firstAttribute="leading" secondItem="G9B-36-gSc" secondAttribute="leadingMargin" id="yIc-pw-BMK"/>
+                                                <constraint firstAttribute="trailing" secondItem="NaP-d5-aHR" secondAttribute="trailing" constant="10" id="3vt-pD-sJi"/>
+                                                <constraint firstItem="5v8-pv-7S2" firstAttribute="top" secondItem="NaP-d5-aHR" secondAttribute="bottom" id="5tk-q3-JA8"/>
+                                                <constraint firstItem="5v8-pv-7S2" firstAttribute="leading" secondItem="Cs6-Lk-03Q" secondAttribute="leading" id="Etp-RH-sHT"/>
+                                                <constraint firstAttribute="bottom" secondItem="5v8-pv-7S2" secondAttribute="bottom" id="I7a-DD-Dai"/>
+                                                <constraint firstItem="NaP-d5-aHR" firstAttribute="top" secondItem="Cs6-Lk-03Q" secondAttribute="top" constant="10" id="Pdg-Ic-lgw"/>
+                                                <constraint firstItem="NaP-d5-aHR" firstAttribute="leading" secondItem="Cs6-Lk-03Q" secondAttribute="leading" constant="10" id="gX4-OY-2WN"/>
+                                                <constraint firstAttribute="trailing" secondItem="5v8-pv-7S2" secondAttribute="trailing" id="jPI-sz-xef"/>
                                             </constraints>
-                                        </tableViewCellContentView>
-                                    </tableViewCell>
-                                </prototypes>
-                            </tableView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jXf-ou-fbq">
-                                <rect key="frame" x="20" y="733" width="350" height="67"/>
-                                <color key="backgroundColor" systemColor="tintColor"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="67" id="pfZ-kH-RRR"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="20"/>
-                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                <state key="normal" title="Generate Resume">
-                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                </state>
-                                <connections>
-                                    <action selector="nextButtonAction:" destination="sHs-ex-nce" eventType="touchUpInside" id="c9n-cM-wyO"/>
-                                </connections>
-                            </button>
+                                        </collectionViewCellContentView>
+                                        <size key="customSize" width="190" height="252"/>
+                                        <connections>
+                                            <outlet property="downloadButton" destination="5v8-pv-7S2" id="cdn-S2-40r"/>
+                                            <outlet property="templateImageView" destination="NaP-d5-aHR" id="0Or-L0-Em2"/>
+                                        </connections>
+                                    </collectionViewCell>
+                                </cells>
+                            </collectionView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Select a template" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OvR-it-ad9">
+                                <rect key="frame" x="20" y="57.000000000000007" width="163" height="25.333333333333336"/>
+                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="21"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="hze-wl-f1T"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" red="0.1215686275" green="0.22352941179999999" blue="0.56078431370000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <constraints>
-                            <constraint firstItem="dIW-lZ-ke0" firstAttribute="top" secondItem="hze-wl-f1T" secondAttribute="top" id="6eZ-RN-mhv"/>
-                            <constraint firstItem="jXf-ou-fbq" firstAttribute="leading" secondItem="hze-wl-f1T" secondAttribute="leading" constant="20" id="979-l4-5Ql"/>
-                            <constraint firstAttribute="trailing" secondItem="dIW-lZ-ke0" secondAttribute="trailing" id="ReG-vi-TIP"/>
-                            <constraint firstAttribute="bottom" secondItem="dIW-lZ-ke0" secondAttribute="bottom" id="Xfl-ML-XgX"/>
-                            <constraint firstItem="hze-wl-f1T" firstAttribute="trailing" secondItem="jXf-ou-fbq" secondAttribute="trailing" constant="20" id="eyn-ON-Asl"/>
-                            <constraint firstItem="dIW-lZ-ke0" firstAttribute="leading" secondItem="hze-wl-f1T" secondAttribute="leading" id="q6x-9n-mCc"/>
-                            <constraint firstItem="hze-wl-f1T" firstAttribute="bottom" secondItem="jXf-ou-fbq" secondAttribute="bottom" constant="10" id="yOk-yQ-k12"/>
+                            <constraint firstItem="OvR-it-ad9" firstAttribute="top" secondItem="hze-wl-f1T" secondAttribute="top" constant="10" id="N69-ZT-2oY"/>
+                            <constraint firstItem="OvR-it-ad9" firstAttribute="leading" secondItem="hze-wl-f1T" secondAttribute="leading" constant="20" id="VrH-Kr-Jeo"/>
+                            <constraint firstItem="hze-wl-f1T" firstAttribute="trailing" secondItem="2to-rI-Ser" secondAttribute="trailing" id="kZG-hq-n3v"/>
+                            <constraint firstItem="hze-wl-f1T" firstAttribute="bottom" secondItem="2to-rI-Ser" secondAttribute="bottom" id="n0k-rF-CvB"/>
+                            <constraint firstItem="2to-rI-Ser" firstAttribute="top" secondItem="OvR-it-ad9" secondAttribute="bottom" constant="20" id="sN0-nz-2Z5"/>
+                            <constraint firstItem="2to-rI-Ser" firstAttribute="leading" secondItem="9n6-0W-v8H" secondAttribute="leading" id="wID-B3-1Qt"/>
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="nextButton" destination="jXf-ou-fbq" id="Fup-00-tKg"/>
-                        <outlet property="tableView" destination="dIW-lZ-ke0" id="2jx-oP-LAs"/>
+                        <outlet property="collectionView" destination="2to-rI-Ser" id="hZj-af-ywE"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ehj-ts-34P" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4863" y="-73"/>
+            <point key="canvasLocation" x="5684.6153846153848" y="-85.308056872037909"/>
         </scene>
         <!--Resume1 View View Controller-->
         <scene sceneID="hhs-ux-Oo1">
@@ -1900,7 +1919,7 @@ name?</string>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lBj-77-GRf" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="5791" y="-103"/>
+            <point key="canvasLocation" x="6343" y="-85"/>
         </scene>
     </scenes>
     <resources>
@@ -1909,6 +1928,7 @@ name?</string>
         <image name="checkmark.circle.fill" catalog="system" width="128" height="123"/>
         <image name="flag" width="160" height="160"/>
         <image name="square.and.arrow.up" catalog="system" width="115" height="128"/>
+        <image name="tray.and.arrow.down.fill" catalog="system" width="128" height="115"/>
         <image name="xmark" catalog="system" width="128" height="113"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
