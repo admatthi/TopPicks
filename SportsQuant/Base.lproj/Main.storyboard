@@ -1957,7 +1957,7 @@ name?</string>
                                     <action selector="tapContinue:" destination="Opj-JV-pq6" eventType="touchUpInside" id="ZCV-CO-xog"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Get hired for your dream job" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uEf-lr-nti">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Welcome to the future of your career" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uEf-lr-nti">
                                 <rect key="frame" x="43" y="215" width="327" height="77"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="77" id="x9t-gP-BCB"/>
