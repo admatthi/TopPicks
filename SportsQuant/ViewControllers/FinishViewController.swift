@@ -27,13 +27,16 @@ struct TemplateCategory {
 }
 class FinishViewController: UIViewController, UITableViewDataSource,UITableViewDelegate {
 
-    var trendingAddedCategory = TemplateCategory(category: "Trending", templates:[Template(name: "Trending Template 1", image: "image1", index: 1),Template(name: "Trending Template 2", image: "image1", index: 2),Template(name: "Trending Template 3", image: "image1", index: 3)])
+    var trendingAddedCategory = TemplateCategory(category: "Technology", templates:[Template(name: "Trending Template 1", image: "image1", index: 1),Template(name: "Trending Template 2", image: "image1", index: 2),Template(name: "Trending Template 3", image: "image1", index: 3)])
 
-    var newlyAddedCategory = TemplateCategory(category: "New", templates:[Template(name: "New Template 1", image: "image1", index: 1),Template(name: "New Template 2", image: "image1", index: 2),Template(name: "New Template 3", image: "image1", index: 3)])
+    var newlyAddedCategory = TemplateCategory(category: "Education", templates:[Template(name: "New Template 1", image: "image1", index: 1),Template(name: "New Template 2", image: "image1", index: 2),Template(name: "New Template 3", image: "image1", index: 3)])
 
-    var freeCategory = TemplateCategory(category: "Free", templates:[Template(name: "Free Template 1", image: "image1", index: 1),Template(name: "Free Template 2", image: "image1", index: 2),Template(name: "Free Template 3", image: "image1", index: 3)])
+    var freeCategory = TemplateCategory(category: "Health", templates:[Template(name: "Free Template 1", image: "image1", index: 1),Template(name: "Free Template 2", image: "image1", index: 2),Template(name: "Free Template 3", image: "image1", index: 3)])
     
-    var paidCategory = TemplateCategory(category: "Paid", templates:[Template(name: "Paid Template 1", image: "image1", index: 1),Template(name: "Paid Template 2", image: "image1", index: 2),Template(name: "Paid Template 3", image: "image1", index: 3)])
+    var paidCategory = TemplateCategory(category: "Sales", templates:[Template(name: "Paid Template 1", image: "image1", index: 1),Template(name: "Paid Template 2", image: "image1", index: 2),Template(name: "Paid Template 3", image: "image1", index: 3)])
+    
+    var businessCategory = TemplateCategory(category: "Business", templates:[Template(name: "Paid Template 1", image: "image1", index: 1),Template(name: "Paid Template 2", image: "image1", index: 2),Template(name: "Paid Template 3", image: "image1", index: 3)])
+
 
     var templatesCategories:[TemplateCategory] = []
 

@@ -36,7 +36,7 @@ class FirstViewController: UIViewController {
         
 
         tapcontinue.layer.borderColor = UIColor.black.cgColor
-        tapcontinue.layer.borderWidth = 5.0
+        tapcontinue.layer.borderWidth = 3.0
     }
     
     func requestTrackingPermission() {
