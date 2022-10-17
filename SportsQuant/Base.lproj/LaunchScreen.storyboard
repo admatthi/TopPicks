@@ -16,8 +16,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Resume+" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SOE-9H-EjT">
-                                <rect key="frame" x="92" y="402" width="207" height="40"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Resume App" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SOE-9H-EjT">
+                                <rect key="frame" x="91.666666666666686" y="402" width="207" height="40"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="207" id="0yN-eM-TNf"/>
                                     <constraint firstAttribute="height" constant="40" id="rzx-fb-Zjl"/>
