@@ -195,9 +195,20 @@ extension UserDefaults{
             UserDefaults.standard.set(newValue, forKey: "UserWorkCompanyInPosition")
         }
     }
+
 }
 
-
+func saveWorkHistory(sounds:[WorkHistory]){
+    UserDefaults.standard.set(try? PropertyListEncoder().encode(sounds), forKey:"WorkHistory")
+}
+func retriveWorkHistory() -> [WorkHistory]{
+    var allFavSounds:[WorkHistory] = []
+    if let data = UserDefaults.standard.value(forKey:"WorkHistory") as? Data {
+    let sounds = try? PropertyListDecoder().decode(Array<WorkHistory>.self, from: data)
+        allFavSounds = sounds ?? []
+    }
+    return allFavSounds
+}
 extension Bundle {
     var appDisplayName: String? {
         return object(forInfoDictionaryKey: "CFBundleDisplayName") as? String

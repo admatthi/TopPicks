@@ -95,3 +95,23 @@ class Category: Codable {
         self.key = key
     }
 }
+class WorkHistory: Codable {
+    var companyName: String
+    var location: String
+    var postion:String
+    var fromMonth:String
+    var toMonth:String
+    var toYear:String
+    var fromYear:String
+    var isPresentWorking:Bool
+    init(companyName: String, location: String,postion:String,fromMonth:String,toMonth:String,toYear:String,fromYear:String,isPresentWorking:Bool) {
+        self.companyName = companyName
+        self.location = location
+        self.postion = postion
+        self.fromMonth = fromMonth
+        self.toMonth = toMonth
+        self.toYear = toYear
+        self.fromYear = fromYear
+        self.isPresentWorking = isPresentWorking
+    }
+}

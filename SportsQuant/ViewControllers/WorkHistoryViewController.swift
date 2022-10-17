@@ -73,19 +73,68 @@ class WorkHistoryViewController: UIViewController {
             UserDefaults.standard.UserWorkCompanyInPosition = newValue
         }
     }
+    var isAddingNew = false
+    var editIndex:Int?{
+        didSet{
+            if editIndex == nil {
+                addNewButton.isHidden = false
+            }else{
+                addNewButton.isHidden = true
+            }
+        }
+    }
+    var currentWorkHistory:WorkHistory?
+    var workHistory:[WorkHistory]{
+        get{
+            return retriveWorkHistory()
+        }
+        set{
+            saveWorkHistory(sounds: newValue)
+        }
+    }
+    @IBOutlet weak var addNewButton: UIButton!
     @IBOutlet weak var nextButton: UIButton!
 
     @IBOutlet weak var tableView: UITableView!
     override func viewDidLoad() {
         super.viewDidLoad()
+        addNewButton.isHidden = false
         tableView.dataSource = self
         tableView.delegate = self
         nextButton.layer.cornerRadius = nextButton.frame.height/2
         nextButton.layer.masksToBounds = true
+        if workHistory.count == 0 {
+            currentWorkHistory = WorkHistory(companyName: "", location: "", postion: "", fromMonth: "", toMonth: "", toYear: "", fromYear: "", isPresentWorking: false)
+            editIndex = 0
+        }else{
+            
+        }
         // Do any additional setup after loading the view.
     }
     
     @IBAction func nextButtonAction(_ sender: Any) {
+        if workHistory.count == 0{
+            if let currentWorkHistory = currentWorkHistory{
+                if currentWorkHistory.companyName != "" {
+                    workHistory.append(currentWorkHistory)
+                }else{
+                    
+                }
+            }
+        }else{
+            guard let editIndex = editIndex else {return}
+            guard let currentWorkHistory = currentWorkHistory else {return}
+            if isAddingNew{
+                workHistory.append(currentWorkHistory)
+            }else{
+                workHistory[editIndex] = currentWorkHistory
+            }
+            isAddingNew = false
+            self.currentWorkHistory = nil
+            self.editIndex = nil
+            self.tableView.reloadData()
+        }
+
         pagingViewController?.select(index: 4,animated: true)
     }
     
@@ -102,82 +151,156 @@ class WorkHistoryViewController: UIViewController {
         let buttonTag = sender.tag
         pagingViewController?.select(index: 4,animated: true)
     }
+    @IBAction func addNewButtonAction(_ sender: Any) {
+        isAddingNew = true
+        currentWorkHistory = WorkHistory(companyName: "", location: "", postion: "", fromMonth: "", toMonth: "", toYear: "", fromYear: "", isPresentWorking: false)
+        if workHistory.isEmpty {
+            editIndex = 0
+
+        }else{
+            editIndex = workHistory.count - 1
+
+        }
+        self.tableView.reloadData()
+    }
     @objc func switchChanged(_ sender : UISwitch!){
-        isPresentSelected = sender.isOn
-          self.tableView.reloadData()
-          print("table row switch Changed \(sender.tag)")
-          print("The switch is \(sender.isOn ? "ON" : "OFF")")
+        guard let editIndex = editIndex else {return}
+        guard let currentWorkHistory = currentWorkHistory else {return}
+        currentWorkHistory.isPresentWorking = sender.isOn
+        
+        self.tableView.reloadData()
+        print("table row switch Changed \(sender.tag)")
+        print("The switch is \(sender.isOn ? "ON" : "OFF")")
     }
     @objc func textFieldToMonthDidChange(_ textField: UITextField) {
-        toMonth = textField.text
-
+        guard let editIndex = editIndex else {return}
+        guard let currentWorkHistory = currentWorkHistory else {return}
+        currentWorkHistory.toMonth  = textField.text ?? ""
     }
     @objc func textFieldFromMonthDidChange(_ textField: UITextField) {
-        fromMonth = textField.text
+        guard let editIndex = editIndex else {return}
+        guard let currentWorkHistory = currentWorkHistory else {return}
+        currentWorkHistory.fromMonth  = textField.text ?? ""
 
     }
     @objc func textFieldToYearDidChange(_ textField: UITextField) {
-        toYear = textField.text
+        guard let editIndex = editIndex else {return}
+        guard let currentWorkHistory = currentWorkHistory else {return}
+        currentWorkHistory.toYear  = textField.text ?? ""
+
 
     }
     @objc func textFieldfromYearDidChange(_ textField: UITextField) {
-        fromYear = textField.text
+        guard let editIndex = editIndex else {return}
+        guard let currentWorkHistory = currentWorkHistory else {return}
+        currentWorkHistory.fromYear  = textField.text ?? ""
+
 
     }
     @objc func textFieldNameDidChange(_ textField: UITextField) {
-        companyName = textField.text
+        guard let editIndex = editIndex else {return}
+        guard let currentWorkHistory = currentWorkHistory else {return}
+        currentWorkHistory.companyName  = textField.text ?? ""
+
 
     }
     @objc func textFieldlocationDidChange(_ textField: UITextField) {
-        companyLocation = textField.text
+        guard let editIndex = editIndex else {return}
+        guard let currentWorkHistory = currentWorkHistory else {return}
+        currentWorkHistory.location  = textField.text ?? ""
+
 
     }
     @objc func textFieldcompanyInPositionDidChange(_ textField: UITextField) {
-        companyInPosition = textField.text
-
+        guard let editIndex = editIndex else {return}
+        guard let currentWorkHistory = currentWorkHistory else {return}
+        currentWorkHistory.postion  = textField.text ?? ""
+    }
+    @objc func editTapped(_ sender: UIButton) {
+        var index = sender.tag
+        editIndex = index
+        currentWorkHistory = workHistory[index]
+        self.tableView.reloadData()
+    }
+    @objc func deleteTapped(_ sender: UIButton) {
+        var index = sender.tag
+        workHistory.remove(at: index)
+        editIndex = nil
+        self.tableView.reloadData()
     }
 
 }
 extension WorkHistoryViewController:UITableViewDelegate,UITableViewDataSource{
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "WorkDetailTableViewCell", for: indexPath) as! WorkDetailTableViewCell
-        cell.skipThisSectionButton.addTarget(self, action: #selector(skipThisSectionButtonAction(sender:)), for: .touchUpInside)
-        cell.presentSwitch.addTarget(self, action: #selector(self.switchChanged(_:)), for: .valueChanged)
-        
-        if isPresentSelected{
-            cell.presentSwitch.isOn = true
-            if !cell.toDateStackView.isHidden{
-                cell.toDateStackView.isHidden = true
+        if workHistory.count == 0 || editIndex != nil {
+
+            let cell = tableView.dequeueReusableCell(withIdentifier: "WorkDetailTableViewCell", for: indexPath) as! WorkDetailTableViewCell
+            guard let editIndex = editIndex else {return cell}
+            guard let currentWorkHistory = currentWorkHistory else {return cell}
+            
+            cell.skipThisSectionButton.addTarget(self, action: #selector(skipThisSectionButtonAction(sender:)), for: .touchUpInside)
+            cell.presentSwitch.addTarget(self, action: #selector(self.switchChanged(_:)), for: .valueChanged)
+            
+            if currentWorkHistory.isPresentWorking ?? false{
+                cell.presentSwitch.isOn = true
+                if !cell.toDateStackView.isHidden{
+                    cell.toDateStackView.isHidden = true
+                }
+            }else{
+                cell.presentSwitch.isOn = false
+
+                cell.toDateStackView.isHidden = false
             }
+            cell.fromMonthTF.text = currentWorkHistory.fromMonth
+            cell.fromYearTF.text = currentWorkHistory.fromYear
+            cell.toMonthTF.text = currentWorkHistory.toMonth
+            cell.toYearTF.text = currentWorkHistory.toYear
+            cell.fromMonthTF.addTarget(self, action: #selector(WorkHistoryViewController.textFieldFromMonthDidChange(_:)), for: .editingChanged)
+
+            cell.fromYearTF.addTarget(self, action: #selector(WorkHistoryViewController.textFieldfromYearDidChange(_:)), for: .editingChanged)
+
+            cell.toMonthTF.addTarget(self, action: #selector(WorkHistoryViewController.textFieldToMonthDidChange(_:)), for: .editingChanged)
+
+            cell.toYearTF.addTarget(self, action: #selector(WorkHistoryViewController.textFieldToYearDidChange(_:)), for: .editingChanged)
+            cell.companyNameLabel.addTarget(self, action: #selector(WorkHistoryViewController.textFieldNameDidChange(_:)), for: .editingChanged)
+            cell.companyLocationLabel.addTarget(self, action: #selector(WorkHistoryViewController.textFieldlocationDidChange(_:)), for: .editingChanged)
+            cell.companyInPositionLabel.addTarget(self, action: #selector(WorkHistoryViewController.textFieldcompanyInPositionDidChange(_:)), for: .editingChanged)
+            
+            cell.companyNameLabel.text = currentWorkHistory.companyName
+            cell.companyLocationLabel.text = currentWorkHistory.location
+            cell.companyInPositionLabel.text = currentWorkHistory.postion
+            return cell
         }else{
-            cell.presentSwitch.isOn = false
+            let cell = tableView.dequeueReusableCell(withIdentifier: "WorkHistoryTableViewCell", for: indexPath) as! WorkHistoryTableViewCell
+            var work = workHistory[indexPath.row]
+            cell.mainView.layer.cornerRadius = 10
+            cell.mainView.layer.masksToBounds = true
+            cell.mainView.layer.borderColor = UIColor.white.cgColor
+            cell.mainView.layer.borderWidth = 1
+            cell.companyNameLabel.text = work.companyName
+            cell.postionLabel.text = work.postion
+            cell.editButton.tag = indexPath.row
+            cell.deleteButton.tag = indexPath.row
+            cell.editButton.addTarget(self, action: #selector(editTapped), for: .touchUpInside)
+            cell.deleteButton.addTarget(self, action: #selector(deleteTapped), for: .touchUpInside)
 
-            cell.toDateStackView.isHidden = false
-        }
-        cell.fromMonthTF.text = fromMonth
-        cell.fromYearTF.text = fromYear
-        cell.toMonthTF.text = toMonth
-        cell.toYearTF.text = toYear
-        cell.fromMonthTF.addTarget(self, action: #selector(WorkHistoryViewController.textFieldFromMonthDidChange(_:)), for: .editingChanged)
-
-        cell.fromYearTF.addTarget(self, action: #selector(WorkHistoryViewController.textFieldfromYearDidChange(_:)), for: .editingChanged)
-
-        cell.toMonthTF.addTarget(self, action: #selector(WorkHistoryViewController.textFieldToMonthDidChange(_:)), for: .editingChanged)
-
-        cell.toYearTF.addTarget(self, action: #selector(WorkHistoryViewController.textFieldToYearDidChange(_:)), for: .editingChanged)
-        cell.companyNameLabel.addTarget(self, action: #selector(WorkHistoryViewController.textFieldNameDidChange(_:)), for: .editingChanged)
-        cell.companyLocationLabel.addTarget(self, action: #selector(WorkHistoryViewController.textFieldlocationDidChange(_:)), for: .editingChanged)
-        cell.companyInPositionLabel.addTarget(self, action: #selector(WorkHistoryViewController.textFieldcompanyInPositionDidChange(_:)), for: .editingChanged)
+            return cell
         
-        cell.companyNameLabel.text = companyName
-        cell.companyLocationLabel.text = companyLocation
-        cell.companyInPositionLabel.text = companyInPosition
-        return cell
+        }
     }
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 1
+        if workHistory.count == 0 || editIndex != nil{
+            return 1
+        }else{
+            return workHistory.count
+        }
     }
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 800
+        if workHistory.count == 0 || editIndex != nil{
+            return 850
+        }else{
+            return 150
+        }
+       
     }
 }
