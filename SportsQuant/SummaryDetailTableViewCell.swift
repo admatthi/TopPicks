@@ -14,7 +14,7 @@ class SummaryDetailTableViewCell: UITableViewCell {
         super.awakeFromNib()
         summaryTextView.layer.cornerRadius = 10
         summaryTextView.layer.masksToBounds = true
-        summaryTextView.layer.borderColor = UIColor.black.cgColor
+        summaryTextView.layer.borderColor = UIColor.white.cgColor
         summaryTextView.layer.borderWidth = 1
         
         // Initialization code

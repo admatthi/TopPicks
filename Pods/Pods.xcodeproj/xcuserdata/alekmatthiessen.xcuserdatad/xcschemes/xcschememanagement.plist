@@ -203,7 +203,7 @@
 		<key>IQKeyboardManagerSwift.xcscheme_^#shared#^_</key>
 		<dict>
 			<key>orderHint</key>
-			<integer>47</integer>
+			<integer>46</integer>
 		</dict>
 		<key>Kingfisher.xcscheme</key>
 		<dict>
@@ -229,7 +229,7 @@
 		<key>Parchment.xcscheme_^#shared#^_</key>
 		<dict>
 			<key>orderHint</key>
-			<integer>46</integer>
+			<integer>47</integer>
 		</dict>
 		<key>Pods-SportsQuant-SportsQuantUITests.xcscheme</key>
 		<dict>
