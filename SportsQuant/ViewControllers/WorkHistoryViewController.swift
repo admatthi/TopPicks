@@ -113,10 +113,19 @@ class WorkHistoryViewController: UIViewController {
     }
     
     @IBAction func nextButtonAction(_ sender: Any) {
+        saveData()
+
+        pagingViewController?.select(index: 4,animated: true)
+    }
+    func saveData(isfromNext:Bool = true){
         if workHistory.count == 0{
             if let currentWorkHistory = currentWorkHistory{
                 if currentWorkHistory.companyName != "" {
                     workHistory.append(currentWorkHistory)
+                    isAddingNew = false
+                    self.currentWorkHistory = nil
+                    self.editIndex = nil
+                    self.tableView.reloadData()
                 }else{
                     
                 }
@@ -127,7 +136,9 @@ class WorkHistoryViewController: UIViewController {
                 self.currentWorkHistory = nil
                 self.editIndex = nil
                 self.tableView.reloadData()
-                pagingViewController?.select(index: 4,animated: true)
+                if isfromNext{
+                    pagingViewController?.select(index: 4,animated: true)
+                }
                 return
             }
             guard let editIndex = editIndex else {
@@ -135,8 +146,10 @@ class WorkHistoryViewController: UIViewController {
                 self.currentWorkHistory = nil
                 self.editIndex = nil
                 self.tableView.reloadData()
-                pagingViewController?.select(index: 4,animated: true)
-
+                if isfromNext{
+                    
+                    pagingViewController?.select(index: 4,animated: true)
+                }
                 return
                 
             }
@@ -145,8 +158,10 @@ class WorkHistoryViewController: UIViewController {
                 self.currentWorkHistory = nil
                 self.editIndex = nil
                 self.tableView.reloadData()
-                pagingViewController?.select(index: 4,animated: true)
-
+                if isfromNext{
+                    
+                    pagingViewController?.select(index: 4,animated: true)
+                }
                 return
                 
             }
@@ -160,8 +175,6 @@ class WorkHistoryViewController: UIViewController {
             self.editIndex = nil
             self.tableView.reloadData()
         }
-
-        pagingViewController?.select(index: 4,animated: true)
     }
     
     /*
@@ -176,6 +189,10 @@ class WorkHistoryViewController: UIViewController {
     @objc func skipThisSectionButtonAction(sender: UIButton){
         let buttonTag = sender.tag
         pagingViewController?.select(index: 4,animated: true)
+    }
+    @objc func backButtonButtonAction(sender: UIButton){
+        let buttonTag = sender.tag
+        saveData(isfromNext: false)
     }
     @IBAction func addNewButtonAction(_ sender: Any) {
         isAddingNew = true
@@ -251,7 +268,14 @@ class WorkHistoryViewController: UIViewController {
     @objc func deleteTapped(_ sender: UIButton) {
         var index = sender.tag
         workHistory.remove(at: index)
+        currentWorkHistory = nil
         editIndex = nil
+        if workHistory.count == 0 {
+            currentWorkHistory = WorkHistory(companyName: "", location: "", postion: "", fromMonth: "", toMonth: "", toYear: "", fromYear: "", isPresentWorking: false)
+            editIndex = 0
+        }else{
+            
+        }
         self.tableView.reloadData()
     }
 
@@ -263,7 +287,8 @@ extension WorkHistoryViewController:UITableViewDelegate,UITableViewDataSource{
             let cell = tableView.dequeueReusableCell(withIdentifier: "WorkDetailTableViewCell", for: indexPath) as! WorkDetailTableViewCell
             guard let editIndex = editIndex else {return cell}
             guard let currentWorkHistory = currentWorkHistory else {return cell}
-            
+            cell.backButon.addTarget(self, action: #selector(backButtonButtonAction(sender:)), for: .touchUpInside)
+
             cell.skipThisSectionButton.addTarget(self, action: #selector(skipThisSectionButtonAction(sender:)), for: .touchUpInside)
             cell.presentSwitch.addTarget(self, action: #selector(self.switchChanged(_:)), for: .valueChanged)
             
@@ -295,6 +320,15 @@ extension WorkHistoryViewController:UITableViewDelegate,UITableViewDataSource{
             cell.companyNameLabel.text = currentWorkHistory.companyName
             cell.companyLocationLabel.text = currentWorkHistory.location
             cell.companyInPositionLabel.text = currentWorkHistory.postion
+            cell.skipThisSectionButton.isHidden = true
+            cell.backButon.isHidden = true
+            if workHistory.count == 0 {
+                cell.skipThisSectionButton.isHidden = false
+                cell.backButon.isHidden = true
+            }else{
+                cell.skipThisSectionButton.isHidden = true
+                cell.backButon.isHidden = false
+            }
             return cell
         }else{
             let cell = tableView.dequeueReusableCell(withIdentifier: "WorkHistoryTableViewCell", for: indexPath) as! WorkHistoryTableViewCell

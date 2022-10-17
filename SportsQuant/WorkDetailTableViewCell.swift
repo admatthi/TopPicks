@@ -15,6 +15,7 @@ class WorkDetailTableViewCell: UITableViewCell {
     @IBOutlet weak var fromMonthTF: UITextField!
     @IBOutlet weak var companyNameLabel: UITextField!
     
+    @IBOutlet weak var backButon: UIButton!
     @IBOutlet weak var companyInPositionLabel: UITextField!
     @IBOutlet weak var companyLocationLabel: UITextField!
     @IBOutlet weak var skipThisSectionButton: UIButton!
