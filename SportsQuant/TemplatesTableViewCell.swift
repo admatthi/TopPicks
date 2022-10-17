@@ -56,7 +56,7 @@ extension TemplatesTableViewCell:UICollectionViewDelegate,UICollectionViewDataSo
     }
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         let template = templateCategory.templates[indexPath.row]
-        if templateCategory.category ==  "Trending"{
+        if templateCategory.category ==  "Technology"{
             let mainStoryboardIpad : UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
             let vc : Resume1ViewViewController = mainStoryboardIpad.instantiateViewController(withIdentifier: "Resume1ViewViewController") as! Resume1ViewViewController
             vc.modalPresentationStyle = .fullScreen

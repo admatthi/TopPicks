@@ -122,8 +122,34 @@ class WorkHistoryViewController: UIViewController {
                 }
             }
         }else{
-            guard let editIndex = editIndex else {return}
-            guard let currentWorkHistory = currentWorkHistory else {return}
+            guard currentWorkHistory?.companyName != "" else {
+                isAddingNew = false
+                self.currentWorkHistory = nil
+                self.editIndex = nil
+                self.tableView.reloadData()
+                pagingViewController?.select(index: 4,animated: true)
+                return
+            }
+            guard let editIndex = editIndex else {
+                isAddingNew = false
+                self.currentWorkHistory = nil
+                self.editIndex = nil
+                self.tableView.reloadData()
+                pagingViewController?.select(index: 4,animated: true)
+
+                return
+                
+            }
+            guard let currentWorkHistory = currentWorkHistory else {
+                isAddingNew = false
+                self.currentWorkHistory = nil
+                self.editIndex = nil
+                self.tableView.reloadData()
+                pagingViewController?.select(index: 4,animated: true)
+
+                return
+                
+            }
             if isAddingNew{
                 workHistory.append(currentWorkHistory)
             }else{

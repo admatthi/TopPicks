@@ -1908,14 +1908,14 @@ name?</string>
                                         </constraints>
                                     </view>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="b3J-uy-NJP">
-                                        <rect key="frame" x="10" y="140" width="350" height="167.33333333333337"/>
-                                        <string key="text">"1234 Main Street" is the street address. To this, you may add a second line, indicating the apartment, suite or other sub-unit of that curb address, before specifying the city, state, country (for international mail) and ZIP code."1234 Main Street" is the street address. To this, you may add a second line, indicating the apartment, suite or other sub-unit of that curb address, before specifying the city, state, country (for international mail) and ZIP code."1234 Main Street" is the street address. To this, you may add a second line, indicating the apartment, suite or other sub-unit of that curb address, before specifying the city, state, country (for international mail) and ZIP code."1234 Main Street" is the street address. To this, you may add a second line, indicating the apartment, suite or other sub-unit of that curb address, before specifying the city, state, country (for international mail) and ZIP code.</string>
+                                        <rect key="frame" x="10" y="140" width="350" height="71.666666666666686"/>
+                                        <string key="text">"1234 Main Street" is the street address. To this, you may add a second line, indicating the apartment, suite or other sub-unit of that curb address, before specifying the city, state, country (for international mail) and ZIP code."1234 Main Street" is the street address. To this, you may add a second line, indicating the apartment, suite </string>
                                         <fontDescription key="fontDescription" type="system" weight="medium" pointSize="10"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="gpk-g0-4QX">
-                                        <rect key="frame" x="10" y="327.33333333333331" width="360" height="57"/>
+                                        <rect key="frame" x="10" y="231.66666666666669" width="360" height="57"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Education:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fbr-gT-6pB">
                                                 <rect key="frame" x="0.0" y="0.0" width="360" height="20.333333333333332"/>
@@ -1924,7 +1924,7 @@ name?</string>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="Ixq-eo-xKs">
-                                                <rect key="frame" x="0.0" y="25.333333333333371" width="360" height="31.666666666666671"/>
+                                                <rect key="frame" x="0.0" y="25.333333333333314" width="360" height="31.666666666666671"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Havard University" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iqQ-rZ-cVx">
                                                         <rect key="frame" x="0.0" y="0.0" width="360" height="15.666666666666666"/>
@@ -1933,7 +1933,7 @@ name?</string>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="11/2020 - Present" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="31F-Nx-oGV">
-                                                        <rect key="frame" x="0.0" y="19.666666666666629" width="360" height="12"/>
+                                                        <rect key="frame" x="0.0" y="19.666666666666686" width="360" height="12"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="10"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
@@ -1943,59 +1943,82 @@ name?</string>
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="QeR-wT-B3w">
-                                        <rect key="frame" x="10" y="404.33333333333331" width="181.33333333333334" height="57"/>
+                                        <rect key="frame" x="10" y="308.66666666666669" width="107.66666666666667" height="20.333333333333314"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Employment:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KBU-Q1-4oL">
-                                                <rect key="frame" x="0.0" y="0.0" width="181.33333333333334" height="20.333333333333332"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="107.66666666666667" height="20.333333333333332"/>
                                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="LBD-vs-8W3">
-                                                <rect key="frame" x="0.0" y="25.333333333333371" width="181.33333333333334" height="31.666666666666671"/>
-                                                <subviews>
-                                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="9Jj-IH-Ek6">
-                                                        <rect key="frame" x="0.0" y="0.0" width="181.33333333333334" height="15.666666666666666"/>
-                                                        <subviews>
-                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ETT Soft" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="B4v-Pk-EmQ">
-                                                                <rect key="frame" x="0.0" y="0.0" width="54" height="15.666666666666666"/>
-                                                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="13"/>
-                                                                <nil key="textColor"/>
-                                                                <nil key="highlightedColor"/>
-                                                            </label>
-                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="--- Software Developer" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WZk-Hb-xoz">
-                                                                <rect key="frame" x="58.999999999999993" y="0.0" width="122.33333333333331" height="15.666666666666666"/>
-                                                                <fontDescription key="fontDescription" type="system" pointSize="11"/>
-                                                                <nil key="textColor"/>
-                                                                <nil key="highlightedColor"/>
-                                                            </label>
-                                                        </subviews>
-                                                    </stackView>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="11/2020 - Present" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iag-mj-fpO">
-                                                        <rect key="frame" x="0.0" y="19.666666666666686" width="181.33333333333334" height="12"/>
-                                                        <fontDescription key="fontDescription" type="system" pointSize="10"/>
-                                                        <nil key="textColor"/>
-                                                        <nil key="highlightedColor"/>
-                                                    </label>
-                                                </subviews>
-                                            </stackView>
                                         </subviews>
                                     </stackView>
+                                    <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="fru-0Q-pXg">
+                                        <rect key="frame" x="10" y="334" width="350" height="184.66666666666663"/>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <prototypes>
+                                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="ResumeWorkHistoryTableViewCell" id="h12-j5-dOQ" customClass="ResumeWorkHistoryTableViewCell" customModule="SportsQuant" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="50" width="350" height="44"/>
+                                                <autoresizingMask key="autoresizingMask"/>
+                                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="h12-j5-dOQ" id="54c-gP-KFK">
+                                                    <rect key="frame" x="0.0" y="0.0" width="350" height="44"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <subviews>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ETT Soft" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FUu-DP-F0B">
+                                                            <rect key="frame" x="0.0" y="4.9999999999999991" width="54" height="15.666666666666664"/>
+                                                            <fontDescription key="fontDescription" type="system" weight="medium" pointSize="13"/>
+                                                            <nil key="textColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="11/2020 - Present" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CTI-K8-7ra">
+                                                            <rect key="frame" x="0.0" y="25.666666666666668" width="85.666666666666671" height="12.000000000000004"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="10"/>
+                                                            <nil key="textColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="--- Software Developer" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZJd-dK-bHX">
+                                                            <rect key="frame" x="58.999999999999993" y="5.0000000000000009" width="122.33333333333331" height="13.333333333333336"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="11"/>
+                                                            <nil key="textColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                    </subviews>
+                                                    <constraints>
+                                                        <constraint firstItem="FUu-DP-F0B" firstAttribute="leading" secondItem="54c-gP-KFK" secondAttribute="leading" id="5jU-vC-W6D"/>
+                                                        <constraint firstItem="ZJd-dK-bHX" firstAttribute="top" secondItem="54c-gP-KFK" secondAttribute="top" constant="5" id="Zo3-3k-dzF"/>
+                                                        <constraint firstItem="CTI-K8-7ra" firstAttribute="top" secondItem="FUu-DP-F0B" secondAttribute="bottom" constant="5" id="eDQ-un-3zA"/>
+                                                        <constraint firstItem="CTI-K8-7ra" firstAttribute="leading" secondItem="FUu-DP-F0B" secondAttribute="leading" id="lZM-X5-zuA"/>
+                                                        <constraint firstItem="ZJd-dK-bHX" firstAttribute="leading" secondItem="FUu-DP-F0B" secondAttribute="trailing" constant="5" id="sWX-Co-N92"/>
+                                                        <constraint firstItem="FUu-DP-F0B" firstAttribute="top" secondItem="54c-gP-KFK" secondAttribute="top" constant="5" id="tGk-5C-b6I"/>
+                                                    </constraints>
+                                                </tableViewCellContentView>
+                                                <connections>
+                                                    <outlet property="companyNameLabel" destination="FUu-DP-F0B" id="iIU-Ct-y7Q"/>
+                                                    <outlet property="roleLabel" destination="ZJd-dK-bHX" id="a25-8O-oWa"/>
+                                                    <outlet property="startEndDateLabel" destination="CTI-K8-7ra" id="yQg-lg-F3C"/>
+                                                </connections>
+                                            </tableViewCell>
+                                        </prototypes>
+                                    </tableView>
                                 </subviews>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <constraints>
                                     <constraint firstItem="b3J-uy-NJP" firstAttribute="top" secondItem="00s-8N-2kp" secondAttribute="bottom" constant="20" id="0gH-zY-Dho"/>
                                     <constraint firstItem="00s-8N-2kp" firstAttribute="leading" secondItem="j2m-vf-XOg" secondAttribute="leading" id="35Z-kv-S3R"/>
                                     <constraint firstItem="QeR-wT-B3w" firstAttribute="leading" secondItem="j2m-vf-XOg" secondAttribute="leading" constant="10" id="Bmo-yH-qM1"/>
+                                    <constraint firstAttribute="bottom" secondItem="fru-0Q-pXg" secondAttribute="bottom" constant="10" id="ICG-Hb-H8w"/>
                                     <constraint firstItem="QeR-wT-B3w" firstAttribute="top" secondItem="gpk-g0-4QX" secondAttribute="bottom" constant="20" id="J6d-I3-3H1"/>
                                     <constraint firstAttribute="trailing" secondItem="gpk-g0-4QX" secondAttribute="trailing" id="PXk-qZ-MvG"/>
                                     <constraint firstItem="gpk-g0-4QX" firstAttribute="top" secondItem="b3J-uy-NJP" secondAttribute="bottom" constant="20" id="RnO-Zf-r9g"/>
+                                    <constraint firstAttribute="trailing" secondItem="fru-0Q-pXg" secondAttribute="trailing" constant="10" id="acT-Ei-DUq"/>
                                     <constraint firstItem="00s-8N-2kp" firstAttribute="top" secondItem="j2m-vf-XOg" secondAttribute="top" id="h9I-f7-2tC"/>
                                     <constraint firstItem="b3J-uy-NJP" firstAttribute="leading" secondItem="j2m-vf-XOg" secondAttribute="leading" constant="10" id="ieM-EZ-oJc"/>
                                     <constraint firstAttribute="width" secondItem="j2m-vf-XOg" secondAttribute="height" multiplier="0.7" id="kah-VM-Qcg"/>
                                     <constraint firstItem="gpk-g0-4QX" firstAttribute="leading" secondItem="j2m-vf-XOg" secondAttribute="leading" constant="10" id="kfX-7e-yWj"/>
                                     <constraint firstAttribute="trailing" secondItem="b3J-uy-NJP" secondAttribute="trailing" constant="10" id="sdR-ka-0bZ"/>
                                     <constraint firstAttribute="trailing" secondItem="00s-8N-2kp" secondAttribute="trailing" id="ut9-8u-ror"/>
+                                    <constraint firstItem="fru-0Q-pXg" firstAttribute="top" secondItem="QeR-wT-B3w" secondAttribute="bottom" constant="5" id="vti-Jf-BQI"/>
+                                    <constraint firstItem="fru-0Q-pXg" firstAttribute="leading" secondItem="KBU-Q1-4oL" secondAttribute="leading" id="yJx-V0-Thc"/>
                                 </constraints>
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KwA-cV-izd">
@@ -2059,9 +2082,7 @@ name?</string>
                         <outlet property="nameLabel" destination="Lv9-GV-Cml" id="1QD-hd-Xbt"/>
                         <outlet property="phoneEmailStackView" destination="s7n-Eg-z0N" id="iVz-MO-rGb"/>
                         <outlet property="resumeMainView" destination="j2m-vf-XOg" id="6AV-ra-IyB"/>
-                        <outlet property="workNameLabel" destination="B4v-Pk-EmQ" id="nZZ-mV-d6M"/>
-                        <outlet property="workTimeLineLabel" destination="iag-mj-fpO" id="dhv-zg-DyI"/>
-                        <outlet property="workTitleLabel" destination="WZk-Hb-xoz" id="2WM-Ij-hrZ"/>
+                        <outlet property="tableView" destination="fru-0Q-pXg" id="Ejk-Hy-9Mo"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lBj-77-GRf" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

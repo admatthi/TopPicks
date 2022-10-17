@@ -29,6 +29,7 @@
 		4EBAF49428F5C7B300BF2EE5 /* ApiModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EBAF49128F5C7B200BF2EE5 /* ApiModel.swift */; };
 		4EBAF49628F5CF5800BF2EE5 /* SportsBetterDetailTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EBAF49528F5CF5800BF2EE5 /* SportsBetterDetailTableViewCell.swift */; };
 		4EBE3E6028FD8B8100B3333D /* WorkHistoryTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EBE3E5F28FD8B8100B3333D /* WorkHistoryTableViewCell.swift */; };
+		4ED7D58C28FDC22F008F606F /* ResumeWorkHistoryTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4ED7D58B28FDC22F008F606F /* ResumeWorkHistoryTableViewCell.swift */; };
 		4EFB7A4428F6F02C0010A45D /* IntoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EFB7A4328F6F02C0010A45D /* IntoViewController.swift */; };
 		4EFB7A4628F6F0490010A45D /* ContactViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EFB7A4528F6F0490010A45D /* ContactViewController.swift */; };
 		4EFB7A4828F6F1650010A45D /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EFB7A4728F6F1650010A45D /* HomeViewController.swift */; };
@@ -91,6 +92,7 @@
 		4EBAF49128F5C7B200BF2EE5 /* ApiModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ApiModel.swift; sourceTree = "<group>"; };
 		4EBAF49528F5CF5800BF2EE5 /* SportsBetterDetailTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SportsBetterDetailTableViewCell.swift; sourceTree = "<group>"; };
 		4EBE3E5F28FD8B8100B3333D /* WorkHistoryTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkHistoryTableViewCell.swift; sourceTree = "<group>"; };
+		4ED7D58B28FDC22F008F606F /* ResumeWorkHistoryTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResumeWorkHistoryTableViewCell.swift; sourceTree = "<group>"; };
 		4EFB7A4328F6F02C0010A45D /* IntoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntoViewController.swift; sourceTree = "<group>"; };
 		4EFB7A4528F6F0490010A45D /* ContactViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactViewController.swift; sourceTree = "<group>"; };
 		4EFB7A4728F6F1650010A45D /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
@@ -232,6 +234,7 @@
 				4E2F635D28F8E2AC007146BD /* TemplateCollectionViewCell.swift */,
 				4E77F5BB28F9DCF7008DF5DD /* TemplatesTableViewCell.swift */,
 				4EBE3E5F28FD8B8100B3333D /* WorkHistoryTableViewCell.swift */,
+				4ED7D58B28FDC22F008F606F /* ResumeWorkHistoryTableViewCell.swift */,
 			);
 			path = SportsQuant;
 			sourceTree = "<group>";
@@ -518,6 +521,7 @@
 				4E21DE0D28F767AB00E5CA16 /* FinishViewController.swift in Sources */,
 				4EA8B7F528F84E1D00AAA75C /* Resume1ViewViewController.swift in Sources */,
 				9D1F12A528F58D91007D1BC0 /* ViewController.swift in Sources */,
+				4ED7D58C28FDC22F008F606F /* ResumeWorkHistoryTableViewCell.swift in Sources */,
 				9D1F12A128F58D91007D1BC0 /* AppDelegate.swift in Sources */,
 				4EFB7A4428F6F02C0010A45D /* IntoViewController.swift in Sources */,
 				4EFB7A4828F6F1650010A45D /* HomeViewController.swift in Sources */,

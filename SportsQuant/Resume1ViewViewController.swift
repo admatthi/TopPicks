@@ -9,6 +9,7 @@ import Foundation
 import UIKit
 
 class Resume1ViewViewController: UIViewController {
+    @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var resumeMainView: UIView!
     @IBOutlet weak var educationNameLabel: UILabel!
     
@@ -26,8 +27,14 @@ class Resume1ViewViewController: UIViewController {
     @IBOutlet weak var PhoneLabel: UILabel!
     @IBOutlet weak var emailLabel: UILabel!
     @IBOutlet weak var nameLabel: UILabel!
+    var workhistory:[WorkHistory]{
+        return retriveWorkHistory()
+    }
+
     override func viewDidLoad() {
         super.viewDidLoad()
+        tableView.dataSource = self
+        tableView.delegate = self
         addShadow()
         nameLabel.text = (UserDefaults.standard.User_First_Name ?? "") + " " + (UserDefaults.standard.User_Last_Name ?? "")
         emailLabel.text = UserDefaults.standard.UserEmail ?? ""
@@ -38,19 +45,19 @@ class Resume1ViewViewController: UIViewController {
         descriptionLabel.text =  UserDefaults.standard.UserSummary ?? ""
         descriptionLabel.text =  UserDefaults.standard.UserSummary ?? ""
         educationNameLabel.text = UserDefaults.standard.UserEducationSchoolName ?? ""
-        workNameLabel.text = UserDefaults.standard.UserWorkCompanyName ?? ""
+//        workNameLabel.text = UserDefaults.standard.UserWorkCompanyName ?? ""
 
         if UserDefaults.standard.UserEducationPresentSelected{
             educationTimeLineLabel.text = "\(UserDefaults.standard.UserEducationFromMonth ?? "")/\(UserDefaults.standard.UserEducationFromYear ?? "") - Present"
         }else{
             educationTimeLineLabel.text = "\(UserDefaults.standard.UserEducationFromMonth ?? "")/\(UserDefaults.standard.UserEducationFromYear ?? "") - \(UserDefaults.standard.UserEducationToMonth ?? "")/\(UserDefaults.standard.UserEducationToYear ?? "")"
         }
-        if UserDefaults.standard.UserWorkHistoryPresentSelected{
-            workTimeLineLabel.text = "\(UserDefaults.standard.UserWorkFromMonth ?? "")/\(UserDefaults.standard.UserWorkFromYear ?? "") - Present, \(UserDefaults.standard.UserWorkCompanyLocation ?? "")"
-        }else{
-            workTimeLineLabel.text = "\(UserDefaults.standard.UserWorkFromMonth ?? "")/\(UserDefaults.standard.UserWorkFromYear ?? "") - \(UserDefaults.standard.UserWorkToMonth ?? "")/\(UserDefaults.standard.UserWorkToYear ?? ""), \(UserDefaults.standard.UserWorkCompanyLocation ?? "")"
-        }
-        workTitleLabel.text = "--- \(UserDefaults.standard.UserWorkCompanyInPosition ?? "")"
+//        if UserDefaults.standard.UserWorkHistoryPresentSelected{
+//            workTimeLineLabel.text = "\(UserDefaults.standard.UserWorkFromMonth ?? "")/\(UserDefaults.standard.UserWorkFromYear ?? "") - Present, \(UserDefaults.standard.UserWorkCompanyLocation ?? "")"
+//        }else{
+//            workTimeLineLabel.text = "\(UserDefaults.standard.UserWorkFromMonth ?? "")/\(UserDefaults.standard.UserWorkFromYear ?? "") - \(UserDefaults.standard.UserWorkToMonth ?? "")/\(UserDefaults.standard.UserWorkToYear ?? ""), \(UserDefaults.standard.UserWorkCompanyLocation ?? "")"
+//        }
+//        workTitleLabel.text = "--- \(UserDefaults.standard.UserWorkCompanyInPosition ?? "")"
         // Do any additional setup after loading the view.
     }
     
@@ -177,4 +184,26 @@ class Resume1ViewViewController: UIViewController {
 
     }
 
+}
+extension Resume1ViewViewController:UITableViewDelegate,UITableViewDataSource{
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return workhistory.count
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "ResumeWorkHistoryTableViewCell", for: indexPath) as! ResumeWorkHistoryTableViewCell
+        let work = workhistory[indexPath.row]
+        cell.companyNameLabel.text = work.companyName
+        cell.roleLabel.text = "---\(work.postion)"
+        if work.isPresentWorking{
+            cell.startEndDateLabel.text = "\(work.fromMonth)/\(work.fromYear) - Present, \(work.location)"
+        }else{
+            cell.startEndDateLabel.text = "\(work.fromMonth)/\(work.fromYear) - \(work.toMonth)/\(work.toYear), \(work.location)"
+        }
+        return cell
+    }
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 45
+    }
+    
 }
