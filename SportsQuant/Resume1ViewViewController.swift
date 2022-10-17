@@ -194,7 +194,7 @@ extension Resume1ViewViewController:UITableViewDelegate,UITableViewDataSource{
         let cell = tableView.dequeueReusableCell(withIdentifier: "ResumeWorkHistoryTableViewCell", for: indexPath) as! ResumeWorkHistoryTableViewCell
         let work = workhistory[indexPath.row]
         cell.companyNameLabel.text = work.companyName
-        cell.roleLabel.text = "---\(work.postion)"
+        cell.roleLabel.text = "--- \(work.postion)"
         if work.isPresentWorking{
             cell.startEndDateLabel.text = "\(work.fromMonth)/\(work.fromYear) - Present, \(work.location)"
         }else{
