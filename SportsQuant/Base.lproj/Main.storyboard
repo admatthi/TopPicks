@@ -1685,7 +1685,7 @@ name?</string>
                                                     <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                                 </textView>
                                                 <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="MjO-xP-8j8">
-                                                    <rect key="frame" x="0.0" y="464" width="390" height="260"/>
+                                                    <rect key="frame" x="0.0" y="490.33333333333326" width="390" height="260"/>
                                                     <color key="backgroundColor" red="0.1215686275" green="0.22352941179999999" blue="0.56078431370000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="260" id="vhe-dq-JxJ"/>
@@ -1761,6 +1761,12 @@ name?</string>
                                                         </collectionViewCell>
                                                     </cells>
                                                 </collectionView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Examples:" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YG7-CJ-zaQ">
+                                                    <rect key="frame" x="10" y="454" width="370" height="26.333333333333314"/>
+                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="22"/>
+                                                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
                                             </subviews>
                                             <color key="backgroundColor" red="0.12156862745098039" green="0.22352941176470587" blue="0.5607843137254902" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                             <constraints>
@@ -1768,11 +1774,14 @@ name?</string>
                                                 <constraint firstItem="R5j-az-F1D" firstAttribute="leading" secondItem="Brh-6S-8mM" secondAttribute="leadingMargin" id="0lw-PM-wau"/>
                                                 <constraint firstItem="tkO-Nn-0gX" firstAttribute="top" secondItem="sfv-HE-8gN" secondAttribute="bottom" constant="30" id="2mH-x6-2gk"/>
                                                 <constraint firstItem="sfv-HE-8gN" firstAttribute="trailing" secondItem="Brh-6S-8mM" secondAttribute="trailingMargin" id="8cO-pi-OEd"/>
+                                                <constraint firstItem="YG7-CJ-zaQ" firstAttribute="top" secondItem="tkO-Nn-0gX" secondAttribute="bottom" constant="20" id="BgF-Gb-hD7"/>
                                                 <constraint firstItem="R5j-az-F1D" firstAttribute="top" secondItem="Brh-6S-8mM" secondAttribute="topMargin" constant="30" id="G5f-Gb-iAK"/>
-                                                <constraint firstItem="MjO-xP-8j8" firstAttribute="top" secondItem="tkO-Nn-0gX" secondAttribute="bottom" constant="30" id="MCt-au-gKP"/>
                                                 <constraint firstAttribute="trailing" secondItem="MjO-xP-8j8" secondAttribute="trailing" id="OcJ-Sr-G5Z"/>
                                                 <constraint firstItem="MjO-xP-8j8" firstAttribute="leading" secondItem="Brh-6S-8mM" secondAttribute="leading" id="PGE-sJ-TkL"/>
+                                                <constraint firstItem="MjO-xP-8j8" firstAttribute="top" secondItem="YG7-CJ-zaQ" secondAttribute="bottom" constant="10" id="dYo-NW-Ibr"/>
                                                 <constraint firstItem="sfv-HE-8gN" firstAttribute="leading" secondItem="Brh-6S-8mM" secondAttribute="leadingMargin" id="ebn-PK-ltQ"/>
+                                                <constraint firstAttribute="trailing" secondItem="YG7-CJ-zaQ" secondAttribute="trailing" constant="10" id="gV9-dg-Oih"/>
+                                                <constraint firstItem="YG7-CJ-zaQ" firstAttribute="leading" secondItem="Brh-6S-8mM" secondAttribute="leading" constant="10" id="gvG-bn-tfZ"/>
                                                 <constraint firstItem="sfv-HE-8gN" firstAttribute="top" secondItem="R5j-az-F1D" secondAttribute="bottom" constant="30" id="hP8-Xy-D8G"/>
                                                 <constraint firstItem="tkO-Nn-0gX" firstAttribute="leading" secondItem="Brh-6S-8mM" secondAttribute="leadingMargin" id="v2O-4k-KR6"/>
                                                 <constraint firstAttribute="trailingMargin" secondItem="R5j-az-F1D" secondAttribute="trailing" id="xSX-uW-qoF"/>
