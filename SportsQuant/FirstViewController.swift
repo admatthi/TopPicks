@@ -26,6 +26,10 @@ class FirstViewController: UIViewController {
     @IBAction func tapContinue(_ sender: Any) {
         
         self.requestTrackingPermission()
+        
+        
+        let generator = UIImpactFeedbackGenerator(style: .light)
+        generator.impactOccurred()
 
         self.performSegue(withIdentifier: "WelcometoPaywall", sender: self)
     }

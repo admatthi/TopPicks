@@ -15,6 +15,10 @@ class ReviewViewController: UIViewController {
 
     @IBAction func tapC(_ sender: Any) {
         
+        
+        let generator = UIImpactFeedbackGenerator(style: .light)
+        generator.impactOccurred()
+        
         self.performSegue(withIdentifier: "ReviewToPaywall", sender: self)
     }
     @IBOutlet weak var tapc: UIButton!

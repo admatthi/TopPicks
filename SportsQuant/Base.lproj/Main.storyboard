@@ -2272,22 +2272,22 @@ name?</string>
                                     <constraint firstAttribute="height" constant="196" id="qkI-0s-sk0"/>
                                 </constraints>
                             </imageView>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Frame 13 (2)" translatesAutoresizingMaskIntoConstraints="NO" id="EPr-tc-t6w">
-                                <rect key="frame" x="165.66666666666666" y="150" width="59" height="59"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Group 14" translatesAutoresizingMaskIntoConstraints="NO" id="EPr-tc-t6w">
+                                <rect key="frame" x="145" y="127" width="100" height="100"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="59" id="6gd-MM-QOM"/>
-                                    <constraint firstAttribute="width" constant="59" id="xlL-8B-DGG"/>
+                                    <constraint firstAttribute="height" constant="100" id="6gd-MM-QOM"/>
+                                    <constraint firstAttribute="width" constant="100" id="xlL-8B-DGG"/>
                                 </constraints>
                             </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="N6f-ct-Tnd"/>
                         <color key="backgroundColor" red="0.1215686351" green="0.2235293984" blue="0.56078433989999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <constraints>
-                            <constraint firstItem="iw4-dl-zYL" firstAttribute="top" secondItem="EPr-tc-t6w" secondAttribute="bottom" constant="38" id="5gi-gj-qdC"/>
+                            <constraint firstItem="iw4-dl-zYL" firstAttribute="top" secondItem="EPr-tc-t6w" secondAttribute="bottom" constant="20" id="5gi-gj-qdC"/>
                             <constraint firstItem="iw4-dl-zYL" firstAttribute="leading" secondItem="N6f-ct-Tnd" secondAttribute="leading" constant="22" id="7Af-Kj-nTk"/>
                             <constraint firstAttribute="bottom" secondItem="Dyk-vv-i3S" secondAttribute="bottom" constant="30" id="EPG-VZ-etN"/>
                             <constraint firstItem="71b-3S-Rhq" firstAttribute="top" secondItem="N6f-ct-Tnd" secondAttribute="top" constant="16" id="Ktr-bK-Wc7"/>
-                            <constraint firstItem="EPr-tc-t6w" firstAttribute="top" secondItem="71b-3S-Rhq" secondAttribute="bottom" constant="61.333333333333343" id="VAq-D6-Jd4"/>
+                            <constraint firstItem="EPr-tc-t6w" firstAttribute="top" secondItem="71b-3S-Rhq" secondAttribute="bottom" constant="38.333333333333343" id="VAq-D6-Jd4"/>
                             <constraint firstItem="71b-3S-Rhq" firstAttribute="centerX" secondItem="3Qe-sC-vTo" secondAttribute="centerX" constant="-1" id="akp-Zw-IT7"/>
                             <constraint firstItem="NKL-gk-ARA" firstAttribute="leading" secondItem="N6f-ct-Tnd" secondAttribute="leading" constant="22" id="gXx-hl-zqA"/>
                             <constraint firstItem="7ai-3s-oAo" firstAttribute="top" secondItem="iw4-dl-zYL" secondAttribute="bottom" constant="74" id="krr-F8-HjM"/>
@@ -2307,7 +2307,7 @@ name?</string>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Grh-uY-Klj" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-829" y="-803"/>
+            <point key="canvasLocation" x="-829.23076923076917" y="-803.3175355450237"/>
         </scene>
         <!--Resume2 View View Controller-->
         <scene sceneID="pZk-Ff-Y43">
@@ -7765,6 +7765,7 @@ across engineering and design, which increased yearly revenue
     <resources>
         <image name="Frame 13 (2)" width="877" height="941"/>
         <image name="Group 11" width="4096" height="2504"/>
+        <image name="Group 14" width="1055" height="1096.3333740234375"/>
         <image name="arrowshape.left.fill" catalog="system" width="128" height="104"/>
         <image name="by proceeding" width="542" height="74"/>
         <image name="checkmark.circle.fill" catalog="system" width="128" height="123"/>
