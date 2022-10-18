@@ -14,6 +14,7 @@
 		4E21DE1128F76F9100E5CA16 /* Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E21DE1028F76F9100E5CA16 /* Extension.swift */; };
 		4E2F635E28F8E2AC007146BD /* TemplateCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E2F635D28F8E2AC007146BD /* TemplateCollectionViewCell.swift */; };
 		4E479CED28F5EAE800757C9D /* TagsCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E479CEC28F5EAE800757C9D /* TagsCollectionViewCell.swift */; };
+		4E4F99F228FF144C00A9278E /* CopyDescriptionCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E4F99F128FF144C00A9278E /* CopyDescriptionCollectionViewCell.swift */; };
 		4E5D04B928F75B1800BE4C8A /* WorkDetailTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E5D04B828F75B1800BE4C8A /* WorkDetailTableViewCell.swift */; };
 		4E77F5BC28F9DCF7008DF5DD /* TemplatesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E77F5BB28F9DCF7008DF5DD /* TemplatesTableViewCell.swift */; };
 		4E79FA1028F7324F000BC176 /* ContactDetailTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E79FA0F28F7324F000BC176 /* ContactDetailTableViewCell.swift */; };
@@ -77,6 +78,7 @@
 		4E21DE1028F76F9100E5CA16 /* Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extension.swift; sourceTree = "<group>"; };
 		4E2F635D28F8E2AC007146BD /* TemplateCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TemplateCollectionViewCell.swift; sourceTree = "<group>"; };
 		4E479CEC28F5EAE800757C9D /* TagsCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TagsCollectionViewCell.swift; sourceTree = "<group>"; };
+		4E4F99F128FF144C00A9278E /* CopyDescriptionCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CopyDescriptionCollectionViewCell.swift; sourceTree = "<group>"; };
 		4E5D04B828F75B1800BE4C8A /* WorkDetailTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkDetailTableViewCell.swift; sourceTree = "<group>"; };
 		4E77F5BB28F9DCF7008DF5DD /* TemplatesTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TemplatesTableViewCell.swift; sourceTree = "<group>"; };
 		4E79FA0F28F7324F000BC176 /* ContactDetailTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactDetailTableViewCell.swift; sourceTree = "<group>"; };
@@ -235,6 +237,7 @@
 				4E77F5BB28F9DCF7008DF5DD /* TemplatesTableViewCell.swift */,
 				4EBE3E5F28FD8B8100B3333D /* WorkHistoryTableViewCell.swift */,
 				4ED7D58B28FDC22F008F606F /* ResumeWorkHistoryTableViewCell.swift */,
+				4E4F99F128FF144C00A9278E /* CopyDescriptionCollectionViewCell.swift */,
 			);
 			path = SportsQuant;
 			sourceTree = "<group>";
@@ -524,6 +527,7 @@
 				4ED7D58C28FDC22F008F606F /* ResumeWorkHistoryTableViewCell.swift in Sources */,
 				9D1F12A128F58D91007D1BC0 /* AppDelegate.swift in Sources */,
 				4EFB7A4428F6F02C0010A45D /* IntoViewController.swift in Sources */,
+				4E4F99F228FF144C00A9278E /* CopyDescriptionCollectionViewCell.swift in Sources */,
 				4EFB7A4828F6F1650010A45D /* HomeViewController.swift in Sources */,
 				4E79FA1028F7324F000BC176 /* ContactDetailTableViewCell.swift in Sources */,
 				4E79FA1228F7367E000BC176 /* EducationViewController.swift in Sources */,

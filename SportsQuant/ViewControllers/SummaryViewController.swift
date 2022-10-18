@@ -8,7 +8,17 @@
 
 import UIKit
 
-class SummaryViewController: UIViewController, UITextViewDelegate {
+class SummaryViewController: UIViewController, UITextViewDelegate, CopyDescriptionDelegate {
+    func didCopyDescription(text: String) {
+        if let userSummary = userSummary{
+            self.userSummary = ((userSummary ?? "") +  "\n" + text)
+
+        }else{
+            self.userSummary = text
+        }
+        self.tableView.reloadData()
+    }
+    
     var userSummary: String?{
         get{
             UserDefaults.standard.UserSummary
@@ -56,13 +66,13 @@ extension SummaryViewController:UITableViewDelegate,UITableViewDataSource{
         let cell = tableView.dequeueReusableCell(withIdentifier: "SummaryDetailTableViewCell", for: indexPath) as! SummaryDetailTableViewCell
         cell.summaryTextView.delegate = self
         cell.summaryTextView.text = userSummary
-
+        cell.copyDescriptionDelegate = self
         return cell
     }
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return 1
     }
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 800
+        return 1000
     }
 }
