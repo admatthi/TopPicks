@@ -60,6 +60,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         SVProgressHUD.setDefaultMaskType(.clear)
 
         
+        AppsFlyerLib.shared().appsFlyerDevKey = "GSfLvX3FDxH58hR3yDZzZe"
+         AppsFlyerLib.shared().appleAppID = "6443812368"
+         AppsFlyerLib.shared().delegate = self
+         
+         AppsFlyerLib.shared().isDebug = true
+         
+         AppsFlyerLib.shared().waitForATTUserAuthorization(timeoutInterval: 10000)
         
    
         Purchases.shared.purchaserInfo { (purchaserInfo, error) in
