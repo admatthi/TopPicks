@@ -59,7 +59,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         Purchases.shared.delegate = self
         SVProgressHUD.setDefaultMaskType(.clear)
 
-        
+      
+    
         
    
         Purchases.shared.purchaserInfo { (purchaserInfo, error) in
