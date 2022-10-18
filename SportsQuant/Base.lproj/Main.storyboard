@@ -476,7 +476,7 @@
                                                             <rect key="frame" x="0.0" y="0.0" width="350" height="41.333333333333336"/>
                                                             <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                             <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="33"/>
-                                                            <textInputTraits key="textInputTraits" textContentType="name"/>
+                                                            <textInputTraits key="textInputTraits" keyboardType="namePhonePad" textContentType="name"/>
                                                         </textField>
                                                         <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="PTt-re-Qug">
                                                             <rect key="frame" x="0.0" y="0.0" width="350" height="1"/>
@@ -494,7 +494,7 @@
                                                             <rect key="frame" x="0.0" y="0.0" width="350" height="41.333333333333336"/>
                                                             <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                             <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="33"/>
-                                                            <textInputTraits key="textInputTraits"/>
+                                                            <textInputTraits key="textInputTraits" keyboardType="namePhonePad"/>
                                                         </textField>
                                                         <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Yl6-Lr-Kfp">
                                                             <rect key="frame" x="0.0" y="0.0" width="350" height="1"/>
@@ -633,7 +633,7 @@
                                                                     <rect key="frame" x="0.0" y="34.333333333333343" width="350" height="41.333333333333343"/>
                                                                     <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                     <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="33"/>
-                                                                    <textInputTraits key="textInputTraits" textContentType="email"/>
+                                                                    <textInputTraits key="textInputTraits" keyboardType="emailAddress" textContentType="email"/>
                                                                 </textField>
                                                                 <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="HUJ-Zc-AQ5">
                                                                     <rect key="frame" x="0.0" y="75.666666666666657" width="350" height="1"/>
@@ -666,7 +666,7 @@
                                                                     <rect key="frame" x="0.0" y="34.333333333333371" width="350" height="41.333333333333343"/>
                                                                     <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                     <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="33"/>
-                                                                    <textInputTraits key="textInputTraits" textContentType="tel"/>
+                                                                    <textInputTraits key="textInputTraits" keyboardType="numberPad" textContentType="tel"/>
                                                                 </textField>
                                                                 <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="EJP-X6-aaW">
                                                                     <rect key="frame" x="0.0" y="75.666666666666686" width="350" height="1"/>
@@ -699,7 +699,7 @@
                                                                     <rect key="frame" x="0.0" y="34.333333333333314" width="350" height="41.333333333333343"/>
                                                                     <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                     <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="33"/>
-                                                                    <textInputTraits key="textInputTraits" textContentType="url"/>
+                                                                    <textInputTraits key="textInputTraits" keyboardType="URL" textContentType="url"/>
                                                                 </textField>
                                                                 <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4uq-vK-qK4">
                                                                     <rect key="frame" x="0.0" y="75.666666666666686" width="350" height="1"/>
@@ -732,7 +732,7 @@
                                                                     <rect key="frame" x="0.0" y="34.333333333333371" width="350" height="41.333333333333343"/>
                                                                     <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                     <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="33"/>
-                                                                    <textInputTraits key="textInputTraits" textContentType="url"/>
+                                                                    <textInputTraits key="textInputTraits" keyboardType="URL" textContentType="url"/>
                                                                 </textField>
                                                                 <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="eY8-Uf-UOM">
                                                                     <rect key="frame" x="0.0" y="75.666666666666742" width="350" height="1"/>
@@ -962,13 +962,13 @@
                                                                                     </constraints>
                                                                                     <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                                     <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="33"/>
-                                                                                    <textInputTraits key="textInputTraits" textContentType="date-time"/>
+                                                                                    <textInputTraits key="textInputTraits" keyboardType="numberPad" textContentType="date-time"/>
                                                                                 </textField>
                                                                                 <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="yyyy" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="xCv-CR-tJS">
                                                                                     <rect key="frame" x="102" y="0.0" width="248" height="41.333333333333336"/>
                                                                                     <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                                     <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="33"/>
-                                                                                    <textInputTraits key="textInputTraits" textContentType="date-time"/>
+                                                                                    <textInputTraits key="textInputTraits" keyboardType="numberPad" textContentType="date-time"/>
                                                                                 </textField>
                                                                             </subviews>
                                                                         </stackView>
@@ -1036,13 +1036,13 @@
                                                                                             </constraints>
                                                                                             <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                                             <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="33"/>
-                                                                                            <textInputTraits key="textInputTraits" textContentType="date-time"/>
+                                                                                            <textInputTraits key="textInputTraits" keyboardType="numberPad" textContentType="date-time"/>
                                                                                         </textField>
                                                                                         <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="yyyy" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Onf-HU-cAy">
                                                                                             <rect key="frame" x="102" y="0.0" width="248" height="41.333333333333336"/>
                                                                                             <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                                             <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="33"/>
-                                                                                            <textInputTraits key="textInputTraits" textContentType="date-time"/>
+                                                                                            <textInputTraits key="textInputTraits" keyboardType="numberPad" textContentType="date-time"/>
                                                                                         </textField>
                                                                                     </subviews>
                                                                                 </stackView>
@@ -1319,13 +1319,13 @@ name?</string>
                                                                                     </constraints>
                                                                                     <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                                     <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="33"/>
-                                                                                    <textInputTraits key="textInputTraits" textContentType="date-time"/>
+                                                                                    <textInputTraits key="textInputTraits" keyboardType="numberPad" textContentType="date-time"/>
                                                                                 </textField>
                                                                                 <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="yyyy" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="G4A-04-hOk">
                                                                                     <rect key="frame" x="102" y="0.0" width="248" height="41.333333333333336"/>
                                                                                     <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                                     <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="33"/>
-                                                                                    <textInputTraits key="textInputTraits" textContentType="date-time"/>
+                                                                                    <textInputTraits key="textInputTraits" keyboardType="numberPad" textContentType="date-time"/>
                                                                                 </textField>
                                                                             </subviews>
                                                                         </stackView>
@@ -2324,19 +2324,19 @@ name?</string>
                                         <rect key="frame" x="2" y="8" width="109" height="128"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ABEL TUSTON" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Yoi-0D-i0K">
-                                                <rect key="frame" x="8" y="2" width="93" height="21"/>
+                                                <rect key="frame" x="8" y="1.9999999999999991" width="93" height="15.666666666666664"/>
                                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="13"/>
                                                 <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Product Manager" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uzG-5e-PAo">
-                                                <rect key="frame" x="8" y="19" width="93" height="21"/>
+                                                <rect key="frame" x="8" y="19" width="93" height="15.666666666666664"/>
                                                 <fontDescription key="fontDescription" type="italicSystem" pointSize="10"/>
                                                 <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="abeltuston@email.com" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Idb-Hp-QfU">
-                                                <rect key="frame" x="8" y="44" width="97" height="18"/>
+                                                <rect key="frame" x="8" y="38.666666666666671" width="97" height="18"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="18" id="nEY-H6-DdA"/>
                                                 </constraints>
@@ -2345,7 +2345,7 @@ name?</string>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1234567890" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0sZ-fz-L0R">
-                                                <rect key="frame" x="8" y="62" width="93" height="18"/>
+                                                <rect key="frame" x="8" y="56.666666666666671" width="93" height="18"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="18" id="9vZ-b0-u28"/>
                                                 </constraints>
@@ -2354,7 +2354,7 @@ name?</string>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Newark, NJ" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yMk-Df-jAg">
-                                                <rect key="frame" x="8" y="80" width="93" height="18"/>
+                                                <rect key="frame" x="8" y="74.666666666666657" width="93" height="18"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="18" id="nPU-EC-Ngc"/>
                                                 </constraints>
@@ -2363,7 +2363,7 @@ name?</string>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Linkedin" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Oyc-ho-hX8">
-                                                <rect key="frame" x="8" y="98" width="93" height="18"/>
+                                                <rect key="frame" x="8" y="92.666666666666657" width="93" height="18"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="18" id="CHT-LE-1Wv"/>
                                                 </constraints>
@@ -2865,19 +2865,19 @@ across engineering and design, which increased yearly revenue
                                 <rect key="frame" x="16" y="47" width="358" height="141"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ZADEY JOHNSTON" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2vg-zo-ZGl">
-                                        <rect key="frame" x="8" y="8" width="330" height="32"/>
+                                        <rect key="frame" x="8" y="8" width="330" height="30"/>
                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="25"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Product Manager" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qCi-tG-j3a">
-                                        <rect key="frame" x="8" y="38" width="330" height="32"/>
+                                        <rect key="frame" x="8" y="38" width="330" height="30"/>
                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
                                         <color key="textColor" red="0.58072251080000004" green="0.066734083" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="zadeyjohnston@email.com" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EwL-JJ-wog">
-                                        <rect key="frame" x="8" y="78" width="162" height="21"/>
+                                        <rect key="frame" x="8" y="76" width="162" height="21"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="21" id="iQZ-JJ-pxW"/>
                                         </constraints>
@@ -2886,13 +2886,13 @@ across engineering and design, which increased yearly revenue
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1234567890" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="L8X-zu-dsZ">
-                                        <rect key="frame" x="172" y="78" width="186" height="21"/>
+                                        <rect key="frame" x="172" y="76" width="186" height="21"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="New York, NY" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6t3-UD-SJI">
-                                        <rect key="frame" x="8" y="107" width="162" height="21"/>
+                                        <rect key="frame" x="8" y="105" width="162" height="21"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="21" id="5W3-7W-oQv"/>
                                         </constraints>
@@ -2901,7 +2901,7 @@ across engineering and design, which increased yearly revenue
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="LinkedIn" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Nzc-Um-Kkk">
-                                        <rect key="frame" x="172" y="107" width="186" height="21"/>
+                                        <rect key="frame" x="172" y="105" width="186" height="21"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                         <color key="textColor" red="0.074509803920000006" green="0.38823529410000002" blue="0.87450980389999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
@@ -3798,7 +3798,7 @@ across engineering and design, which increased yearly </string>
                                         <rect key="frame" x="0.0" y="8" width="147" height="173"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="CONTACT" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FRW-fl-jB1">
-                                                <rect key="frame" x="0.6666666666666714" y="8" width="145.66666666666663" height="27"/>
+                                                <rect key="frame" x="0.66666666666668561" y="8" width="145.66666666666663" height="27"/>
                                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
@@ -4349,7 +4349,7 @@ functional teams to remedy issues from coding enhanceme</string>
                                         <rect key="frame" x="0.0" y="8" width="147" height="173"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="CONTACT" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4l2-Ty-RJB">
-                                                <rect key="frame" x="0.6666666666666714" y="8" width="145.66666666666663" height="27"/>
+                                                <rect key="frame" x="0.66666666666668561" y="8" width="145.66666666666663" height="27"/>
                                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
@@ -6837,7 +6837,7 @@ across engineering and design, which increased yearly revenue
                                         <rect key="frame" x="0.0" y="322" width="147" height="163"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="SKILLS" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gn4-ul-xtT">
-                                                <rect key="frame" x="79.333333333333329" y="8" width="58.333333333333329" height="27"/>
+                                                <rect key="frame" x="79.333333333333314" y="8" width="58.333333333333329" height="27"/>
                                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
