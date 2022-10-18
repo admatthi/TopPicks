@@ -70,6 +70,11 @@ class ContactViewController: UIViewController {
     }
     
     @IBAction func nextButtonAction(_ sender: Any) {
+        
+        
+        let generator = UIImpactFeedbackGenerator(style: .light)
+        generator.impactOccurred()
+        
         pagingViewController?.select(index: 2,animated: true)
     }
     

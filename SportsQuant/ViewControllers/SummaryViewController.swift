@@ -30,6 +30,11 @@ class SummaryViewController: UIViewController, UITextViewDelegate {
     }
     
     @IBAction func nextButtonAction(_ sender: Any) {
+        
+        
+        let generator = UIImpactFeedbackGenerator(style: .light)
+        generator.impactOccurred()
+        
         pagingViewController?.select(index: 5,animated: true)
     }
     

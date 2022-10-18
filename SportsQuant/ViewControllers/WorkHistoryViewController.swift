@@ -113,7 +113,13 @@ class WorkHistoryViewController: UIViewController {
     }
     
     @IBAction func nextButtonAction(_ sender: Any) {
+        
+        
+        let generator = UIImpactFeedbackGenerator(style: .light)
+        generator.impactOccurred()
         saveData()
+        
+        
 
         pagingViewController?.select(index: 4,animated: true)
     }

@@ -26,6 +26,11 @@ class IntoViewController: UIViewController {
     }
     
     @IBAction func nextButtonAction(_ sender: Any) {
+        
+        
+        let generator = UIImpactFeedbackGenerator(style: .light)
+        generator.impactOccurred()
+        
         UserDefaults.standard.User_First_Name = firstName
         UserDefaults.standard.User_Last_Name = lastName
 

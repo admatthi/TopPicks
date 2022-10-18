@@ -15,8 +15,6 @@ class IntroTableViewCell: UITableViewCell {
         super.awakeFromNib()
         // Initialization code
         
-        firstNameTextField.keyboardty
-        
         firstNameTextField.attributedPlaceholder = NSAttributedString(
             string: "First Name",
             attributes: [NSAttributedString.Key.foregroundColor: UIColor.white.withAlphaComponent(0.2)]

@@ -57,6 +57,10 @@ class FinishViewController: UIViewController, UITableViewDataSource,UITableViewD
     
     @IBAction func nextButtonAction(_ sender: Any) {
         
+        
+        let generator = UIImpactFeedbackGenerator(style: .light)
+        generator.impactOccurred()
+        
         let mainStoryboardIpad : UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
         let vc : Resume1ViewViewController = mainStoryboardIpad.instantiateViewController(withIdentifier: "Resume1ViewViewController") as! Resume1ViewViewController
         vc.modalPresentationStyle = .fullScreen
