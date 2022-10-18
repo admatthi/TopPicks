@@ -64,7 +64,9 @@ extension SummaryDetailTableViewCell:UICollectionViewDelegate,UICollectionViewDa
         return cell
     }
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        
+        let template = exampleDescriptions[indexPath.row]
+
+        copyDescriptionDelegate?.didCopyDescription(text: template)
     }
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
         return 0
