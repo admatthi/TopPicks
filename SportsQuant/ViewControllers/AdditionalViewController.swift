@@ -17,14 +17,37 @@ class AdditionalViewController: UIViewController {
             saveSection(sounds: newValue)
         }
     }
+    @IBOutlet weak var addItemToSectionButton: UIButton!
     @IBOutlet weak var goBackToAllSectionButton: UIButton!
     @IBOutlet weak var backButton: UIButton!
     @IBOutlet weak var nextButton: UIButton!
     @IBOutlet weak var addSectionButton: UIButton!
     @IBOutlet weak var tableView: UITableView!
+    var isAddingNewItem:Bool = false{
+        didSet{
+            if isAddingNewItem{
+                addItemToSectionButton.isHidden = false
+            }else{
+                addItemToSectionButton.isHidden = true
+            }
+        }
+    }
     var selectedEditIndex:Int?{
         didSet{
             if selectedEditIndex != nil{
+                goBackToAllSectionButton.isHidden = false
+                addItemToSectionButton.isHidden = false
+                addSectionButton.isHidden = true
+            }else{
+                goBackToAllSectionButton.isHidden = true
+                addItemToSectionButton.isHidden = true
+                addSectionButton.isHidden = false
+            }
+        }
+    }
+    var selectedItemEditIndex:Int?{
+        didSet{
+            if selectedItemEditIndex != nil{
                 goBackToAllSectionButton.isHidden = false
             }else{
                 goBackToAllSectionButton.isHidden = true
@@ -45,6 +68,8 @@ class AdditionalViewController: UIViewController {
         super.viewDidLoad()
         addSectionEnable = false
         selectedEditIndex = nil
+        isAddingNewItem = false
+
         tableView.dataSource = self
         tableView.delegate = self
         nextButton.layer.cornerRadius = nextButton.frame.height/2
@@ -52,6 +77,9 @@ class AdditionalViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
     
+    @IBAction func addItemToSectionButtonAction(_ sender: Any) {
+
+    }
     @IBAction func goBackToAllSectionButtonAction(_ sender: Any) {
         selectedEditIndex = nil
         self.tableView.reloadData()
@@ -129,6 +157,18 @@ class AdditionalViewController: UIViewController {
     @objc func deleteTapped(_ sender: UIButton) {
         var index = sender.tag
         sections.remove(at: index)
+        self.tableView.reloadData()
+    }
+    @objc func editItemTapped(_ sender: UIButton) {
+        var index = sender.tag
+        selectedItemEditIndex = index
+        self.tableView.reloadData()
+    }
+    @objc func deleteItemTapped(_ sender: UIButton) {
+        var index = sender.tag
+        if let selectedEditIndex = selectedEditIndex{
+            sections[selectedEditIndex].items.remove(at: index)
+        }
         self.tableView.reloadData()
     }
 }

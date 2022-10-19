@@ -126,7 +126,7 @@ class IconModel: Codable {
 }
 class Section: Codable {
     let title: String
-    let items: [SectionDetail]
+    var items: [SectionDetail]
 
     init(title: String, items: [SectionDetail]) {
         self.title = title
