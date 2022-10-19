@@ -1730,7 +1730,7 @@ name?</string>
                                                                                 </connections>
                                                                             </button>
                                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2pb-hI-1FF">
-                                                                                <rect key="frame" x="5" y="45" width="170" height="219"/>
+                                                                                <rect key="frame" x="8" y="45" width="164" height="219"/>
                                                                                 <mutableString key="text">Known for creating and implementing training that expands team member capabilities and instructs users on system utilization/improvement. Works with government, civilian, and corporate stakeholders.Known for creating and implementing training that expands team member capabilities and instructs users on system utilization/improvement. Works with government, civilian, and corporate stakeholders.Known for creating and implementing training that expands team member capabilities and instructs users on system utilization/improvement. Works with government, civilian, and corporate stakeholders.</mutableString>
                                                                                 <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                                                                 <nil key="textColor"/>
@@ -1744,8 +1744,8 @@ name?</string>
                                                                             <constraint firstItem="Vqj-i9-Adl" firstAttribute="top" secondItem="PcA-kO-WtQ" secondAttribute="top" constant="5" id="IdR-NU-1WG"/>
                                                                             <constraint firstItem="Vqj-i9-Adl" firstAttribute="leading" secondItem="PcA-kO-WtQ" secondAttribute="leading" constant="8" id="P8W-aG-TBU"/>
                                                                             <constraint firstItem="2pb-hI-1FF" firstAttribute="top" secondItem="Vqj-i9-Adl" secondAttribute="bottom" id="e3W-vX-cUe"/>
-                                                                            <constraint firstAttribute="trailing" secondItem="2pb-hI-1FF" secondAttribute="trailing" constant="5" id="hA2-ax-nsl"/>
-                                                                            <constraint firstItem="2pb-hI-1FF" firstAttribute="leading" secondItem="PcA-kO-WtQ" secondAttribute="leading" constant="5" id="m9L-5E-ylA"/>
+                                                                            <constraint firstAttribute="trailing" secondItem="2pb-hI-1FF" secondAttribute="trailing" constant="8" id="hA2-ax-nsl"/>
+                                                                            <constraint firstItem="2pb-hI-1FF" firstAttribute="leading" secondItem="PcA-kO-WtQ" secondAttribute="leading" constant="8" id="m9L-5E-ylA"/>
                                                                         </constraints>
                                                                         <userDefinedRuntimeAttributes>
                                                                             <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
