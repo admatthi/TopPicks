@@ -477,11 +477,12 @@
                         <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yfr-3r-u8y">
-                                <rect key="frame" x="0.0" y="47" width="390" height="60"/>
+                            <view alpha="0.0" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yfr-3r-u8y">
+                                <rect key="frame" x="0.0" y="47" width="390" height="17"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <rect key="contentStretch" x="0.0" y="0.0" width="1" height="0.0"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="60" id="gti-6f-QFO"/>
+                                    <constraint firstAttribute="height" constant="17" id="gti-6f-QFO"/>
                                 </constraints>
                             </view>
                         </subviews>
@@ -501,7 +502,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Mzf-fl-wKU" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="31" y="-97"/>
+            <point key="canvasLocation" x="30.769230769230766" y="-97.393364928909946"/>
         </scene>
         <!--Into View Controller-->
         <scene sceneID="TuB-5d-sy1">
@@ -2496,19 +2497,19 @@ name?</string>
                                         <rect key="frame" x="2" y="8" width="109" height="128"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ABEL TUSTON" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Yoi-0D-i0K">
-                                                <rect key="frame" x="8" y="1.9999999999999991" width="93" height="15.666666666666664"/>
+                                                <rect key="frame" x="8" y="2" width="93" height="21"/>
                                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="13"/>
                                                 <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Product Manager" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uzG-5e-PAo">
-                                                <rect key="frame" x="8" y="19" width="93" height="15.666666666666664"/>
+                                                <rect key="frame" x="8" y="19" width="93" height="21"/>
                                                 <fontDescription key="fontDescription" type="italicSystem" pointSize="10"/>
                                                 <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="abeltuston@email.com" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Idb-Hp-QfU">
-                                                <rect key="frame" x="8" y="38.666666666666671" width="97" height="18"/>
+                                                <rect key="frame" x="8" y="44" width="97" height="18"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="18" id="nEY-H6-DdA"/>
                                                 </constraints>
@@ -2517,7 +2518,7 @@ name?</string>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1234567890" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0sZ-fz-L0R">
-                                                <rect key="frame" x="8" y="56.666666666666671" width="93" height="18"/>
+                                                <rect key="frame" x="8" y="62" width="93" height="18"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="18" id="9vZ-b0-u28"/>
                                                 </constraints>
@@ -2526,7 +2527,7 @@ name?</string>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Newark, NJ" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yMk-Df-jAg">
-                                                <rect key="frame" x="8" y="74.666666666666657" width="93" height="18"/>
+                                                <rect key="frame" x="8" y="80" width="93" height="18"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="18" id="nPU-EC-Ngc"/>
                                                 </constraints>
@@ -2535,7 +2536,7 @@ name?</string>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Linkedin" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Oyc-ho-hX8">
-                                                <rect key="frame" x="8" y="92.666666666666657" width="93" height="18"/>
+                                                <rect key="frame" x="8" y="98" width="93" height="18"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="18" id="CHT-LE-1Wv"/>
                                                 </constraints>
@@ -3037,19 +3038,19 @@ across engineering and design, which increased yearly revenue
                                 <rect key="frame" x="16" y="47" width="358" height="141"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ZADEY JOHNSTON" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2vg-zo-ZGl">
-                                        <rect key="frame" x="8" y="8" width="330" height="30"/>
+                                        <rect key="frame" x="8" y="8" width="330" height="32"/>
                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="25"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Product Manager" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qCi-tG-j3a">
-                                        <rect key="frame" x="8" y="38" width="330" height="30"/>
+                                        <rect key="frame" x="8" y="38" width="330" height="32"/>
                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
                                         <color key="textColor" red="0.58072251080000004" green="0.066734083" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="zadeyjohnston@email.com" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EwL-JJ-wog">
-                                        <rect key="frame" x="8" y="76" width="162" height="21"/>
+                                        <rect key="frame" x="8" y="78" width="162" height="21"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="21" id="iQZ-JJ-pxW"/>
                                         </constraints>
@@ -3058,13 +3059,13 @@ across engineering and design, which increased yearly revenue
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1234567890" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="L8X-zu-dsZ">
-                                        <rect key="frame" x="172" y="76" width="186" height="21"/>
+                                        <rect key="frame" x="172" y="78" width="186" height="21"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="New York, NY" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6t3-UD-SJI">
-                                        <rect key="frame" x="8" y="105" width="162" height="21"/>
+                                        <rect key="frame" x="8" y="107" width="162" height="21"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="21" id="5W3-7W-oQv"/>
                                         </constraints>
@@ -3073,7 +3074,7 @@ across engineering and design, which increased yearly revenue
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="LinkedIn" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Nzc-Um-Kkk">
-                                        <rect key="frame" x="172" y="105" width="186" height="21"/>
+                                        <rect key="frame" x="172" y="107" width="186" height="21"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                         <color key="textColor" red="0.074509803920000006" green="0.38823529410000002" blue="0.87450980389999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
@@ -4521,7 +4522,7 @@ functional teams to remedy issues from coding enhanceme</string>
                                         <rect key="frame" x="0.0" y="8" width="147" height="173"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="CONTACT" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4l2-Ty-RJB">
-                                                <rect key="frame" x="0.66666666666668561" y="8" width="145.66666666666663" height="27"/>
+                                                <rect key="frame" x="0.6666666666666714" y="8" width="145.66666666666663" height="27"/>
                                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
@@ -7009,7 +7010,7 @@ across engineering and design, which increased yearly revenue
                                         <rect key="frame" x="0.0" y="322" width="147" height="163"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="SKILLS" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gn4-ul-xtT">
-                                                <rect key="frame" x="79.333333333333314" y="8" width="58.333333333333329" height="27"/>
+                                                <rect key="frame" x="79.333333333333329" y="8" width="58.333333333333329" height="27"/>
                                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
@@ -7359,19 +7360,19 @@ functional teams to remedy issues from coding enhanceme</string>
                                                 <rect key="frame" x="2" y="8" width="108.66666666666667" height="128"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ABEL TUSTON" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3GQ-9s-oSq">
-                                                        <rect key="frame" x="8" y="1.9999999999999991" width="96.333333333333329" height="15.666666666666664"/>
+                                                        <rect key="frame" x="8" y="2" width="96.333333333333329" height="21"/>
                                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="13"/>
                                                         <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Product Manager" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="syX-cG-r4G">
-                                                        <rect key="frame" x="8" y="19" width="96.333333333333329" height="15.666666666666664"/>
+                                                        <rect key="frame" x="8" y="19" width="96.333333333333329" height="21"/>
                                                         <fontDescription key="fontDescription" type="italicSystem" pointSize="10"/>
                                                         <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="abeltuston@email.com" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WnT-HK-HuR">
-                                                        <rect key="frame" x="8" y="38.666666666666671" width="96.333333333333329" height="18"/>
+                                                        <rect key="frame" x="8" y="44" width="96.333333333333329" height="18"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="18" id="lBv-DB-MHV"/>
                                                         </constraints>
@@ -7380,7 +7381,7 @@ functional teams to remedy issues from coding enhanceme</string>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1234567890" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QmZ-pa-kqr">
-                                                        <rect key="frame" x="8" y="56.666666666666671" width="96.333333333333329" height="18"/>
+                                                        <rect key="frame" x="8" y="62" width="96.333333333333329" height="18"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="18" id="DNp-tC-QPg"/>
                                                         </constraints>
@@ -7389,7 +7390,7 @@ functional teams to remedy issues from coding enhanceme</string>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Newark, NJ" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ufZ-w0-dj3">
-                                                        <rect key="frame" x="8" y="74.666666666666657" width="96.333333333333329" height="18"/>
+                                                        <rect key="frame" x="8" y="80" width="96.333333333333329" height="18"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="18" id="yWU-dD-IWa"/>
                                                         </constraints>
@@ -7398,7 +7399,7 @@ functional teams to remedy issues from coding enhanceme</string>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Linkedin" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RvT-zh-cnZ">
-                                                        <rect key="frame" x="8" y="92.666666666666657" width="96.333333333333329" height="18"/>
+                                                        <rect key="frame" x="8" y="98" width="96.333333333333329" height="18"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="18" id="GiD-qO-bN9"/>
                                                         </constraints>

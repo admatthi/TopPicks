@@ -96,8 +96,8 @@ class IconViewPagingCell: PagingCell {
                 titleLabel.textColor = UIColor.white
             } else {
                 imageView.transform = CGAffineTransform(scaleX: 0.6, y: 0.6)
-                imageView.tintColor = UIColor(white: 0, alpha: 0.8)
-                titleLabel.textColor = UIColor(white: 0, alpha: 0.8)
+                imageView.tintColor = #colorLiteral(red: 0.2183435261, green: 0.3164234757, blue: 0.5498962402, alpha: 1)
+                titleLabel.textColor = #colorLiteral(red: 0.194462955, green: 0.2768029273, blue: 0.4853520989, alpha: 1)
             }
 
             self.viewModel = viewModel
