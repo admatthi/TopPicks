@@ -77,7 +77,7 @@ class EducationViewController: UIViewController {
         let generator = UIImpactFeedbackGenerator(style: .light)
         generator.impactOccurred()
         
-        pagingViewController?.select(index: 3,animated: true)
+        pagingController?.select(pagingItem: IconItem(icon: icons[3].icon, index: 3, title: icons[3].title))
     }
     
     /*
@@ -91,7 +91,7 @@ class EducationViewController: UIViewController {
     */
     @objc func skipThisSectionButtonAction(sender: UIButton){
         let buttonTag = sender.tag
-        pagingViewController?.select(index: 3,animated: true)
+        pagingController?.select(pagingItem: IconItem(icon: icons[3].icon, index: 3, title: icons[3].title))
     }
     @objc func switchChanged(_ sender : UISwitch!){
         isPresentSelected = sender.isOn

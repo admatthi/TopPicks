@@ -120,8 +120,7 @@ class WorkHistoryViewController: UIViewController {
         saveData()
         
         
-
-        pagingViewController?.select(index: 4,animated: true)
+        pagingController?.select(pagingItem: IconItem(icon: icons[4].icon, index: 4, title: icons[4].title))
     }
     func saveData(isfromNext:Bool = true){
         if workHistory.count == 0{
@@ -143,8 +142,7 @@ class WorkHistoryViewController: UIViewController {
                 self.editIndex = nil
                 self.tableView.reloadData()
                 if isfromNext{
-                    pagingViewController?.select(index: 4,animated: true)
-                }
+                    pagingController?.select(pagingItem: IconItem(icon: icons[4].icon, index: 4, title: icons[4].title))                }
                 return
             }
             guard let editIndex = editIndex else {
@@ -154,7 +152,8 @@ class WorkHistoryViewController: UIViewController {
                 self.tableView.reloadData()
                 if isfromNext{
                     
-                    pagingViewController?.select(index: 4,animated: true)
+                    pagingController?.select(pagingItem: IconItem(icon: icons[4].icon, index: 4, title: icons[4].title))
+                    
                 }
                 return
                 
@@ -166,7 +165,8 @@ class WorkHistoryViewController: UIViewController {
                 self.tableView.reloadData()
                 if isfromNext{
                     
-                    pagingViewController?.select(index: 4,animated: true)
+                    pagingController?.select(pagingItem: IconItem(icon: icons[4].icon, index: 4, title: icons[4].title))
+                    
                 }
                 return
                 
@@ -194,7 +194,8 @@ class WorkHistoryViewController: UIViewController {
     */
     @objc func skipThisSectionButtonAction(sender: UIButton){
         let buttonTag = sender.tag
-        pagingViewController?.select(index: 4,animated: true)
+        pagingController?.select(pagingItem: IconItem(icon: icons[4].icon, index: 4, title: icons[4].title))
+        
     }
     @objc func backButtonButtonAction(sender: UIButton){
         let buttonTag = sender.tag

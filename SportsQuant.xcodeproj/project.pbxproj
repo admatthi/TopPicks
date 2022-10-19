@@ -30,6 +30,9 @@
 		4EBAF49428F5C7B300BF2EE5 /* ApiModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EBAF49128F5C7B200BF2EE5 /* ApiModel.swift */; };
 		4EBAF49628F5CF5800BF2EE5 /* SportsBetterDetailTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EBAF49528F5CF5800BF2EE5 /* SportsBetterDetailTableViewCell.swift */; };
 		4EBE3E6028FD8B8100B3333D /* WorkHistoryTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EBE3E5F28FD8B8100B3333D /* WorkHistoryTableViewCell.swift */; };
+		4EC98822290025F200200952 /* IconViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EC9881F290025F100200952 /* IconViewController.swift */; };
+		4EC98823290025F200200952 /* IconsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EC98820290025F100200952 /* IconsViewController.swift */; };
+		4EC98824290025F200200952 /* IconPagingCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EC98821290025F200200952 /* IconPagingCell.swift */; };
 		4ED7D58C28FDC22F008F606F /* ResumeWorkHistoryTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4ED7D58B28FDC22F008F606F /* ResumeWorkHistoryTableViewCell.swift */; };
 		4EFB7A4428F6F02C0010A45D /* IntoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EFB7A4328F6F02C0010A45D /* IntoViewController.swift */; };
 		4EFB7A4628F6F0490010A45D /* ContactViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EFB7A4528F6F0490010A45D /* ContactViewController.swift */; };
@@ -94,6 +97,9 @@
 		4EBAF49128F5C7B200BF2EE5 /* ApiModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ApiModel.swift; sourceTree = "<group>"; };
 		4EBAF49528F5CF5800BF2EE5 /* SportsBetterDetailTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SportsBetterDetailTableViewCell.swift; sourceTree = "<group>"; };
 		4EBE3E5F28FD8B8100B3333D /* WorkHistoryTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkHistoryTableViewCell.swift; sourceTree = "<group>"; };
+		4EC9881F290025F100200952 /* IconViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IconViewController.swift; sourceTree = "<group>"; };
+		4EC98820290025F100200952 /* IconsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IconsViewController.swift; sourceTree = "<group>"; };
+		4EC98821290025F200200952 /* IconPagingCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IconPagingCell.swift; sourceTree = "<group>"; };
 		4ED7D58B28FDC22F008F606F /* ResumeWorkHistoryTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResumeWorkHistoryTableViewCell.swift; sourceTree = "<group>"; };
 		4EFB7A4328F6F02C0010A45D /* IntoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntoViewController.swift; sourceTree = "<group>"; };
 		4EFB7A4528F6F0490010A45D /* ContactViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactViewController.swift; sourceTree = "<group>"; };
@@ -169,6 +175,16 @@
 			path = CreateResume;
 			sourceTree = "<group>";
 		};
+		4EC9881E290025E300200952 /* customsViews */ = {
+			isa = PBXGroup;
+			children = (
+				4EC98821290025F200200952 /* IconPagingCell.swift */,
+				4EC98820290025F100200952 /* IconsViewController.swift */,
+				4EC9881F290025F100200952 /* IconViewController.swift */,
+			);
+			path = customsViews;
+			sourceTree = "<group>";
+		};
 		4EFB7A4228F6F0190010A45D /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
@@ -208,6 +224,7 @@
 		9D1F129F28F58D91007D1BC0 /* SportsQuant */ = {
 			isa = PBXGroup;
 			children = (
+				4EC9881E290025E300200952 /* customsViews */,
 				4EA8B7F128F84C4500AAA75C /* CreateResume */,
 				4EFB7A4228F6F0190010A45D /* ViewControllers */,
 				4EBAF49128F5C7B200BF2EE5 /* ApiModel.swift */,
@@ -513,6 +530,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				4EBE3E6028FD8B8100B3333D /* WorkHistoryTableViewCell.swift in Sources */,
+				4EC98823290025F200200952 /* IconsViewController.swift in Sources */,
+				4EC98824290025F200200952 /* IconPagingCell.swift in Sources */,
 				4E5D04B928F75B1800BE4C8A /* WorkDetailTableViewCell.swift in Sources */,
 				4EBAF49228F5C7B300BF2EE5 /* NetworkManager.swift in Sources */,
 				9D05F42028FC5779006379E9 /* ReviewViewController.swift in Sources */,
@@ -539,6 +558,7 @@
 				4E79FA1428F73B1B000BC176 /* EducationDetailTableViewCell.swift in Sources */,
 				4EFB7A4C28F6F7D90010A45D /* IntroTableViewCell.swift in Sources */,
 				4E79FA1628F741BE000BC176 /* WorkHistoryViewController.swift in Sources */,
+				4EC98822290025F200200952 /* IconViewController.swift in Sources */,
 				4E2F635E28F8E2AC007146BD /* TemplateCollectionViewCell.swift in Sources */,
 				4E7BB37E28F75FDB00251F4E /* SummaryDetailTableViewCell.swift in Sources */,
 				4EFB7A4628F6F0490010A45D /* ContactViewController.swift in Sources */,

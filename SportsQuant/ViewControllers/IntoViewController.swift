@@ -34,8 +34,7 @@ class IntoViewController: UIViewController {
         UserDefaults.standard.User_First_Name = firstName
         UserDefaults.standard.User_Last_Name = lastName
 
-        pagingViewController?.select(index: 1,animated: true)
-    }
+        pagingController?.select(pagingItem: IconItem(icon: icons[1].icon, index: 1, title: icons[1].title))    }
     
     /*
     // MARK: - Navigation

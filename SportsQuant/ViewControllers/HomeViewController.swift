@@ -7,7 +7,8 @@
 
 import UIKit
 import Parchment
-var pagingViewController:PagingViewController?
+var pagingController:PagingViewController?
+let icons:[IconModel] = [IconModel(title: "Intro", icon: "Intro"),IconModel(title: "Contact", icon: "Contact"),IconModel(title: "Education", icon: "Education"),IconModel(title: "Work", icon: "Work"),IconModel(title: "Summary", icon: "Summary"),IconModel(title: "Finish", icon: "Finish")]
 class HomeViewController: UIViewController {
 
     @IBOutlet weak var topView: UIView!
@@ -20,44 +21,34 @@ class HomeViewController: UIViewController {
     }
     
     func setupPageController(){
-        let IntoViewControllerVC = storyboard!.instantiateViewController(withIdentifier: "IntoViewController") as! IntoViewController
-        IntoViewControllerVC.title = "Intro"
-        let ContactViewControllerVC = storyboard!.instantiateViewController(withIdentifier: "ContactViewController") as! ContactViewController
-        ContactViewControllerVC.title = "Contact"
-        let EducationViewControllerVC = storyboard!.instantiateViewController(withIdentifier: "EducationViewController") as! EducationViewController
-        EducationViewControllerVC.title = "Education"
-        let WorkHistoryViewControllerVC = storyboard!.instantiateViewController(withIdentifier: "WorkHistoryViewController") as! WorkHistoryViewController
-        WorkHistoryViewControllerVC.title = "Work"
-        let SummaryViewControllerVC = storyboard!.instantiateViewController(withIdentifier: "SummaryViewController") as! SummaryViewController
-        SummaryViewControllerVC.title = "Summary"
-        let FinishViewControllerVC = storyboard!.instantiateViewController(withIdentifier: "FinishViewController") as! FinishViewController
-        FinishViewControllerVC.title = "Finish"
+        pagingController = PagingViewController()
+        pagingController?.register(IconViewPagingCell.self, for: IconItem.self)
+        pagingController?.menuItemSize = .fixed(width: 90, height: 60)
+        pagingController?.dataSource = self
+        pagingController?.select(pagingItem: IconItem(icon: icons[0].icon, index: 0, title: icons[0].title))
+//        pagingController?.menuItemSize = .fixed(width: UIScreen.main.bounds.width / 3, height: 50)
+        pagingController?.textColor = UIColor.lightGray
+        pagingController?.selectedFont = UIFont.systemFont(ofSize: 17, weight: UIFont.Weight.semibold)
         
-         pagingViewController = PagingViewController(viewControllers: [
-            IntoViewControllerVC,ContactViewControllerVC,EducationViewControllerVC,WorkHistoryViewControllerVC,SummaryViewControllerVC,FinishViewControllerVC
-        ])
-        pagingViewController?.menuItemSize = .fixed(width: UIScreen.main.bounds.width / 3, height: 50)
-        pagingViewController?.textColor = UIColor.lightGray
-        pagingViewController?.selectedFont = UIFont.systemFont(ofSize: 17, weight: UIFont.Weight.semibold)
-        
-        pagingViewController?.font =  UIFont.systemFont(ofSize: 17, weight: UIFont.Weight.semibold)
-        pagingViewController?.selectedTextColor = UIColor.white
-        pagingViewController?.selectedBackgroundColor = #colorLiteral(red: 0.0829134658, green: 0.2267663181, blue: 0.5822093487, alpha: 1)
-        pagingViewController?.indicatorColor = UIColor.white
-        pagingViewController?.backgroundColor = #colorLiteral(red: 0.0829134658, green: 0.2267663181, blue: 0.5822093487, alpha: 1)
-        pagingViewController?.borderColor = #colorLiteral(red: 0.0829134658, green: 0.2267663181, blue: 0.5822093487, alpha: 1)
+        pagingController?.font =  UIFont.systemFont(ofSize: 17, weight: UIFont.Weight.semibold)
+        pagingController?.selectedTextColor = UIColor.white
+        pagingController?.selectedBackgroundColor = #colorLiteral(red: 0.0829134658, green: 0.2267663181, blue: 0.5822093487, alpha: 1)
+        pagingController?.indicatorColor = UIColor.white
+        pagingController?.backgroundColor = #colorLiteral(red: 0.0829134658, green: 0.2267663181, blue: 0.5822093487, alpha: 1)
+        pagingController?.borderColor = #colorLiteral(red: 0.0829134658, green: 0.2267663181, blue: 0.5822093487, alpha: 1)
+        pagingController?.collectionView.backgroundColor = #colorLiteral(red: 0.0829134658, green: 0.2267663181, blue: 0.5822093487, alpha: 1)
 //        pagingViewController.menuBackgroundColor = .secondarySystemBackground
         
-        addChild(pagingViewController!)
-        view.addSubview(pagingViewController!.view)
-        pagingViewController?.didMove(toParent: self)
-        pagingViewController?.view.translatesAutoresizingMaskIntoConstraints = false
+        addChild(pagingController!)
+        view.addSubview(pagingController!.view)
+        pagingController?.didMove(toParent: self)
+        pagingController?.view.translatesAutoresizingMaskIntoConstraints = false
 
         NSLayoutConstraint.activate([
-            pagingViewController!.view.leadingAnchor.constraint(equalTo: view.leadingAnchor),
-            pagingViewController!.view.trailingAnchor.constraint(equalTo: view.trailingAnchor),
-            pagingViewController!.view.bottomAnchor.constraint(equalTo: view.bottomAnchor),
-            pagingViewController!.view.topAnchor.constraint(equalTo: topView.bottomAnchor)
+            pagingController!.view.leadingAnchor.constraint(equalTo: view.leadingAnchor),
+            pagingController!.view.trailingAnchor.constraint(equalTo: view.trailingAnchor),
+            pagingController!.view.bottomAnchor.constraint(equalTo: view.bottomAnchor),
+            pagingController!.view.topAnchor.constraint(equalTo: topView.bottomAnchor)
         ])
     }
     func getNavBarHeight() -> CGFloat {
@@ -75,8 +66,53 @@ class HomeViewController: UIViewController {
     }
     */
 
-}
 
+
+
+
+
+}
+extension HomeViewController: PagingViewControllerDataSource {
+    func pagingViewController(_: PagingViewController, viewControllerAt index: Int) -> UIViewController {
+        if index == 0 {
+            let IntoViewControllerVC = storyboard!.instantiateViewController(withIdentifier: "IntoViewController") as! IntoViewController
+            IntoViewControllerVC.title = "Intro"
+            return IntoViewControllerVC
+        }else if index == 1{
+            let ContactViewControllerVC = storyboard!.instantiateViewController(withIdentifier: "ContactViewController") as! ContactViewController
+            ContactViewControllerVC.title = "Contact"
+            return ContactViewControllerVC
+
+        }else if index == 2{
+            let EducationViewControllerVC = storyboard!.instantiateViewController(withIdentifier: "EducationViewController") as! EducationViewController
+            EducationViewControllerVC.title = "Education"
+            return EducationViewControllerVC
+
+        }else if index == 3{
+            let WorkHistoryViewControllerVC = storyboard!.instantiateViewController(withIdentifier: "WorkHistoryViewController") as! WorkHistoryViewController
+            WorkHistoryViewControllerVC.title = "Work"
+            return WorkHistoryViewControllerVC
+        }else if index == 4{
+            let SummaryViewControllerVC = storyboard!.instantiateViewController(withIdentifier: "SummaryViewController") as! SummaryViewController
+            SummaryViewControllerVC.title = "Summary"
+            return SummaryViewControllerVC
+        }else if index == 5{
+            let FinishViewControllerVC = storyboard!.instantiateViewController(withIdentifier: "FinishViewController") as! FinishViewController
+            FinishViewControllerVC.title = "Finish"
+            return FinishViewControllerVC
+        }else{
+            return IconViewController(title: icons[index].title.capitalized)
+        }
+    }
+
+    func pagingViewController(_: PagingViewController, pagingItemAt index: Int) -> PagingItem {
+        return IconItem(icon: icons[index].icon, index: index, title: icons[index].title)
+    }
+
+    func numberOfViewControllers(in _: PagingViewController) -> Int {
+        return icons.count
+    }
+}
 extension UITextField {
 
     func setUnderLine() {

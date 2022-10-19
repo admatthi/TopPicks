@@ -75,7 +75,7 @@ class ContactViewController: UIViewController {
         let generator = UIImpactFeedbackGenerator(style: .light)
         generator.impactOccurred()
         
-        pagingViewController?.select(index: 2,animated: true)
+        pagingController?.select(pagingItem: IconItem(icon: icons[2].icon, index: 2, title: icons[2].title))
     }
     
     /*

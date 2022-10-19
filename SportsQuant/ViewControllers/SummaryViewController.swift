@@ -45,7 +45,7 @@ class SummaryViewController: UIViewController, UITextViewDelegate, CopyDescripti
         let generator = UIImpactFeedbackGenerator(style: .light)
         generator.impactOccurred()
         
-        pagingViewController?.select(index: 5,animated: true)
+        pagingController?.select(pagingItem: IconItem(icon: icons[5].icon, index: 5, title: icons[5].title))
     }
     
     /*
