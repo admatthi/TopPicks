@@ -11,5 +11,5 @@ class CopyDescriptionCollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var copyButton: UIButton!
     
     @IBOutlet weak var mainView: UIView!
-    @IBOutlet weak var descriptionTextView: UITextView!
+    @IBOutlet weak var descriptionTextView: UILabel!
 }

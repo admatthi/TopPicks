@@ -73,6 +73,6 @@ extension SummaryViewController:UITableViewDelegate,UITableViewDataSource{
         return 1
     }
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 900
+        return 950
     }
 }
