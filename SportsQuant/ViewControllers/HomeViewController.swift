@@ -42,7 +42,7 @@ class HomeViewController: UIViewController {
         pagingViewController?.font =  UIFont.systemFont(ofSize: 17, weight: UIFont.Weight.semibold)
         pagingViewController?.selectedTextColor = UIColor.white
         pagingViewController?.selectedBackgroundColor = #colorLiteral(red: 0.0829134658, green: 0.2267663181, blue: 0.5822093487, alpha: 1)
-        pagingViewController?.indicatorColor = #colorLiteral(red: 0.0829134658, green: 0.2267663181, blue: 0.5822093487, alpha: 1)
+        pagingViewController?.indicatorColor = UIColor.white
         pagingViewController?.backgroundColor = #colorLiteral(red: 0.0829134658, green: 0.2267663181, blue: 0.5822093487, alpha: 1)
         
 //        pagingViewController.menuBackgroundColor = .secondarySystemBackground
