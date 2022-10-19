@@ -134,8 +134,8 @@ class Section: Codable {
     }
 }
 class SectionDetail: Codable {
-    let title: String
-    let subtitle: String
+    var title: String
+    var subtitle: String
 
     init(title: String, subtitle: String) {
         self.title = title

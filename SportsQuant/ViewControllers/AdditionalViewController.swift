@@ -39,15 +39,7 @@ class AdditionalViewController: UIViewController {
             }
         }
     }
-    var selectedItemEditIndex:Int?{
-        didSet{
-            if selectedItemEditIndex != nil{
-                goBackToAllSectionButton.isHidden = false
-            }else{
-                goBackToAllSectionButton.isHidden = true
-            }
-        }
-    }
+    var selectedItemEditIndex:Int?
     var selectedIndex = 0
     var addSectionEnable = false{
         didSet{
@@ -76,11 +68,19 @@ class AdditionalViewController: UIViewController {
         self.tableView.reloadData()
     }
     @IBAction func goBackToAllSectionButtonAction(_ sender: Any) {
+        if selectedItemEditIndex != nil{
+            selectedItemEditIndex = nil
+            resetValues()
+            self.tableView.reloadData()
+
+        }else
         if isAddingNewItem{
             isAddingNewItem = false
+            resetValues()
             self.tableView.reloadData()
         }else{
             selectedEditIndex = nil
+            resetValues()
             self.tableView.reloadData()
         }
     }
@@ -118,6 +118,19 @@ class AdditionalViewController: UIViewController {
         
     }
     @IBAction func nextButton(_ sender: Any) {
+        if let selectedEditIndex = selectedEditIndex, let selectedItemEditIndex = selectedItemEditIndex{
+            if let sectionItemTitle = sectionItemTitle,!sectionItemTitle.isEmpty{
+            var sections = sections
+            sections[selectedEditIndex].items[selectedItemEditIndex].title = sectionItemTitle
+            sections[selectedEditIndex].items[selectedItemEditIndex].subtitle = sectionItemDescription ?? ""
+            self.sections = sections
+            isAddingNewItem = false
+            resetValues()
+            }else{
+                errorMessage(error: "Error", message: "Please enter title before proceed!")
+            }
+            self.tableView.reloadData()
+        }else
         if isAddingNewItem{
             if let sectionItemTitle = sectionItemTitle,!sectionItemTitle.isEmpty{
             var sections = sections
@@ -142,6 +155,7 @@ class AdditionalViewController: UIViewController {
         self.isAddingNewItem = false
         self.sectionItemTitle = nil
         self.sectionItemDescription = nil
+        self.selectedItemEditIndex = nil
         self.tableView.reloadData()
     }
     func errorMessage(error:String,message:String){
@@ -198,6 +212,12 @@ class AdditionalViewController: UIViewController {
     @objc func editItemTapped(_ sender: UIButton) {
         var index = sender.tag
         selectedItemEditIndex = index
+        var sections = sections
+        if let selectedEditIndex = selectedEditIndex{
+            sectionItemTitle = sections[selectedEditIndex].items[index].title
+            sectionItemDescription = sections[selectedEditIndex].items[index].subtitle
+
+        }
         self.tableView.reloadData()
     }
     @objc func deleteItemTapped(_ sender: UIButton) {
@@ -210,16 +230,28 @@ class AdditionalViewController: UIViewController {
         self.tableView.reloadData()
     }
     @objc func textFieldTitleDidChange(_ textField: UITextField) {
-        sectionItemTitle = textField.text
+        if textField.tag == 0 {
+            sectionItemTitle = textField.text
+        }else{
+            sectionItemTitle = textField.text
+        }
+
 
     }
     @objc func textFieldDescriptionDidChange(_ textField: UITextField) {
-        sectionItemDescription = textField.text
+        if textField.tag == 0 {
+            sectionItemDescription = textField.text
+        }else{
+            sectionItemDescription = textField.text
+        }
 
     }
 }
 extension AdditionalViewController:UITableViewDataSource,UITableViewDelegate{
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        if selectedItemEditIndex != nil{
+            return 2
+        }else
         if isAddingNewItem{
             return 2
         }else
@@ -236,6 +268,23 @@ extension AdditionalViewController:UITableViewDataSource,UITableViewDelegate{
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        if let selectedEditIndex = selectedEditIndex, let selectedItemEditIndex = selectedItemEditIndex{
+            var section = sections[selectedEditIndex]
+            if indexPath.row == 0{
+                let cell = tableView.dequeueReusableCell(withIdentifier: "SectionTitleTableViewCell", for: indexPath) as! SectionTitleTableViewCell
+                cell.titleLabel.text = section.title
+                return cell
+            }else{
+                let cell = tableView.dequeueReusableCell(withIdentifier: "AddSectionDescriptionTableViewCell", for: indexPath) as! AddSectionDescriptionTableViewCell
+                cell.enterTitleTF.tag = 1
+                cell.enterDescriptionTF.tag = 1
+                cell.enterTitleTF.text = section.items[selectedItemEditIndex].title
+                cell.enterDescriptionTF.text = section.items[selectedItemEditIndex].subtitle
+                cell.enterTitleTF.addTarget(self, action: #selector(AdditionalViewController.textFieldTitleDidChange(_:)), for: .editingChanged)
+                cell.enterDescriptionTF.addTarget(self, action: #selector(AdditionalViewController.textFieldDescriptionDidChange(_:)), for: .editingChanged)
+                return cell
+            }
+        }else
         if let selectedEditIndex = selectedEditIndex, isAddingNewItem{
             var section = sections[selectedEditIndex]
             if indexPath.row == 0{
@@ -246,6 +295,8 @@ extension AdditionalViewController:UITableViewDataSource,UITableViewDelegate{
                 let cell = tableView.dequeueReusableCell(withIdentifier: "AddSectionDescriptionTableViewCell", for: indexPath) as! AddSectionDescriptionTableViewCell
                 cell.enterTitleTF.text = sectionItemTitle
                 cell.enterDescriptionTF.text = sectionItemDescription
+                cell.enterTitleTF.tag = 0
+                cell.enterDescriptionTF.tag = 0
                 cell.enterTitleTF.addTarget(self, action: #selector(AdditionalViewController.textFieldTitleDidChange(_:)), for: .editingChanged)
                 cell.enterDescriptionTF.addTarget(self, action: #selector(AdditionalViewController.textFieldDescriptionDidChange(_:)), for: .editingChanged)
                 return cell
@@ -320,6 +371,14 @@ extension AdditionalViewController:UITableViewDataSource,UITableViewDelegate{
         
     }
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        if let selectedEditIndex = selectedEditIndex, let selectedItemEditIndex = selectedItemEditIndex{
+            if indexPath.row == 0{
+                return 50
+            }else{
+                return 351
+
+            }
+        }
         if isAddingNewItem {
             if indexPath.row == 0{
                 return 50
