@@ -7787,7 +7787,7 @@ across engineering and design, which increased yearly revenue
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Additional Sections:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ld9-88-4sx">
-                                                    <rect key="frame" x="20" y="16" width="350" height="25.333333333333329"/>
+                                                    <rect key="frame" x="20" y="15.999999999999998" width="350" height="25.333333333333329"/>
                                                     <fontDescription key="fontDescription" type="boldSystem" pointSize="21"/>
                                                     <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <nil key="highlightedColor"/>
@@ -7902,8 +7902,33 @@ across engineering and design, which increased yearly revenue
                                             <outlet property="technicalSkillImageView" destination="j0f-Jm-jO0" id="Oj6-lD-rch"/>
                                         </connections>
                                     </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="SectionTitleTableViewCell" rowHeight="56" id="p7Q-lV-wwi" customClass="SectionTitleTableViewCell" customModule="SportsQuant" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="284" width="390" height="56"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="p7Q-lV-wwi" id="8Zp-ge-hEk">
+                                            <rect key="frame" x="0.0" y="0.0" width="390" height="56"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Section Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gJ4-D3-Ofe">
+                                                    <rect key="frame" x="20" y="15.333333333333334" width="350" height="25.333333333333329"/>
+                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="21"/>
+                                                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="gJ4-D3-Ofe" firstAttribute="trailing" secondItem="8Zp-ge-hEk" secondAttribute="trailingMargin" id="9m6-vx-YXF"/>
+                                                <constraint firstItem="gJ4-D3-Ofe" firstAttribute="centerY" secondItem="8Zp-ge-hEk" secondAttribute="centerY" id="hwu-Zz-grJ"/>
+                                                <constraint firstItem="gJ4-D3-Ofe" firstAttribute="leading" secondItem="8Zp-ge-hEk" secondAttribute="leadingMargin" id="uYz-sl-Iz0"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <color key="backgroundColor" red="0.1215686275" green="0.22352941179999999" blue="0.56078431370000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <connections>
+                                            <outlet property="titleLabel" destination="gJ4-D3-Ofe" id="Xwl-UW-wCg"/>
+                                        </connections>
+                                    </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="WorkHistoryTableViewCell" rowHeight="120" id="TJG-8q-aHS" customClass="WorkHistoryTableViewCell" customModule="SportsQuant" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="284" width="390" height="120"/>
+                                        <rect key="frame" x="0.0" y="340" width="390" height="120"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="TJG-8q-aHS" id="8gF-L4-jft">
                                             <rect key="frame" x="0.0" y="0.0" width="390" height="120"/>
@@ -8011,7 +8036,7 @@ across engineering and design, which increased yearly revenue
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5KK-l0-kOc">
-                                <rect key="frame" x="0.0" y="47" width="390" height="50"/>
+                                <rect key="frame" x="10" y="47" width="380" height="50"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="UDp-Q6-Wyi"/>
@@ -8030,21 +8055,45 @@ across engineering and design, which increased yearly revenue
                                     <action selector="shareButtonAction:" destination="bRr-iv-baI" eventType="touchUpInside" id="Pd5-hf-BKz"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="y1X-p5-CMw">
+                                <rect key="frame" x="10" y="47" width="380" height="50"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="uYN-sU-rbn"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" title=" Go Back to all sections">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <imageReference key="image" image="arrowshape.left.fill" catalog="system" symbolScale="large"/>
+                                </state>
+                                <connections>
+                                    <action selector="backButtonAction:" destination="bRr-iv-baI" eventType="touchUpInside" id="046-r5-87M"/>
+                                    <action selector="backButtonAction:" destination="GiN-UU-Ise" eventType="touchUpInside" id="ZjI-yE-4hS"/>
+                                    <action selector="goBackToAllSectionButtonAction:" destination="GiN-UU-Ise" eventType="touchUpInside" id="DjR-Xt-RNY"/>
+                                    <action selector="nextButtonAction:" destination="sHs-ex-nce" eventType="touchUpInside" id="cb5-Pa-BzZ"/>
+                                    <action selector="shareButtonAction:" destination="bRr-iv-baI" eventType="touchUpInside" id="8Hl-Ws-H8g"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="Vwx-FP-iUx"/>
                         <color key="backgroundColor" red="0.1215686351" green="0.2235293984" blue="0.56078433989999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <constraints>
-                            <constraint firstItem="5KK-l0-kOc" firstAttribute="leading" secondItem="Vwx-FP-iUx" secondAttribute="leading" id="5F5-PB-PE8"/>
+                            <constraint firstItem="5KK-l0-kOc" firstAttribute="leading" secondItem="Vwx-FP-iUx" secondAttribute="leading" constant="10" id="5F5-PB-PE8"/>
                             <constraint firstItem="0hL-RC-utN" firstAttribute="trailing" secondItem="jhb-j8-5Pw" secondAttribute="trailing" id="8Ee-1N-pTG"/>
                             <constraint firstItem="jXa-kg-mPu" firstAttribute="top" secondItem="5KK-l0-kOc" secondAttribute="bottom" constant="10" id="DNr-F6-NkY"/>
                             <constraint firstAttribute="bottom" secondItem="jXa-kg-mPu" secondAttribute="bottom" id="DSf-ob-Srw"/>
                             <constraint firstItem="jXa-kg-mPu" firstAttribute="leading" secondItem="Vwx-FP-iUx" secondAttribute="leading" id="DmG-j0-n1Z"/>
                             <constraint firstItem="jhb-j8-5Pw" firstAttribute="leading" secondItem="Vwx-FP-iUx" secondAttribute="leading" constant="20" id="E7T-6i-lcI"/>
+                            <constraint firstItem="y1X-p5-CMw" firstAttribute="top" secondItem="Vwx-FP-iUx" secondAttribute="top" id="MNr-Re-heo"/>
                             <constraint firstItem="Vwx-FP-iUx" firstAttribute="bottom" secondItem="jhb-j8-5Pw" secondAttribute="bottom" constant="10" id="XF1-Nz-qfa"/>
                             <constraint firstItem="5KK-l0-kOc" firstAttribute="top" secondItem="Vwx-FP-iUx" secondAttribute="top" id="aPA-z5-C7x"/>
+                            <constraint firstItem="y1X-p5-CMw" firstAttribute="leading" secondItem="Vwx-FP-iUx" secondAttribute="leading" constant="10" id="lKL-ol-G2H"/>
                             <constraint firstAttribute="trailing" secondItem="jXa-kg-mPu" secondAttribute="trailing" id="lMP-d3-4Yq"/>
                             <constraint firstItem="Vwx-FP-iUx" firstAttribute="trailing" secondItem="jhb-j8-5Pw" secondAttribute="trailing" constant="20" id="pyg-hd-mjw"/>
                             <constraint firstItem="Vwx-FP-iUx" firstAttribute="trailing" secondItem="5KK-l0-kOc" secondAttribute="trailing" id="usl-Ph-Pt5"/>
+                            <constraint firstAttribute="trailing" secondItem="y1X-p5-CMw" secondAttribute="trailing" id="wjx-hT-9mD"/>
                             <constraint firstItem="jhb-j8-5Pw" firstAttribute="top" secondItem="0hL-RC-utN" secondAttribute="bottom" constant="10" id="z42-pM-BBe"/>
                             <constraint firstItem="0hL-RC-utN" firstAttribute="leading" secondItem="jhb-j8-5Pw" secondAttribute="leading" id="zrW-HT-Tlj"/>
                         </constraints>
@@ -8052,6 +8101,7 @@ across engineering and design, which increased yearly revenue
                     <connections>
                         <outlet property="addSectionButton" destination="0hL-RC-utN" id="bEp-x5-GWN"/>
                         <outlet property="backButton" destination="5KK-l0-kOc" id="KLn-Xr-eUc"/>
+                        <outlet property="goBackToAllSectionButton" destination="y1X-p5-CMw" id="GLS-Vh-7jh"/>
                         <outlet property="nextButton" destination="jhb-j8-5Pw" id="q8S-kj-v5E"/>
                         <outlet property="tableView" destination="jXa-kg-mPu" id="HQC-rC-6mn"/>
                     </connections>

@@ -25,6 +25,7 @@
 		4E7BB37E28F75FDB00251F4E /* SummaryDetailTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E7BB37D28F75FDB00251F4E /* SummaryDetailTableViewCell.swift */; };
 		4E97F9F92900421E00162E75 /* AdditionalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E97F9F82900421E00162E75 /* AdditionalViewController.swift */; };
 		4E97F9FB290044C500162E75 /* AddAdditionalSectionTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E97F9FA290044C500162E75 /* AddAdditionalSectionTableViewCell.swift */; };
+		4E97F9FD2900576000162E75 /* SectionTitleTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E97F9FC2900576000162E75 /* SectionTitleTableViewCell.swift */; };
 		4EA8B7F328F84C5600AAA75C /* CreateResume.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EA8B7F228F84C5600AAA75C /* CreateResume.swift */; };
 		4EA8B7F528F84E1D00AAA75C /* Resume1ViewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EA8B7F428F84E1D00AAA75C /* Resume1ViewViewController.swift */; };
 		4EBAF49228F5C7B300BF2EE5 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EBAF48F28F5C7B200BF2EE5 /* NetworkManager.swift */; };
@@ -94,6 +95,7 @@
 		4E7BB37D28F75FDB00251F4E /* SummaryDetailTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SummaryDetailTableViewCell.swift; sourceTree = "<group>"; };
 		4E97F9F82900421E00162E75 /* AdditionalViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdditionalViewController.swift; sourceTree = "<group>"; };
 		4E97F9FA290044C500162E75 /* AddAdditionalSectionTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddAdditionalSectionTableViewCell.swift; sourceTree = "<group>"; };
+		4E97F9FC2900576000162E75 /* SectionTitleTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SectionTitleTableViewCell.swift; sourceTree = "<group>"; };
 		4EA8B7F228F84C5600AAA75C /* CreateResume.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateResume.swift; sourceTree = "<group>"; };
 		4EA8B7F428F84E1D00AAA75C /* Resume1ViewViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Resume1ViewViewController.swift; sourceTree = "<group>"; };
 		4EBAF48F28F5C7B200BF2EE5 /* NetworkManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
@@ -261,6 +263,7 @@
 				4ED7D58B28FDC22F008F606F /* ResumeWorkHistoryTableViewCell.swift */,
 				4E4F99F128FF144C00A9278E /* CopyDescriptionCollectionViewCell.swift */,
 				4E97F9FA290044C500162E75 /* AddAdditionalSectionTableViewCell.swift */,
+				4E97F9FC2900576000162E75 /* SectionTitleTableViewCell.swift */,
 			);
 			path = SportsQuant;
 			sourceTree = "<group>";
@@ -570,6 +573,7 @@
 				4E97F9F92900421E00162E75 /* AdditionalViewController.swift in Sources */,
 				4E7BB37E28F75FDB00251F4E /* SummaryDetailTableViewCell.swift in Sources */,
 				4EFB7A4628F6F0490010A45D /* ContactViewController.swift in Sources */,
+				4E97F9FD2900576000162E75 /* SectionTitleTableViewCell.swift in Sources */,
 				4E7BB37C28F75F2F00251F4E /* SummaryViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

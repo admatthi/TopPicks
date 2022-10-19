@@ -17,10 +17,20 @@ class AdditionalViewController: UIViewController {
             saveSection(sounds: newValue)
         }
     }
+    @IBOutlet weak var goBackToAllSectionButton: UIButton!
     @IBOutlet weak var backButton: UIButton!
     @IBOutlet weak var nextButton: UIButton!
     @IBOutlet weak var addSectionButton: UIButton!
     @IBOutlet weak var tableView: UITableView!
+    var selectedEditIndex:Int?{
+        didSet{
+            if selectedEditIndex != nil{
+                goBackToAllSectionButton.isHidden = false
+            }else{
+                goBackToAllSectionButton.isHidden = true
+            }
+        }
+    }
     var selectedIndex = 0
     var addSectionEnable = false{
         didSet{
@@ -34,6 +44,7 @@ class AdditionalViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         addSectionEnable = false
+        selectedEditIndex = nil
         tableView.dataSource = self
         tableView.delegate = self
         nextButton.layer.cornerRadius = nextButton.frame.height/2
@@ -41,6 +52,10 @@ class AdditionalViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
     
+    @IBAction func goBackToAllSectionButtonAction(_ sender: Any) {
+        selectedEditIndex = nil
+        self.tableView.reloadData()
+    }
     @IBAction func backButtonAction(_ sender: Any) {
         addSectionEnable = false
         self.tableView.reloadData()
@@ -107,10 +122,9 @@ class AdditionalViewController: UIViewController {
 
     }
     @objc func editTapped(_ sender: UIButton) {
-//        var index = sender.tag
-//        editIndex = index
-//        currentWorkHistory = workHistory[index]
-//        self.tableView.reloadData()
+        var index = sender.tag
+        selectedEditIndex = index
+        self.tableView.reloadData()
     }
     @objc func deleteTapped(_ sender: UIButton) {
         var index = sender.tag
@@ -120,15 +134,41 @@ class AdditionalViewController: UIViewController {
 }
 extension AdditionalViewController:UITableViewDataSource,UITableViewDelegate{
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        if let selectedEditIndex = selectedEditIndex{
+            var items = sections[selectedEditIndex].items
+            return items.count + 1
+        }else
         if sections.count == 0 || addSectionEnable{
             return 1
         }else{
-            return sections.count
+            return sections.count + 1
         }
         
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        if let selectedEditIndex = selectedEditIndex{
+            var section = sections[selectedEditIndex]
+
+            if indexPath.row == 0 {
+                let cell = tableView.dequeueReusableCell(withIdentifier: "SectionTitleTableViewCell", for: indexPath) as! SectionTitleTableViewCell
+                cell.titleLabel.text = section.title
+                return cell
+            }else{
+                let cell = tableView.dequeueReusableCell(withIdentifier: "WorkHistoryTableViewCell", for: indexPath) as! WorkHistoryTableViewCell
+                cell.mainView.layer.cornerRadius = 10
+                cell.mainView.layer.masksToBounds = true
+                cell.mainView.layer.borderColor = UIColor.white.cgColor
+                cell.mainView.layer.borderWidth = 1
+                cell.editButton.tag = indexPath.row
+                cell.deleteButton.tag = indexPath.row
+                cell.editButton.addTarget(self, action: #selector(editTapped), for: .touchUpInside)
+                cell.deleteButton.addTarget(self, action: #selector(deleteTapped), for: .touchUpInside)
+                let item = section.items[indexPath.row-1]
+                cell.companyNameLabel.text = item.title
+                return cell
+            }
+        }else
         if sections.count == 0 || addSectionEnable{
             let cell = tableView.dequeueReusableCell(withIdentifier: "AddAdditionalSectionTableViewCell", for: indexPath) as! AddAdditionalSectionTableViewCell
             let accomplishmentViewTapGesture = UITapGestureRecognizer(target:self,action:#selector(self.accomplishmentOnTap))
@@ -154,26 +194,45 @@ extension AdditionalViewController:UITableViewDataSource,UITableViewDelegate{
             }
             return cell
         }else{
-            let cell = tableView.dequeueReusableCell(withIdentifier: "WorkHistoryTableViewCell", for: indexPath) as! WorkHistoryTableViewCell
-            cell.mainView.layer.cornerRadius = 10
-            cell.mainView.layer.masksToBounds = true
-            cell.mainView.layer.borderColor = UIColor.white.cgColor
-            cell.mainView.layer.borderWidth = 1
-            cell.editButton.tag = indexPath.row
-            cell.deleteButton.tag = indexPath.row
-            cell.editButton.addTarget(self, action: #selector(editTapped), for: .touchUpInside)
-            cell.deleteButton.addTarget(self, action: #selector(deleteTapped), for: .touchUpInside)
-            let section = sections[indexPath.row]
-            cell.companyNameLabel.text = section.title
-            return cell
+            if indexPath.row == 0 {
+                let cell = tableView.dequeueReusableCell(withIdentifier: "SectionTitleTableViewCell", for: indexPath) as! SectionTitleTableViewCell
+                cell.titleLabel.text = "All Sections"
+                return cell
+            }else{
+                let cell = tableView.dequeueReusableCell(withIdentifier: "WorkHistoryTableViewCell", for: indexPath) as! WorkHistoryTableViewCell
+                cell.mainView.layer.cornerRadius = 10
+                cell.mainView.layer.masksToBounds = true
+                cell.mainView.layer.borderColor = UIColor.white.cgColor
+                cell.mainView.layer.borderWidth = 1
+                cell.editButton.tag = indexPath.row-1
+                cell.deleteButton.tag = indexPath.row-1
+                cell.editButton.addTarget(self, action: #selector(editTapped), for: .touchUpInside)
+                cell.deleteButton.addTarget(self, action: #selector(deleteTapped), for: .touchUpInside)
+                let section = sections[indexPath.row-1]
+                cell.companyNameLabel.text = section.title
+                return cell
+            }
         }
         
     }
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        if let selectedEditIndex = selectedEditIndex{
+            if indexPath.row == 0 {
+                return 50
+            }else{
+                return 120
+            }
+        }else
         if sections.count == 0 || addSectionEnable{
             return 500
         }else{
-            return 120
+            if indexPath.row == 0{
+                return 50
+
+            }else{
+                return 120
+
+            }
 
         }
     }
