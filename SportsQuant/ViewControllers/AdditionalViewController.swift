@@ -23,6 +23,8 @@ class AdditionalViewController: UIViewController {
     @IBOutlet weak var nextButton: UIButton!
     @IBOutlet weak var addSectionButton: UIButton!
     @IBOutlet weak var tableView: UITableView!
+    var sectionItemTitle:String?
+    var sectionItemDescription:String?
     var isAddingNewItem:Bool = false
     var selectedEditIndex:Int?{
         didSet{
@@ -117,14 +119,44 @@ class AdditionalViewController: UIViewController {
     }
     @IBAction func nextButton(_ sender: Any) {
         if isAddingNewItem{
+            if let sectionItemTitle = sectionItemTitle,!sectionItemTitle.isEmpty{
+            var sections = sections
+            if let selectedEditIndex = selectedEditIndex, isAddingNewItem{
+                var items = sections[selectedEditIndex].items
+                items.append(SectionDetail(title: sectionItemTitle, subtitle: sectionItemDescription ?? ""))
+                sections[selectedEditIndex].items = items
+                self.sections = sections
+            }
             isAddingNewItem = false
+            resetValues()
+            }else{
+                errorMessage(error: "Error", message: "Please enter title before proceed!")
+            }
             self.tableView.reloadData()
         }else{
             pagingController?.select(pagingItem: IconItem(icon: icons[6].icon, index: 6, title: icons[6].title))
+            resetValues()
+        }
+    }
+    func resetValues(){
+        self.isAddingNewItem = false
+        self.sectionItemTitle = nil
+        self.sectionItemDescription = nil
+        self.tableView.reloadData()
+    }
+    func errorMessage(error:String,message:String){
+        let alertController = UIAlertController(title: error, message: message, preferredStyle: .alert)
+
+        let OKAction = UIAlertAction(title: "OK", style: .default) { (action:UIAlertAction!) in
+            
+            // Code in this block will trigger when OK button is tapped.
+            print("Ok button tapped");
+            
         }
 
+        alertController.addAction(OKAction)
 
-        
+        self.present(alertController, animated: true, completion:nil)
     }
     
     /*
@@ -170,10 +202,20 @@ class AdditionalViewController: UIViewController {
     }
     @objc func deleteItemTapped(_ sender: UIButton) {
         var index = sender.tag
+        var sections = sections
         if let selectedEditIndex = selectedEditIndex{
             sections[selectedEditIndex].items.remove(at: index)
         }
+        self.sections = sections
         self.tableView.reloadData()
+    }
+    @objc func textFieldTitleDidChange(_ textField: UITextField) {
+        sectionItemTitle = textField.text
+
+    }
+    @objc func textFieldDescriptionDidChange(_ textField: UITextField) {
+        sectionItemDescription = textField.text
+
     }
 }
 extension AdditionalViewController:UITableViewDataSource,UITableViewDelegate{
@@ -201,8 +243,11 @@ extension AdditionalViewController:UITableViewDataSource,UITableViewDelegate{
                 cell.titleLabel.text = section.title
                 return cell
             }else{
-                let cell = tableView.dequeueReusableCell(withIdentifier: "SectionTitleTableViewCell", for: indexPath) as! SectionTitleTableViewCell
-                cell.titleLabel.text = section.title
+                let cell = tableView.dequeueReusableCell(withIdentifier: "AddSectionDescriptionTableViewCell", for: indexPath) as! AddSectionDescriptionTableViewCell
+                cell.enterTitleTF.text = sectionItemTitle
+                cell.enterDescriptionTF.text = sectionItemDescription
+                cell.enterTitleTF.addTarget(self, action: #selector(AdditionalViewController.textFieldTitleDidChange(_:)), for: .editingChanged)
+                cell.enterDescriptionTF.addTarget(self, action: #selector(AdditionalViewController.textFieldDescriptionDidChange(_:)), for: .editingChanged)
                 return cell
             }
         }else
@@ -214,15 +259,15 @@ extension AdditionalViewController:UITableViewDataSource,UITableViewDelegate{
                 cell.titleLabel.text = section.title
                 return cell
             }else{
-                let cell = tableView.dequeueReusableCell(withIdentifier: "WorkHistoryTableViewCell", for: indexPath) as! WorkHistoryTableViewCell
+                let cell = tableView.dequeueReusableCell(withIdentifier: "WorkHistoryTableViewCell1", for: indexPath) as! WorkHistoryTableViewCell
                 cell.mainView.layer.cornerRadius = 10
                 cell.mainView.layer.masksToBounds = true
                 cell.mainView.layer.borderColor = UIColor.white.cgColor
                 cell.mainView.layer.borderWidth = 1
-                cell.editButton.tag = indexPath.row
-                cell.deleteButton.tag = indexPath.row
-                cell.editButton.addTarget(self, action: #selector(editTapped), for: .touchUpInside)
-                cell.deleteButton.addTarget(self, action: #selector(deleteTapped), for: .touchUpInside)
+                cell.editButton.tag = indexPath.row-1
+                cell.deleteButton.tag = indexPath.row-1
+                cell.editButton.addTarget(self, action: #selector(editItemTapped), for: .touchUpInside)
+                cell.deleteButton.addTarget(self, action: #selector(deleteItemTapped), for: .touchUpInside)
                 let item = section.items[indexPath.row-1]
                 cell.companyNameLabel.text = item.title
                 return cell
@@ -279,7 +324,7 @@ extension AdditionalViewController:UITableViewDataSource,UITableViewDelegate{
             if indexPath.row == 0{
                 return 50
             }else{
-                return 300
+                return 351
 
             }
         }else
