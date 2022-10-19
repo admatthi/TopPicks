@@ -8,7 +8,7 @@
 import UIKit
 import Parchment
 var pagingController:PagingViewController?
-let icons:[IconModel] = [IconModel(title: "Intro", icon: "Intro"),IconModel(title: "Contact", icon: "Contact"),IconModel(title: "Education", icon: "Education"),IconModel(title: "Work", icon: "Work"),IconModel(title: "Summary", icon: "Summary"),IconModel(title: "Finish", icon: "Finish")]
+let icons:[IconModel] = [IconModel(title: "Intro", icon: "Intro"),IconModel(title: "Contact", icon: "Contact"),IconModel(title: "Education", icon: "Education"),IconModel(title: "Work", icon: "Work"),IconModel(title: "Summary", icon: "Summary"),IconModel(title: "Additional", icon: "Additional"),IconModel(title: "Finish", icon: "Finish")]
 class HomeViewController: UIViewController {
 
     @IBOutlet weak var topView: UIView!
@@ -97,6 +97,10 @@ extension HomeViewController: PagingViewControllerDataSource {
             SummaryViewControllerVC.title = "Summary"
             return SummaryViewControllerVC
         }else if index == 5{
+            let AdditionalViewController = storyboard!.instantiateViewController(withIdentifier: "AdditionalViewController") as! AdditionalViewController
+            AdditionalViewController.title = "Additional"
+            return AdditionalViewController
+        }else if index == 6{
             let FinishViewControllerVC = storyboard!.instantiateViewController(withIdentifier: "FinishViewController") as! FinishViewController
             FinishViewControllerVC.title = "Finish"
             return FinishViewControllerVC
