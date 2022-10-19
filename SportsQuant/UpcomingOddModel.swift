@@ -124,3 +124,21 @@ class IconModel: Codable {
         self.icon = icon
     }
 }
+class Section: Codable {
+    let title: String
+    let items: [SectionDetail]
+
+    init(title: String, items: [SectionDetail]) {
+        self.title = title
+        self.items = items
+    }
+}
+class SectionDetail: Codable {
+    let title: String
+    let subtitle: String
+
+    init(title: String, subtitle: String) {
+        self.title = title
+        self.subtitle = subtitle
+    }
+}

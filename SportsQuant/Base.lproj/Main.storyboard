@@ -7776,7 +7776,7 @@ across engineering and design, which increased yearly revenue
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="jXa-kg-mPu">
-                                <rect key="frame" x="0.0" y="47" width="390" height="797"/>
+                                <rect key="frame" x="0.0" y="107" width="390" height="737"/>
                                 <color key="backgroundColor" red="0.1215686351" green="0.2235293984" blue="0.56078433989999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="AddAdditionalSectionTableViewCell" rowHeight="234" id="RoP-iD-Zmg" customClass="AddAdditionalSectionTableViewCell" customModule="SportsQuant" customModuleProvider="target">
@@ -7787,19 +7787,19 @@ across engineering and design, which increased yearly revenue
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Additional Sections:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ld9-88-4sx">
-                                                    <rect key="frame" x="20" y="41" width="350" height="25.333333333333329"/>
+                                                    <rect key="frame" x="20" y="16" width="350" height="25.333333333333329"/>
                                                     <fontDescription key="fontDescription" type="boldSystem" pointSize="21"/>
                                                     <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="0ec-GY-aLm">
-                                                    <rect key="frame" x="20" y="76.333333333333314" width="350" height="150"/>
+                                                    <rect key="frame" x="20" y="51.333333333333343" width="350" height="150"/>
                                                     <subviews>
                                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JfM-kV-Cxi">
                                                             <rect key="frame" x="0.0" y="0.0" width="350" height="50"/>
                                                             <subviews>
                                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="circle.inset.filled" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="j0f-Jm-jO0">
-                                                                    <rect key="frame" x="10" y="13.66666666666667" width="25" height="23.666666666666664"/>
+                                                                    <rect key="frame" x="10" y="13.666666666666663" width="25" height="23.666666666666664"/>
                                                                     <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                     <constraints>
                                                                         <constraint firstAttribute="width" constant="25" id="fA6-cr-sTz"/>
@@ -7807,7 +7807,7 @@ across engineering and design, which increased yearly revenue
                                                                     </constraints>
                                                                 </imageView>
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tech skills" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="K4R-2i-mvs">
-                                                                    <rect key="frame" x="45" y="14.999999999999998" width="285" height="20.333333333333329"/>
+                                                                    <rect key="frame" x="45" y="14.999999999999991" width="285" height="20.333333333333329"/>
                                                                     <fontDescription key="fontDescription" type="system" weight="medium" pointSize="17"/>
                                                                     <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                     <nil key="highlightedColor"/>
@@ -7835,7 +7835,7 @@ across engineering and design, which increased yearly revenue
                                                                     </constraints>
                                                                 </imageView>
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Languages" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Iir-ro-Hoy">
-                                                                    <rect key="frame" x="45" y="15.000000000000012" width="285" height="20.333333333333329"/>
+                                                                    <rect key="frame" x="45" y="14.999999999999998" width="285" height="20.333333333333329"/>
                                                                     <fontDescription key="fontDescription" type="system" weight="medium" pointSize="17"/>
                                                                     <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                     <nil key="highlightedColor"/>
@@ -7852,7 +7852,7 @@ across engineering and design, which increased yearly revenue
                                                             </constraints>
                                                         </view>
                                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="LjO-92-lQ3">
-                                                            <rect key="frame" x="0.0" y="100.00000000000001" width="350" height="49.999999999999986"/>
+                                                            <rect key="frame" x="0.0" y="100" width="350" height="50"/>
                                                             <subviews>
                                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="circle.inset.filled" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="n8F-Yj-8gv">
                                                                     <rect key="frame" x="10" y="13.666666666666655" width="25" height="23.666666666666664"/>
@@ -7888,7 +7888,7 @@ across engineering and design, which increased yearly revenue
                                                 <constraint firstItem="Ld9-88-4sx" firstAttribute="leading" secondItem="pZB-lG-NkD" secondAttribute="leadingMargin" id="Cpb-5o-T7V"/>
                                                 <constraint firstItem="0ec-GY-aLm" firstAttribute="top" secondItem="Ld9-88-4sx" secondAttribute="bottom" constant="10" id="GJ4-4h-ATb"/>
                                                 <constraint firstItem="0ec-GY-aLm" firstAttribute="trailing" secondItem="pZB-lG-NkD" secondAttribute="trailingMargin" id="M6P-ic-53L"/>
-                                                <constraint firstItem="Ld9-88-4sx" firstAttribute="top" secondItem="pZB-lG-NkD" secondAttribute="topMargin" constant="30" id="MZd-dE-UAb"/>
+                                                <constraint firstItem="Ld9-88-4sx" firstAttribute="top" secondItem="pZB-lG-NkD" secondAttribute="topMargin" constant="5" id="MZd-dE-UAb"/>
                                                 <constraint firstAttribute="trailingMargin" secondItem="Ld9-88-4sx" secondAttribute="trailing" id="yA3-Nq-IkV"/>
                                             </constraints>
                                         </tableViewCellContentView>
@@ -7900,6 +7900,82 @@ across engineering and design, which increased yearly revenue
                                             <outlet property="languageView" destination="A3V-E7-a2p" id="76N-di-Bl0"/>
                                             <outlet property="techSkillsView" destination="JfM-kV-Cxi" id="1cD-h5-GxU"/>
                                             <outlet property="technicalSkillImageView" destination="j0f-Jm-jO0" id="Oj6-lD-rch"/>
+                                        </connections>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="WorkHistoryTableViewCell" rowHeight="120" id="TJG-8q-aHS" customClass="WorkHistoryTableViewCell" customModule="SportsQuant" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="284" width="390" height="120"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="TJG-8q-aHS" id="8gF-L4-jft">
+                                            <rect key="frame" x="0.0" y="0.0" width="390" height="120"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="MT2-Wg-Xdo">
+                                                    <rect key="frame" x="20" y="11" width="350" height="98"/>
+                                                    <subviews>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Where was the company located?" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HI6-GP-VBd">
+                                                            <rect key="frame" x="20" y="20" width="320" height="20.333333333333329"/>
+                                                            <fontDescription key="fontDescription" type="system" weight="medium" pointSize="17"/>
+                                                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="KIW-KC-q5l">
+                                                            <rect key="frame" x="10" y="50.333333333333343" width="120" height="50"/>
+                                                            <subviews>
+                                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UTS-tB-6tT">
+                                                                    <rect key="frame" x="0.0" y="0.0" width="60" height="50"/>
+                                                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                    <constraints>
+                                                                        <constraint firstAttribute="height" constant="50" id="2Go-hY-jio"/>
+                                                                        <constraint firstAttribute="width" constant="60" id="jCM-lW-UJF"/>
+                                                                    </constraints>
+                                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
+                                                                    <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                    <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                                    <state key="normal" title="Edit">
+                                                                        <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                    </state>
+                                                                </button>
+                                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tii-6A-fCk">
+                                                                    <rect key="frame" x="60" y="0.0" width="60" height="50"/>
+                                                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                    <constraints>
+                                                                        <constraint firstAttribute="height" constant="50" id="VDo-fc-Fhz"/>
+                                                                        <constraint firstAttribute="width" constant="60" id="cfy-FQ-ne8"/>
+                                                                    </constraints>
+                                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
+                                                                    <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                    <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                                    <state key="normal" title="Delete">
+                                                                        <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                    </state>
+                                                                </button>
+                                                            </subviews>
+                                                        </stackView>
+                                                    </subviews>
+                                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <constraints>
+                                                        <constraint firstItem="KIW-KC-q5l" firstAttribute="leading" secondItem="MT2-Wg-Xdo" secondAttribute="leading" constant="10" id="AdC-fl-f3c"/>
+                                                        <constraint firstItem="KIW-KC-q5l" firstAttribute="top" secondItem="HI6-GP-VBd" secondAttribute="bottom" constant="10" id="Kgn-lo-gfL"/>
+                                                        <constraint firstAttribute="trailing" secondItem="HI6-GP-VBd" secondAttribute="trailing" constant="10" id="gxp-ra-6jW"/>
+                                                        <constraint firstItem="HI6-GP-VBd" firstAttribute="leading" secondItem="MT2-Wg-Xdo" secondAttribute="leading" constant="20" id="kRL-ES-ofG"/>
+                                                        <constraint firstItem="HI6-GP-VBd" firstAttribute="top" secondItem="MT2-Wg-Xdo" secondAttribute="top" constant="20" id="kzJ-Ic-coV"/>
+                                                    </constraints>
+                                                </view>
+                                            </subviews>
+                                            <color key="backgroundColor" red="0.1215686351" green="0.2235293984" blue="0.56078433989999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                            <constraints>
+                                                <constraint firstAttribute="bottomMargin" secondItem="MT2-Wg-Xdo" secondAttribute="bottom" id="2EF-Xf-cdc"/>
+                                                <constraint firstItem="MT2-Wg-Xdo" firstAttribute="leading" secondItem="8gF-L4-jft" secondAttribute="leadingMargin" id="coV-rq-65r"/>
+                                                <constraint firstItem="MT2-Wg-Xdo" firstAttribute="top" secondItem="8gF-L4-jft" secondAttribute="topMargin" id="eHw-5c-r8q"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="MT2-Wg-Xdo" secondAttribute="trailing" id="mvl-kF-mK4"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <connections>
+                                            <outlet property="companyNameLabel" destination="HI6-GP-VBd" id="TfX-ZN-lNF"/>
+                                            <outlet property="deleteButton" destination="tii-6A-fCk" id="Uv6-wE-os8"/>
+                                            <outlet property="editButton" destination="UTS-tB-6tT" id="MPG-Ag-aoP"/>
+                                            <outlet property="mainView" destination="MT2-Wg-Xdo" id="GCZ-R9-Naz"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -7934,24 +8010,48 @@ across engineering and design, which increased yearly revenue
                                     <action selector="addSectionButton:" destination="GiN-UU-Ise" eventType="touchUpInside" id="1rk-5I-pfr"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5KK-l0-kOc">
+                                <rect key="frame" x="0.0" y="47" width="390" height="50"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="UDp-Q6-Wyi"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" title=" Go Back">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <imageReference key="image" image="arrowshape.left.fill" catalog="system" symbolScale="large"/>
+                                </state>
+                                <connections>
+                                    <action selector="backButtonAction:" destination="bRr-iv-baI" eventType="touchUpInside" id="67q-Iu-NqZ"/>
+                                    <action selector="backButtonAction:" destination="GiN-UU-Ise" eventType="touchUpInside" id="I8X-aN-gqM"/>
+                                    <action selector="nextButtonAction:" destination="sHs-ex-nce" eventType="touchUpInside" id="cPz-FW-48z"/>
+                                    <action selector="shareButtonAction:" destination="bRr-iv-baI" eventType="touchUpInside" id="Pd5-hf-BKz"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="Vwx-FP-iUx"/>
                         <color key="backgroundColor" red="0.1215686351" green="0.2235293984" blue="0.56078433989999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <constraints>
+                            <constraint firstItem="5KK-l0-kOc" firstAttribute="leading" secondItem="Vwx-FP-iUx" secondAttribute="leading" id="5F5-PB-PE8"/>
                             <constraint firstItem="0hL-RC-utN" firstAttribute="trailing" secondItem="jhb-j8-5Pw" secondAttribute="trailing" id="8Ee-1N-pTG"/>
+                            <constraint firstItem="jXa-kg-mPu" firstAttribute="top" secondItem="5KK-l0-kOc" secondAttribute="bottom" constant="10" id="DNr-F6-NkY"/>
                             <constraint firstAttribute="bottom" secondItem="jXa-kg-mPu" secondAttribute="bottom" id="DSf-ob-Srw"/>
                             <constraint firstItem="jXa-kg-mPu" firstAttribute="leading" secondItem="Vwx-FP-iUx" secondAttribute="leading" id="DmG-j0-n1Z"/>
                             <constraint firstItem="jhb-j8-5Pw" firstAttribute="leading" secondItem="Vwx-FP-iUx" secondAttribute="leading" constant="20" id="E7T-6i-lcI"/>
                             <constraint firstItem="Vwx-FP-iUx" firstAttribute="bottom" secondItem="jhb-j8-5Pw" secondAttribute="bottom" constant="10" id="XF1-Nz-qfa"/>
+                            <constraint firstItem="5KK-l0-kOc" firstAttribute="top" secondItem="Vwx-FP-iUx" secondAttribute="top" id="aPA-z5-C7x"/>
                             <constraint firstAttribute="trailing" secondItem="jXa-kg-mPu" secondAttribute="trailing" id="lMP-d3-4Yq"/>
                             <constraint firstItem="Vwx-FP-iUx" firstAttribute="trailing" secondItem="jhb-j8-5Pw" secondAttribute="trailing" constant="20" id="pyg-hd-mjw"/>
-                            <constraint firstItem="jXa-kg-mPu" firstAttribute="top" secondItem="Vwx-FP-iUx" secondAttribute="top" id="sSt-dj-cQ2"/>
+                            <constraint firstItem="Vwx-FP-iUx" firstAttribute="trailing" secondItem="5KK-l0-kOc" secondAttribute="trailing" id="usl-Ph-Pt5"/>
                             <constraint firstItem="jhb-j8-5Pw" firstAttribute="top" secondItem="0hL-RC-utN" secondAttribute="bottom" constant="10" id="z42-pM-BBe"/>
                             <constraint firstItem="0hL-RC-utN" firstAttribute="leading" secondItem="jhb-j8-5Pw" secondAttribute="leading" id="zrW-HT-Tlj"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="addSectionButton" destination="0hL-RC-utN" id="bEp-x5-GWN"/>
+                        <outlet property="backButton" destination="5KK-l0-kOc" id="KLn-Xr-eUc"/>
                         <outlet property="nextButton" destination="jhb-j8-5Pw" id="q8S-kj-v5E"/>
                         <outlet property="tableView" destination="jXa-kg-mPu" id="HQC-rC-6mn"/>
                     </connections>

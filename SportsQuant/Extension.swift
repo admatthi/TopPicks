@@ -209,6 +209,18 @@ func retriveWorkHistory() -> [WorkHistory]{
     }
     return allFavSounds
 }
+
+func saveSection(sounds:[Section]){
+    UserDefaults.standard.set(try? PropertyListEncoder().encode(sounds), forKey:"AdditionalSection")
+}
+func retriveSection() -> [Section]{
+    var allFavSounds:[Section] = []
+    if let data = UserDefaults.standard.value(forKey:"AdditionalSection") as? Data {
+    let sounds = try? PropertyListDecoder().decode(Array<Section>.self, from: data)
+        allFavSounds = sounds ?? []
+    }
+    return allFavSounds
+}
 extension Bundle {
     var appDisplayName: String? {
         return object(forInfoDictionaryKey: "CFBundleDisplayName") as? String

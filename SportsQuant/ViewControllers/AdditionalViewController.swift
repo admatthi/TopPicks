@@ -9,12 +9,31 @@ import UIKit
 
 class AdditionalViewController: UIViewController {
 
+    var sections:[Section]{
+        get{
+            return retriveSection()
+        }
+        set{
+            saveSection(sounds: newValue)
+        }
+    }
+    @IBOutlet weak var backButton: UIButton!
     @IBOutlet weak var nextButton: UIButton!
     @IBOutlet weak var addSectionButton: UIButton!
     @IBOutlet weak var tableView: UITableView!
     var selectedIndex = 0
+    var addSectionEnable = false{
+        didSet{
+            if addSectionEnable{
+                backButton.isHidden = false
+            }else{
+                backButton.isHidden = true
+            }
+        }
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
+        addSectionEnable = false
         tableView.dataSource = self
         tableView.delegate = self
         nextButton.layer.cornerRadius = nextButton.frame.height/2
@@ -22,7 +41,37 @@ class AdditionalViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
     
+    @IBAction func backButtonAction(_ sender: Any) {
+        addSectionEnable = false
+        self.tableView.reloadData()
+    }
     @IBAction func addSectionButton(_ sender: UIButton) {
+        
+        var sections = sections
+        if addSectionEnable || sections.count == 0{
+            addSectionEnable = false
+            if selectedIndex == 0 {
+                if !sections.contains(where: {$0.title == "Technical Skill"}){
+                    sections.append(Section(title: "Technical Skill", items: []))
+                }
+            }else if selectedIndex == 1 {
+                if !sections.contains(where: {$0.title == "Language"}){
+                    sections.append(Section(title: "Language", items: []))
+                }
+            }else{
+                if !sections.contains(where: {$0.title == "Accomplishments"}){
+                    sections.append(Section(title: "Accomplishments", items: []))
+                }
+            }
+            self.sections =  sections
+            self.tableView.reloadData()
+            return
+        }
+        if sections.count > 0 {
+            addSectionEnable = true
+            self.tableView.reloadData()
+            return
+        }
         
     }
     @IBAction func nextButton(_ sender: Any) {
@@ -57,40 +106,76 @@ class AdditionalViewController: UIViewController {
         self.tableView.reloadData()
 
     }
-    
+    @objc func editTapped(_ sender: UIButton) {
+//        var index = sender.tag
+//        editIndex = index
+//        currentWorkHistory = workHistory[index]
+//        self.tableView.reloadData()
+    }
+    @objc func deleteTapped(_ sender: UIButton) {
+        var index = sender.tag
+        sections.remove(at: index)
+        self.tableView.reloadData()
+    }
 }
 extension AdditionalViewController:UITableViewDataSource,UITableViewDelegate{
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 1
+        if sections.count == 0 || addSectionEnable{
+            return 1
+        }else{
+            return sections.count
+        }
+        
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "AddAdditionalSectionTableViewCell", for: indexPath) as! AddAdditionalSectionTableViewCell
-        let accomplishmentViewTapGesture = UITapGestureRecognizer(target:self,action:#selector(self.accomplishmentOnTap))
-        cell.accomplishmentView.addGestureRecognizer(accomplishmentViewTapGesture)
-        let languageViewTapGesture = UITapGestureRecognizer(target:self,action:#selector(self.languageViewOnTap))
-        cell.languageView.addGestureRecognizer(languageViewTapGesture)
-        let techSkillsViewTapGesture = UITapGestureRecognizer(target:self,action:#selector(self.techSkillsViewOnTap))
-        cell.techSkillsView.addGestureRecognizer(techSkillsViewTapGesture)
-        if selectedIndex == 0 {
-            cell.technicalSkillImageView.image = UIImage(systemName: "circle.inset.filled")
-            cell.languageImageView.image = UIImage(systemName: "circle")
-            cell.accomplishImageView.image = UIImage(systemName: "circle")
-        }else if selectedIndex == 1 {
-            cell.technicalSkillImageView.image = UIImage(systemName: "circle")
-            cell.languageImageView.image = UIImage(systemName: "circle.inset.filled")
-            cell.accomplishImageView.image = UIImage(systemName: "circle")
-        }else if selectedIndex == 2 {
-            cell.technicalSkillImageView.image = UIImage(systemName: "circle")
-            cell.languageImageView.image = UIImage(systemName: "circle")
-            cell.accomplishImageView.image = UIImage(systemName: "circle.inset.filled")
+        if sections.count == 0 || addSectionEnable{
+            let cell = tableView.dequeueReusableCell(withIdentifier: "AddAdditionalSectionTableViewCell", for: indexPath) as! AddAdditionalSectionTableViewCell
+            let accomplishmentViewTapGesture = UITapGestureRecognizer(target:self,action:#selector(self.accomplishmentOnTap))
+            cell.accomplishmentView.addGestureRecognizer(accomplishmentViewTapGesture)
+            let languageViewTapGesture = UITapGestureRecognizer(target:self,action:#selector(self.languageViewOnTap))
+            cell.languageView.addGestureRecognizer(languageViewTapGesture)
+            let techSkillsViewTapGesture = UITapGestureRecognizer(target:self,action:#selector(self.techSkillsViewOnTap))
+            cell.techSkillsView.addGestureRecognizer(techSkillsViewTapGesture)
+            if selectedIndex == 0 {
+                cell.technicalSkillImageView.image = UIImage(systemName: "circle.inset.filled")
+                cell.languageImageView.image = UIImage(systemName: "circle")
+                cell.accomplishImageView.image = UIImage(systemName: "circle")
+            }else if selectedIndex == 1 {
+                cell.technicalSkillImageView.image = UIImage(systemName: "circle")
+                cell.languageImageView.image = UIImage(systemName: "circle.inset.filled")
+                cell.accomplishImageView.image = UIImage(systemName: "circle")
+            }else if selectedIndex == 2 {
+                cell.technicalSkillImageView.image = UIImage(systemName: "circle")
+                cell.languageImageView.image = UIImage(systemName: "circle")
+                cell.accomplishImageView.image = UIImage(systemName: "circle.inset.filled")
+            }else{
+                
+            }
+            return cell
         }else{
-            
+            let cell = tableView.dequeueReusableCell(withIdentifier: "WorkHistoryTableViewCell", for: indexPath) as! WorkHistoryTableViewCell
+            cell.mainView.layer.cornerRadius = 10
+            cell.mainView.layer.masksToBounds = true
+            cell.mainView.layer.borderColor = UIColor.white.cgColor
+            cell.mainView.layer.borderWidth = 1
+            cell.editButton.tag = indexPath.row
+            cell.deleteButton.tag = indexPath.row
+            cell.editButton.addTarget(self, action: #selector(editTapped), for: .touchUpInside)
+            cell.deleteButton.addTarget(self, action: #selector(deleteTapped), for: .touchUpInside)
+            let section = sections[indexPath.row]
+            cell.companyNameLabel.text = section.title
+            return cell
         }
-        return cell
+        
     }
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 500
+        if sections.count == 0 || addSectionEnable{
+            return 500
+        }else{
+            return 120
+
+        }
     }
     
 }
