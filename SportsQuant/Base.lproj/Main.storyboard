@@ -1685,27 +1685,27 @@ name?</string>
                                                     <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                                 </textView>
                                                 <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="MjO-xP-8j8">
-                                                    <rect key="frame" x="0.0" y="489.33333333333326" width="390" height="260"/>
+                                                    <rect key="frame" x="0.0" y="473" width="390" height="274"/>
                                                     <color key="backgroundColor" red="0.1215686275" green="0.22352941179999999" blue="0.56078431370000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                     <constraints>
-                                                        <constraint firstAttribute="height" constant="260" id="vhe-dq-JxJ"/>
+                                                        <constraint firstAttribute="height" constant="274" id="vhe-dq-JxJ"/>
                                                     </constraints>
                                                     <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="ijt-9O-IFt">
-                                                        <size key="itemSize" width="190" height="252"/>
+                                                        <size key="itemSize" width="190" height="279"/>
                                                         <size key="headerReferenceSize" width="0.0" height="0.0"/>
                                                         <size key="footerReferenceSize" width="0.0" height="0.0"/>
                                                         <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                                     </collectionViewFlowLayout>
                                                     <cells>
                                                         <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="CopyDescriptionCollectionViewCell" id="TTX-Ol-ohG" customClass="CopyDescriptionCollectionViewCell" customModule="SportsQuant" customModuleProvider="target">
-                                                            <rect key="frame" x="0.0" y="0.0" width="190" height="252"/>
+                                                            <rect key="frame" x="0.0" y="0.0" width="190" height="279"/>
                                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                             <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="34J-CX-DP2">
-                                                                <rect key="frame" x="0.0" y="0.0" width="190" height="252"/>
+                                                                <rect key="frame" x="0.0" y="0.0" width="190" height="279"/>
                                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                                 <subviews>
                                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="PcA-kO-WtQ">
-                                                                        <rect key="frame" x="5" y="5" width="180" height="242"/>
+                                                                        <rect key="frame" x="5" y="5" width="180" height="269"/>
                                                                         <subviews>
                                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Vqj-i9-Adl">
                                                                                 <rect key="frame" x="8" y="5" width="170" height="40"/>
@@ -1726,7 +1726,7 @@ name?</string>
                                                                                 </connections>
                                                                             </button>
                                                                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" userInteractionEnabled="NO" contentMode="scaleToFill" text="lkklkjlkj" translatesAutoresizingMaskIntoConstraints="NO" id="gi2-F4-MjN">
-                                                                                <rect key="frame" x="5" y="30" width="170" height="204"/>
+                                                                                <rect key="frame" x="5" y="30" width="170" height="231"/>
                                                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                                 <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                                 <fontDescription key="fontDescription" type="system" pointSize="13"/>
@@ -1743,6 +1743,12 @@ name?</string>
                                                                             <constraint firstAttribute="trailing" secondItem="gi2-F4-MjN" secondAttribute="trailing" constant="5" id="gkd-q5-9XQ"/>
                                                                             <constraint firstAttribute="bottom" secondItem="gi2-F4-MjN" secondAttribute="bottom" constant="8" id="zan-Xm-K5W"/>
                                                                         </constraints>
+                                                                        <userDefinedRuntimeAttributes>
+                                                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                                                <integer key="value" value="15"/>
+                                                                            </userDefinedRuntimeAttribute>
+                                                                            <userDefinedRuntimeAttribute type="boolean" keyPath="clipsToBounds" value="YES"/>
+                                                                        </userDefinedRuntimeAttributes>
                                                                     </view>
                                                                 </subviews>
                                                                 <constraints>
@@ -1752,7 +1758,13 @@ name?</string>
                                                                     <constraint firstAttribute="bottom" secondItem="PcA-kO-WtQ" secondAttribute="bottom" constant="5" id="o7n-Nj-FdA"/>
                                                                 </constraints>
                                                             </collectionViewCellContentView>
-                                                            <size key="customSize" width="190" height="252"/>
+                                                            <size key="customSize" width="190" height="279"/>
+                                                            <userDefinedRuntimeAttributes>
+                                                                <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                                    <integer key="value" value="15"/>
+                                                                </userDefinedRuntimeAttribute>
+                                                                <userDefinedRuntimeAttribute type="boolean" keyPath="clipsToBounds" value="YES"/>
+                                                            </userDefinedRuntimeAttributes>
                                                             <connections>
                                                                 <outlet property="copyButton" destination="Vqj-i9-Adl" id="RVM-4m-pLa"/>
                                                                 <outlet property="descriptionTextView" destination="gi2-F4-MjN" id="EGl-nZ-aSG"/>
@@ -1762,8 +1774,8 @@ name?</string>
                                                     </cells>
                                                 </collectionView>
                                                 <label opaque="NO" userInteractionEnabled="NO" alpha="0.29999999999999999" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Examples" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YG7-CJ-zaQ">
-                                                    <rect key="frame" x="10" y="454" width="370" height="25.333333333333314"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="21"/>
+                                                    <rect key="frame" x="10" y="442" width="370" height="23"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="19"/>
                                                     <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
@@ -1774,11 +1786,11 @@ name?</string>
                                                 <constraint firstItem="R5j-az-F1D" firstAttribute="leading" secondItem="Brh-6S-8mM" secondAttribute="leadingMargin" id="0lw-PM-wau"/>
                                                 <constraint firstItem="tkO-Nn-0gX" firstAttribute="top" secondItem="sfv-HE-8gN" secondAttribute="bottom" constant="30" id="2mH-x6-2gk"/>
                                                 <constraint firstItem="sfv-HE-8gN" firstAttribute="trailing" secondItem="Brh-6S-8mM" secondAttribute="trailingMargin" id="8cO-pi-OEd"/>
-                                                <constraint firstItem="YG7-CJ-zaQ" firstAttribute="top" secondItem="tkO-Nn-0gX" secondAttribute="bottom" constant="20" id="BgF-Gb-hD7"/>
+                                                <constraint firstItem="YG7-CJ-zaQ" firstAttribute="top" secondItem="tkO-Nn-0gX" secondAttribute="bottom" constant="8" id="BgF-Gb-hD7"/>
                                                 <constraint firstItem="R5j-az-F1D" firstAttribute="top" secondItem="Brh-6S-8mM" secondAttribute="topMargin" constant="30" id="G5f-Gb-iAK"/>
                                                 <constraint firstAttribute="trailing" secondItem="MjO-xP-8j8" secondAttribute="trailing" id="OcJ-Sr-G5Z"/>
                                                 <constraint firstItem="MjO-xP-8j8" firstAttribute="leading" secondItem="Brh-6S-8mM" secondAttribute="leading" id="PGE-sJ-TkL"/>
-                                                <constraint firstItem="MjO-xP-8j8" firstAttribute="top" secondItem="YG7-CJ-zaQ" secondAttribute="bottom" constant="10" id="dYo-NW-Ibr"/>
+                                                <constraint firstItem="MjO-xP-8j8" firstAttribute="top" secondItem="YG7-CJ-zaQ" secondAttribute="bottom" constant="8" id="dYo-NW-Ibr"/>
                                                 <constraint firstItem="sfv-HE-8gN" firstAttribute="leading" secondItem="Brh-6S-8mM" secondAttribute="leadingMargin" id="ebn-PK-ltQ"/>
                                                 <constraint firstAttribute="trailing" secondItem="YG7-CJ-zaQ" secondAttribute="trailing" constant="10" id="gV9-dg-Oih"/>
                                                 <constraint firstItem="YG7-CJ-zaQ" firstAttribute="leading" secondItem="Brh-6S-8mM" secondAttribute="leading" constant="10" id="gvG-bn-tfZ"/>

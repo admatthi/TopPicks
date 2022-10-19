@@ -78,7 +78,7 @@ extension SummaryDetailTableViewCell:UICollectionViewDelegate,UICollectionViewDa
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
             let bounds = UIScreen.main.bounds
             let width = bounds.width - 20
-        return CGSize(width: width/2, height: 250)
+        return CGSize(width: width/2, height: 300)
     }
 
 }
