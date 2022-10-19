@@ -96,18 +96,28 @@ class AdditionalViewController: UIViewController {
             if selectedIndex == 0 {
                 if !sections.contains(where: {$0.title == "Technical Skill"}){
                     sections.append(Section(title: "Technical Skill", items: []))
+                    self.sections =  sections
+                    selectedEditIndex = sections.count-1
                 }
+                self.tableView.reloadData()
             }else if selectedIndex == 1 {
                 if !sections.contains(where: {$0.title == "Language"}){
                     sections.append(Section(title: "Language", items: []))
+                    self.sections =  sections
+                    selectedEditIndex = sections.count-1
                 }
+
+                self.tableView.reloadData()
             }else{
                 if !sections.contains(where: {$0.title == "Accomplishments"}){
                     sections.append(Section(title: "Accomplishments", items: []))
+                    self.sections =  sections
+                    selectedEditIndex = sections.count-1
                 }
+
+                self.tableView.reloadData()
             }
-            self.sections =  sections
-            self.tableView.reloadData()
+
             return
         }
         if sections.count > 0 {
@@ -378,7 +388,7 @@ extension AdditionalViewController:UITableViewDataSource,UITableViewDelegate{
                 return 351
 
             }
-        }
+        }else
         if isAddingNewItem {
             if indexPath.row == 0{
                 return 50
@@ -389,7 +399,11 @@ extension AdditionalViewController:UITableViewDataSource,UITableViewDelegate{
         }else
         if let selectedEditIndex = selectedEditIndex{
             if indexPath.row == 0 {
-                return 50
+                if sections[selectedEditIndex].items.count == 0 {
+                    return 100
+                }else{
+                    return 50
+                }
             }else{
                 return 120
             }
