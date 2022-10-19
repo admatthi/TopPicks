@@ -428,11 +428,54 @@
                     <view key="view" contentMode="scaleToFill" id="Zek-tZ-S1T">
                         <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yfr-3r-u8y">
+                                <rect key="frame" x="0.0" y="47" width="390" height="60"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="reusmelogo" translatesAutoresizingMaskIntoConstraints="NO" id="YBP-Np-Lc0">
+                                        <rect key="frame" x="0.0" y="0.0" width="200" height="60"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="200" id="JQP-HZ-C1f"/>
+                                            <constraint firstAttribute="height" constant="60" id="OkI-ry-mkk"/>
+                                        </constraints>
+                                    </imageView>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ej9-W1-K1b">
+                                        <rect key="frame" x="330" y="5" width="50" height="50"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="50" id="0JY-I4-II4"/>
+                                            <constraint firstAttribute="width" constant="50" id="OnU-vJ-63z"/>
+                                        </constraints>
+                                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                        <state key="normal" image="envelope" catalog="system">
+                                            <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="pointSize" pointSize="25"/>
+                                        </state>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="YBP-Np-Lc0" secondAttribute="bottom" id="6ap-8g-Iwp"/>
+                                    <constraint firstAttribute="trailing" secondItem="ej9-W1-K1b" secondAttribute="trailing" constant="10" id="87k-N3-6D5"/>
+                                    <constraint firstItem="ej9-W1-K1b" firstAttribute="centerY" secondItem="yfr-3r-u8y" secondAttribute="centerY" id="Lg7-U0-nQC"/>
+                                    <constraint firstItem="YBP-Np-Lc0" firstAttribute="top" secondItem="yfr-3r-u8y" secondAttribute="top" id="gAw-vi-czj"/>
+                                    <constraint firstAttribute="height" constant="60" id="gti-6f-QFO"/>
+                                    <constraint firstItem="YBP-Np-Lc0" firstAttribute="leading" secondItem="yfr-3r-u8y" secondAttribute="leading" id="inq-hO-hn4"/>
+                                </constraints>
+                            </view>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="ach-6N-7gT"/>
                         <color key="backgroundColor" red="0.1215686351" green="0.2235293984" blue="0.56078433989999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <constraints>
+                            <constraint firstItem="ach-6N-7gT" firstAttribute="trailing" secondItem="yfr-3r-u8y" secondAttribute="trailing" id="IDu-ns-HcJ"/>
+                            <constraint firstItem="yfr-3r-u8y" firstAttribute="top" secondItem="ach-6N-7gT" secondAttribute="top" id="VYd-hZ-XDT"/>
+                            <constraint firstItem="yfr-3r-u8y" firstAttribute="leading" secondItem="ach-6N-7gT" secondAttribute="leading" id="XJd-vO-fKo"/>
+                        </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Item" id="l8c-8y-kpu"/>
                     <nil key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="topView" destination="yfr-3r-u8y" id="g6O-95-GHw"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Mzf-fl-wKU" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -7735,9 +7778,11 @@ across engineering and design, which increased yearly revenue
         <image name="arrowshape.left.fill" catalog="system" width="128" height="104"/>
         <image name="by proceeding" width="542" height="74"/>
         <image name="checkmark.circle.fill" catalog="system" width="128" height="123"/>
+        <image name="envelope" catalog="system" width="128" height="93"/>
         <image name="flag" width="160" height="160"/>
         <image name="image1" width="383.33334350585938" height="453.66665649414062"/>
         <image name="plus.circle.fill" catalog="system" width="128" height="123"/>
+        <image name="reusmelogo" width="275.33334350585938" height="72.333335876464844"/>
         <image name="square.and.arrow.up" catalog="system" width="115" height="128"/>
         <image name="tray.and.arrow.down.fill" catalog="system" width="128" height="115"/>
         <image name="xmark" catalog="system" width="128" height="113"/>

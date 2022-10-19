@@ -10,6 +10,7 @@ import Parchment
 var pagingViewController:PagingViewController?
 class HomeViewController: UIViewController {
 
+    @IBOutlet weak var topView: UIView!
     override func viewDidLoad() {
         super.viewDidLoad()
         self.tabBarController?.tabBar.isHidden = true
@@ -56,7 +57,7 @@ class HomeViewController: UIViewController {
             pagingViewController!.view.leadingAnchor.constraint(equalTo: view.leadingAnchor),
             pagingViewController!.view.trailingAnchor.constraint(equalTo: view.trailingAnchor),
             pagingViewController!.view.bottomAnchor.constraint(equalTo: view.bottomAnchor),
-            pagingViewController!.view.topAnchor.constraint(equalTo: view.topAnchor,constant:  getNavBarHeight())
+            pagingViewController!.view.topAnchor.constraint(equalTo: topView.bottomAnchor)
         ])
     }
     func getNavBarHeight() -> CGFloat {
