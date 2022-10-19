@@ -23,15 +23,7 @@ class AdditionalViewController: UIViewController {
     @IBOutlet weak var nextButton: UIButton!
     @IBOutlet weak var addSectionButton: UIButton!
     @IBOutlet weak var tableView: UITableView!
-    var isAddingNewItem:Bool = false{
-        didSet{
-            if isAddingNewItem{
-                addItemToSectionButton.isHidden = false
-            }else{
-                addItemToSectionButton.isHidden = true
-            }
-        }
-    }
+    var isAddingNewItem:Bool = false
     var selectedEditIndex:Int?{
         didSet{
             if selectedEditIndex != nil{
@@ -78,11 +70,17 @@ class AdditionalViewController: UIViewController {
     }
     
     @IBAction func addItemToSectionButtonAction(_ sender: Any) {
-
+        isAddingNewItem = true
+        self.tableView.reloadData()
     }
     @IBAction func goBackToAllSectionButtonAction(_ sender: Any) {
-        selectedEditIndex = nil
-        self.tableView.reloadData()
+        if isAddingNewItem{
+            isAddingNewItem = false
+            self.tableView.reloadData()
+        }else{
+            selectedEditIndex = nil
+            self.tableView.reloadData()
+        }
     }
     @IBAction func backButtonAction(_ sender: Any) {
         addSectionEnable = false
@@ -118,7 +116,13 @@ class AdditionalViewController: UIViewController {
         
     }
     @IBAction func nextButton(_ sender: Any) {
-        pagingController?.select(pagingItem: IconItem(icon: icons[6].icon, index: 6, title: icons[6].title))
+        if isAddingNewItem{
+            isAddingNewItem = false
+            self.tableView.reloadData()
+        }else{
+            pagingController?.select(pagingItem: IconItem(icon: icons[6].icon, index: 6, title: icons[6].title))
+        }
+
 
         
     }
@@ -174,6 +178,9 @@ class AdditionalViewController: UIViewController {
 }
 extension AdditionalViewController:UITableViewDataSource,UITableViewDelegate{
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        if isAddingNewItem{
+            return 2
+        }else
         if let selectedEditIndex = selectedEditIndex{
             var items = sections[selectedEditIndex].items
             return items.count + 1
@@ -187,6 +194,18 @@ extension AdditionalViewController:UITableViewDataSource,UITableViewDelegate{
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        if let selectedEditIndex = selectedEditIndex, isAddingNewItem{
+            var section = sections[selectedEditIndex]
+            if indexPath.row == 0{
+                let cell = tableView.dequeueReusableCell(withIdentifier: "SectionTitleTableViewCell", for: indexPath) as! SectionTitleTableViewCell
+                cell.titleLabel.text = section.title
+                return cell
+            }else{
+                let cell = tableView.dequeueReusableCell(withIdentifier: "SectionTitleTableViewCell", for: indexPath) as! SectionTitleTableViewCell
+                cell.titleLabel.text = section.title
+                return cell
+            }
+        }else
         if let selectedEditIndex = selectedEditIndex{
             var section = sections[selectedEditIndex]
 
@@ -256,6 +275,14 @@ extension AdditionalViewController:UITableViewDataSource,UITableViewDelegate{
         
     }
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        if isAddingNewItem {
+            if indexPath.row == 0{
+                return 50
+            }else{
+                return 300
+
+            }
+        }else
         if let selectedEditIndex = selectedEditIndex{
             if indexPath.row == 0 {
                 return 50
