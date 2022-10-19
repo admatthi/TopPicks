@@ -44,7 +44,7 @@ class HomeViewController: UIViewController {
         pagingViewController?.selectedBackgroundColor = #colorLiteral(red: 0.0829134658, green: 0.2267663181, blue: 0.5822093487, alpha: 1)
         pagingViewController?.indicatorColor = UIColor.white
         pagingViewController?.backgroundColor = #colorLiteral(red: 0.0829134658, green: 0.2267663181, blue: 0.5822093487, alpha: 1)
-        
+        pagingViewController?.borderColor = #colorLiteral(red: 0.0829134658, green: 0.2267663181, blue: 0.5822093487, alpha: 1)
 //        pagingViewController.menuBackgroundColor = .secondarySystemBackground
         
         addChild(pagingViewController!)

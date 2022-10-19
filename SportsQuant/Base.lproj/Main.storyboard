@@ -828,6 +828,7 @@
                                                 <constraint firstAttribute="trailingMargin" secondItem="IXQ-tA-NZh" secondAttribute="trailing" id="vxb-ZY-GW3"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <connections>
                                             <outlet property="address1TF" destination="NnW-hv-s6G" id="Grx-Oc-MeW"/>
                                             <outlet property="address2TF" destination="kkq-7E-mSy" id="wCB-5G-n0g"/>
@@ -1115,6 +1116,7 @@ include the month and the year for each entry. List all the dates on your resume
                                                 <constraint firstItem="17y-xA-ZkY" firstAttribute="top" secondItem="OWl-85-Mfo" secondAttribute="topMargin" constant="20" id="vJj-sP-bJA"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <connections>
                                             <outlet property="fromMonthTF" destination="gXG-OD-EuV" id="ETd-37-vSW"/>
                                             <outlet property="fromYearTF" destination="xCv-CR-tJS" id="Hz6-mK-KFO"/>
@@ -1485,6 +1487,7 @@ name?</string>
                                                 <constraint firstItem="QPT-gT-sNq" firstAttribute="top" secondItem="KFQ-zK-Vbo" secondAttribute="top" id="xUa-Jw-YAB"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <connections>
                                             <outlet property="backButon" destination="QPT-gT-sNq" id="I2b-M6-rXR"/>
                                             <outlet property="companyInPositionLabel" destination="h1y-w9-KcE" id="J0s-v7-8co"/>
@@ -1576,6 +1579,7 @@ name?</string>
                                                 <constraint firstAttribute="trailingMargin" secondItem="c8n-a8-Y1S" secondAttribute="trailing" id="rZY-zs-fZH"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <connections>
                                             <outlet property="companyNameLabel" destination="M6n-Io-i2A" id="L3p-xh-xFE"/>
                                             <outlet property="deleteButton" destination="e4j-yw-Daf" id="nJn-UA-23l"/>
@@ -1799,6 +1803,7 @@ name?</string>
                                                 <constraint firstAttribute="trailingMargin" secondItem="R5j-az-F1D" secondAttribute="trailing" id="xSX-uW-qoF"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <connections>
                                             <outlet property="collectionView" destination="MjO-xP-8j8" id="bLg-uu-7g1"/>
                                             <outlet property="summaryTextView" destination="tkO-Nn-0gX" id="tlx-q3-yaP"/>
