@@ -1,6 +1,8 @@
 import Parchment
 import UIKit
 
+var mydict = [String:UIImage]()
+
 struct IconPagingCellViewModel {
     let image: UIImage?
     let selected: Bool
@@ -43,6 +45,33 @@ class IconViewPagingCell: PagingCell {
         contentView.addSubview(imageView)
         contentView.addSubview(titleLabel)
 
+        let homeSymbolConfiguration = UIImage.SymbolConfiguration(pointSize: 55, weight: .black)
+
+        let i1 = UIImage(systemName: "person.circle.fill", withConfiguration: homeSymbolConfiguration)
+        
+        let i2 = UIImage(systemName: "pencil.circle.fill", withConfiguration: homeSymbolConfiguration)
+
+        
+        let i3 = UIImage(systemName: "graduationcap.circle.fill", withConfiguration: homeSymbolConfiguration)
+
+        
+        let i4 = UIImage(systemName: "book.circle.fill", withConfiguration: homeSymbolConfiguration)
+
+        
+        let i5 = UIImage(systemName: "house", withConfiguration: homeSymbolConfiguration)
+
+        
+        let i6 = UIImage(systemName: "bookmark.circle.fill", withConfiguration: homeSymbolConfiguration)
+
+        let i7 = UIImage(systemName: "plus.circle.fill", withConfiguration: homeSymbolConfiguration)
+
+        let i8 = UIImage(systemName: "checkmark.circle.fill", withConfiguration: homeSymbolConfiguration)
+
+
+        
+        mydict = ["Intro":i1!, "Contact":i2!, "Education":i3!, "Work":i4!, "Summary":i5!, "Additional":i6!, "Finish":i7!]
+        
+        
         setupConstraints()
     }
 
@@ -58,7 +87,7 @@ class IconViewPagingCell: PagingCell {
                 options: options
             )
 
-            imageView.image = viewModel.image
+            imageView.image = mydict[viewModel.title]
             titleLabel.text = viewModel.title
             self.contentView.backgroundColor = #colorLiteral(red: 0.0829134658, green: 0.2267663181, blue: 0.5822093487, alpha: 1)
             if viewModel.selected {
