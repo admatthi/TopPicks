@@ -45,7 +45,7 @@ class IconViewPagingCell: PagingCell {
         contentView.addSubview(imageView)
         contentView.addSubview(titleLabel)
 
-        let homeSymbolConfiguration = UIImage.SymbolConfiguration(pointSize: 55, weight: .black)
+        let homeSymbolConfiguration = UIImage.SymbolConfiguration(pointSize: 35, weight: .black)
 
         let i1 = UIImage(systemName: "person.circle.fill", withConfiguration: homeSymbolConfiguration)
         
@@ -91,7 +91,7 @@ class IconViewPagingCell: PagingCell {
             titleLabel.text = viewModel.title
             self.contentView.backgroundColor = #colorLiteral(red: 0.0829134658, green: 0.2267663181, blue: 0.5822093487, alpha: 1)
             if viewModel.selected {
-                imageView.transform = CGAffineTransform(scaleX: 0.9, y: 0.9)
+                imageView.transform = CGAffineTransform(scaleX: 0.8, y: 0.8)
                 imageView.tintColor = UIColor.white
                 titleLabel.textColor = UIColor.white
             } else {
